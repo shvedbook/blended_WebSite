@@ -1,26 +1,26 @@
 {
-  "name": "mearvevim",
+  "name": "blended_website",
   "version": "1.0.0",
-  "description": "mearvevim - blended learning web portal",
+  "description": "this web site is final project of BA studies ",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "Alex   Golberg",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint": "^7.0.0",
-    "eslint-config-airbnb-base": "14.1.0",
-    "eslint-plugin-import": "^2.20.2"
-  },
   "dependencies": {
-    "express": "4.17.1"
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "express": "^4.17.1",
+    "prettier": "^2.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shvedbook/blended_WebSite.git"
   },
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/shvedbook/blended_WebSite/issues"
   },
