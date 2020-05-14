@@ -2,35 +2,18 @@ const express = require('express');
 
 const path = require('path');
 
+const routes = require('./routes');
+
 const app = express();
 
 const port = 3000;
 
+app.set('view engine', 'ejs');
+app.set('vies', path.join(__dirname, '.views'));
+
 app.use(express.static(path.join(__dirname, './static')));
 
-app.get('/', (request, response) => {
-  response.sendFile(path.join(__dirname, './static/index.html'));
-});
-
-app.get('/experts', (request, response) => {
-  response.sendFile(path.join(__dirname, './static/exprets.html'));
-});
-
-app.get('/casestudy', (request, response) => {
-  response.sendFile(path.join(__dirname, './static/casestudy.html'));
-});
-
-app.get('/models', (request, response) => {
-  response.sendFile(path.join(__dirname, './static/models.html'));
-});
-
-app.get('/tools', (request, response) => {
-  response.sendFile(path.join(__dirname, './static/tools.html'));
-});
-
-app.get('/forum', (request, response) => {
-  response.sendFile(path.join(__dirname, './static/forum.html'));
-});
+app.use('/', routes());
 
 app.listen(port, () => {
   console.log('Express server listening on port ' + port);
