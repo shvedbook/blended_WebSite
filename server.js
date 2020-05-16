@@ -2,6 +2,14 @@ const express = require('express');
 
 const path = require('path');
 
+const FeedbackService = require('./services/FeedbackService');
+
+const ExpertsService = require('./services/ExpertsService');
+
+const feedbackService = new FeedbackService('./data/feedback.json');
+
+const expertsService = new ExpertsService('./data/Exprets.json');
+
 const routes = require('./routes');
 
 const app = express();
@@ -13,7 +21,13 @@ app.set('vies', path.join(__dirname, '.views'));
 
 app.use(express.static(path.join(__dirname, './static')));
 
-app.use('/', routes());
+app.use(
+  '/',
+  routes({
+    feedbackService,
+    expertsService,
+  })
+);
 
 app.listen(port, () => {
   console.log('Express server listening on port ' + port);

@@ -4,18 +4,20 @@ const casestudyRoute = require('./casestudy');
 const expertsRoute = require('./experts');
 const modelsRoute = require('./models');
 const toolsRoute = require('./tools');
+const feedbackRoute = require('./feedback');
 
 const router = express.Router();
 
-module.exports = () => {
+module.exports = (params) => {
   router.get('/', (request, response) => {
     response.render('pages/index', { pageTitle: 'מְעַרְבְּבִים' });
   });
 
-  router.use('/casestudy', casestudyRoute());
-  router.use('/experts', expertsRoute());
-  router.use('/models', modelsRoute());
-  router.use('/tools', toolsRoute());
+  router.use('/casestudy', casestudyRoute(params));
+  router.use('/experts', expertsRoute(params));
+  router.use('/models', modelsRoute(params));
+  router.use('/tools', toolsRoute(params));
+  router.use('/feedback', feedbackRoute(params));
 
   return router;
 };

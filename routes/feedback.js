@@ -3,15 +3,13 @@ const express = require('express');
 const router = express.Router();
 
 module.exports = (params) => {
-  const { expertsService } = params;
+  const { feedbackService } = params;
 
   router.get('/', async (request, response) => {
-    const experts = await expertsService.getList();
-    return response.json(experts);
+    const feedback = await feedbackService.getList();
+    return response.json(feedback);
   });
-  router.get('/:expertID', (request, response) => {
-    return response.send(`detail page of ${request.params.expertID}`);
-  });
+
   router.post('/', (request, response) => {
     return response.send('Feedback form posted');
   });
