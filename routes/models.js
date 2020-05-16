@@ -4,7 +4,7 @@ const router = express.Router();
 
 module.exports = () => {
   router.get('/', (request, response) => {
-    return response.send('Models List');
+    response.render('layout', { pageTitle: 'מודלים', template: 'models' });
   });
   router.get('/:modelName', (request, response) => {
     return response.send(`detail page of ${request.params.modelName}`);

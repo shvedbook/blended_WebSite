@@ -1,331 +1,248 @@
-﻿<!DOCTYPE html>
-<html lang="he">
-  <head>
-    <meta charset="utf-8" />
-    <title><%= pageTitle %></title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-
-    <!-- CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
-      integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If"
-      crossorigin="anonymous"
-    />
-    <link href="styles/myStyle.css" rel="stylesheet" />
-
-    <!-- Scripts -->
-
-    <script
-      type="text/javascript"
-      src="https://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"
-    ></script>
-    <script type="text/javascript" src="jScripts/jquery-1.12.0.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="jScripts/JavaScript.js"></script>
-  </head>
-  <body>
-    <div id="container" class="container">
-      <div id="headerLogo">
-        <h1><a href="index.html" style="font-size: 48pt;">מְעַרְבְּבִים</a></h1>
-        <p>הדרך הנכונה לשלב למידה מעורבת</p>
+﻿<!-- [REST OF YOUR PAGE] -->
+<span id="yourBlended"></span>
+<div id="page-contents" style="margin-top: 5%;">
+  <!-- section "howto" -->
+  <section class="row item" aos="zoom-in">
+    <div class="col-md-12">
+      <h3>מערכת להתאמת מודלים של למידה מעורבת</h3>
+      <p>
+        המטרה העיקרית של הפרוייקט "מערבבים", היא להתאים לכם מודל בלנדד לפי צרכי הלממידה/ הוראה שלכם.
+      </p>
+      <p>
+        <b>אנחנו בשלבי מחקר בפיתוח המערכת ונשמח לקבל משוב <a href="#">הודות המערכת</a>:</b>
+      </p>
+      <div class="row onmobilehidden">
+        <div class="col-md-2">
+          <b>תכנים</b>
+        </div>
+        <div class="col-md-2">
+          <b>מודל פדגוגי</b>
+        </div>
+        <div class="col-md-2">
+          <b>הקיף מפגשים</b>
+        </div>
+        <div class="col-md-2">
+          <b>רמת אוריינות דגטלית</b>
+        </div>
+        <div class="col-md-2">
+          <b>משאבים קיימים</b>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <b class="ondeskhidden">תכנים</b>
+          <select class="custom-select" id="inputGroupSelect01">
+            <option selected value="0">בחר</option>
+            <option value="1">אוריינות דיגיטלית</option>
+            <option value="2">שפה</option>
+            <option value="3">קורסי העשרה</option>
+            <option value="4">הכנה לשוק העבודה</option>
+            <option value="5">הכשרה מקצועית</option>
+            <option value="6">פיתוח מקצועי</option>
+            <option value="7">מעבר מבחן</option>
+            <option value="8">קבלת תעודה</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <b class="ondeskhidden">מודל פדגוגי</b>
+          <select class="custom-select" id="inputGroupSelect02">
+            <option selected value="0">בחר</option>
+            <option value="1">הנחייה צמודה</option>
+            <option value="2">למידה בזוגות</option>
+            <option value="3">קבוצה קטנה</option>
+            <option value="4">כיתה גדולה</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <b class="ondeskhidden">הקיף מפגשים</b>
+          <select class="custom-select" id="inputGroupSelect03">
+            <option selected value="0">בחר</option>
+            <option value="1">4-5 פעמים בשבוע</option>
+            <option value="2">2-3 פעמים בשבוע</option>
+            <option value="3">פעם בשבוע</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <b class="ondeskhidden">רמת אוריינות דגטלית</b>
+          <select class="custom-select" id="inputGroupSelect04">
+            <option selected value="0">בחר</option>
+            <option value="1">נמוכה</option>
+            <option value="2">בינונית</option>
+            <option value="3">גבוהה</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <b class="ondeskhidden">משאבים קיימים</b>
+          <select class="custom-select" id="inputGroupSelect05">
+            <option selected value="0">בחר</option>
+            <option value="1">כיתת לימוד עם כיתת לימוד עם מחשבים / בלי מחשב בבית</option>
+            <option value="2">כיתת לימוד בלי מחשבים/ עם מחשב בבית</option>
+            <option value="3">כיתת לימוד עם מחשבים / עם מחשב בבית</option>
+          </select>
+        </div>
+        <button id="sendBtn" type="button" class="btn btn-primary col-md-2">שלח</button>
       </div>
 
-      <nav class="navbar navbar-expand-md bg-primary navbar-dark sticky-top">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#collapsibleNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#yourBlended">מה הבלנד שלך?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#forum">פורום בלנדד</a>
-            </li>
-            <!-- Dropdown -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                איך עושים בלנדד
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="models.html">מודלים</a>
-                <a class="dropdown-item" href="casestudy.html">מקרי בוחן</a>
-                <a class="dropdown-item" href="experts.html">מומחי תוכן</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tools.html">כלים ויישומונים</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#aboutUs">אודות</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <!-- [REST OF YOUR PAGE] -->
-      <span id="yourBlended"></span>
-      <div id="page-contents" style="margin-top: 5%;">
-        <!-- section "howto" -->
-        <section class="row item" aos="zoom-in">
-          <div class="col-md-12">
-            <h3>מערכת להתאמת מודלים של למידה מעורבת</h3>
-            <p>
-              המטרה העיקרית של הפרוייקט "מערבבים", היא להתאים לכם מודל בלנדד לפי צרכי הלממידה/ הוראה
-              שלכם.
-            </p>
-            <p>
-              <b>אנחנו בשלבי מחקר בפיתוח המערכת ונשמח לקבל משוב <a href="#">הודות המערכת</a>:</b>
-            </p>
-            <div class="row onmobilehidden">
-              <div class="col-md-2">
-                <b>תכנים</b>
-              </div>
-              <div class="col-md-2">
-                <b>מודל פדגוגי</b>
-              </div>
-              <div class="col-md-2">
-                <b>הקיף מפגשים</b>
-              </div>
-              <div class="col-md-2">
-                <b>רמת אוריינות דגטלית</b>
-              </div>
-              <div class="col-md-2">
-                <b>משאבים קיימים</b>
-              </div>
-              <div class="col-md-2"></div>
-            </div>
-            <div class="row">
-              <div class="col-md-2">
-                <b class="ondeskhidden">תכנים</b>
-                <select class="custom-select" id="inputGroupSelect01">
-                  <option selected value="0">בחר</option>
-                  <option value="1">אוריינות דיגיטלית</option>
-                  <option value="2">שפה</option>
-                  <option value="3">קורסי העשרה</option>
-                  <option value="4">הכנה לשוק העבודה</option>
-                  <option value="5">הכשרה מקצועית</option>
-                  <option value="6">פיתוח מקצועי</option>
-                  <option value="7">מעבר מבחן</option>
-                  <option value="8">קבלת תעודה</option>
-                </select>
-              </div>
-              <div class="col-md-2">
-                <b class="ondeskhidden">מודל פדגוגי</b>
-                <select class="custom-select" id="inputGroupSelect02">
-                  <option selected value="0">בחר</option>
-                  <option value="1">הנחייה צמודה</option>
-                  <option value="2">למידה בזוגות</option>
-                  <option value="3">קבוצה קטנה</option>
-                  <option value="4">כיתה גדולה</option>
-                </select>
-              </div>
-              <div class="col-md-2">
-                <b class="ondeskhidden">הקיף מפגשים</b>
-                <select class="custom-select" id="inputGroupSelect03">
-                  <option selected value="0">בחר</option>
-                  <option value="1">4-5 פעמים בשבוע</option>
-                  <option value="2">2-3 פעמים בשבוע</option>
-                  <option value="3">פעם בשבוע</option>
-                </select>
-              </div>
-              <div class="col-md-2">
-                <b class="ondeskhidden">רמת אוריינות דגטלית</b>
-                <select class="custom-select" id="inputGroupSelect04">
-                  <option selected value="0">בחר</option>
-                  <option value="1">נמוכה</option>
-                  <option value="2">בינונית</option>
-                  <option value="3">גבוהה</option>
-                </select>
-              </div>
-              <div class="col-md-2">
-                <b class="ondeskhidden">משאבים קיימים</b>
-                <select class="custom-select" id="inputGroupSelect05">
-                  <option selected value="0">בחר</option>
-                  <option value="1">כיתת לימוד עם כיתת לימוד עם מחשבים / בלי מחשב בבית</option>
-                  <option value="2">כיתת לימוד בלי מחשבים/ עם מחשב בבית</option>
-                  <option value="3">כיתת לימוד עם מחשבים / עם מחשב בבית</option>
-                </select>
-              </div>
-              <button id="sendBtn" type="button" class="btn btn-primary col-md-2">שלח</button>
-            </div>
-
-            <div id="aiAnswer"></div>
-          </div>
-          <!--<div class="col-md-3 divNone">
+      <div id="aiAnswer"></div>
+    </div>
+    <!--<div class="col-md-3 divNone">
                 <img src="images/method.png" alt="picture of instuctors" />
 
             </div>-->
-        </section>
-        <hr />
+  </section>
+  <hr />
 
-        <!-- section "forum" -->
-        <section id="forum">
-          <div>
-            <h3>פורום</h3>
-            <p>לרשותכם פורום לניצול חוכמת ההמונים</p>
-            <br />
-            <img src="images/forum.png" width="700" alt="picture of instuctors" />
-          </div>
-        </section>
-        <hr />
-        <!-- section "whatis" -->
-        <section class="row">
-          <div class="col-md-12">
-            <h3>איך עושים בלנדד?</h3>
-          </div>
-          <div class="col-md-4">
-            <img src="images/method1.png" class="big-icon" />
-            <h4><a href="models.html">מודלים</a></h4>
+  <!-- section "forum" -->
+  <section id="forum">
+    <div>
+      <h3>פורום</h3>
+      <p>לרשותכם פורום לניצול חוכמת ההמונים</p>
+      <br />
+      <img src="images/forum.png" width="700" alt="picture of instuctors" />
+    </div>
+  </section>
+  <hr />
+  <!-- section "whatis" -->
+  <section class="row">
+    <div class="col-md-12">
+      <h3>איך עושים בלנדד?</h3>
+    </div>
+    <div class="col-md-4">
+      <img src="images/method1.png" class="big-icon" />
+      <h4><a href="models.html">מודלים</a></h4>
 
-            <p>
-              <a class="pInA" href="models.html">
-                בואו להכיר את המודלים הראשיים של הבלנדד. איך הם עובדים, למי הם מתאים ועוד...
-              </a>
-            </p>
-          </div>
-          <div class="col-md-4">
-            <img src="images/method1.png" class="big-icon" />
-            <h4><a href="casestudy.html">מקרי בוחן</a></h4>
-            <p>
-              <a class="pInA" href="casestudy.html"
-                >בואו לראות דוגמאות לשילוב של מודלים של בלנדד בהוראה והדרכה, דוגמאות להצלחות
-                וכישלונות, מסכנות ועוד...</a
-              >
-            </p>
-          </div>
-          <div class="col-md-4">
-            <img src="images/method1.png" class="big-icon" />
-            <h4><a href="experts.html">מומחי תוכן</a></h4>
-            <p>
-              <a class="pInA" href="experts.html"
-                >בואו לשמע את העמדות, הדעות והעצות של מומחי התוכן מהגדולים בתחום.</a
-              >
-            </p>
-          </div>
-        </section>
-        <hr />
+      <p>
+        <a class="pInA" href="models.html">
+          בואו להכיר את המודלים הראשיים של הבלנדד. איך הם עובדים, למי הם מתאים ועוד...
+        </a>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <img src="images/method1.png" class="big-icon" />
+      <h4><a href="casestudy.html">מקרי בוחן</a></h4>
+      <p>
+        <a class="pInA" href="casestudy.html"
+          >בואו לראות דוגמאות לשילוב של מודלים של בלנדד בהוראה והדרכה, דוגמאות להצלחות וכישלונות,
+          מסכנות ועוד...</a
+        >
+      </p>
+    </div>
+    <div class="col-md-4">
+      <img src="images/method1.png" class="big-icon" />
+      <h4><a href="experts.html">מומחי תוכן</a></h4>
+      <p>
+        <a class="pInA" href="experts.html"
+          >בואו לשמע את העמדות, הדעות והעצות של מומחי התוכן מהגדולים בתחום.</a
+        >
+      </p>
+    </div>
+  </section>
+  <hr />
 
-        <!--section tools-->
-        <section class="row" id="tools">
-          <div class="col-md-12">
-            <h3>כלים ויישומונים</h3>
-            <p>בוא להכיר את הכלים והיישומונים שיאפשרו לכם לבצע בלנדד טוב ואיכותי</p>
-          </div>
-          <div class="col-md-4 tools">
-            <h5>BeeTime</h5>
-            <img src="images/beetime.png" alt="picture of instuctors" />
+  <!--section tools-->
+  <section class="row" id="tools">
+    <div class="col-md-12">
+      <h3>כלים ויישומונים</h3>
+      <p>בוא להכיר את הכלים והיישומונים שיאפשרו לכם לבצע בלנדד טוב ואיכותי</p>
+    </div>
+    <div class="col-md-4 tools">
+      <h5>BeeTime</h5>
+      <img src="images/beetime.png" alt="picture of instuctors" />
 
-            <p>מערכת BeeTime היא מתערכת אינטראקטיבית המאפשרת ללומדים בכיתה למידה:</p>
-            <ul>
-              <li>לענות על שאלות סקר</li>
-              <li>לכתוב באופן חופשי את דעתם על התוכן</li>
-              <li>להשתתף בהגרלה משעשעת</li>
-              <li>ועוד פעילויות הניתנות לשילוב בבלנדד</li>
-            </ul>
-          </div>
-          <div class="col-md-4 tools">
-            <h5>BeeTime</h5>
-            <img src="images/beetime.png" alt="picture of instuctors" />
+      <p>מערכת BeeTime היא מתערכת אינטראקטיבית המאפשרת ללומדים בכיתה למידה:</p>
+      <ul>
+        <li>לענות על שאלות סקר</li>
+        <li>לכתוב באופן חופשי את דעתם על התוכן</li>
+        <li>להשתתף בהגרלה משעשעת</li>
+        <li>ועוד פעילויות הניתנות לשילוב בבלנדד</li>
+      </ul>
+    </div>
+    <div class="col-md-4 tools">
+      <h5>BeeTime</h5>
+      <img src="images/beetime.png" alt="picture of instuctors" />
 
-            <p>מערכת BeeTime היא מתערכת אינטראקטיבית המאפשרת ללומדים בכיתה למידה:</p>
-            <ul>
-              <li>לענות על שאלות סקר</li>
-              <li>לכתוב באופן חופשי את דעתם על התוכן</li>
-              <li>להשתתף בהגרלה משעשעת</li>
-              <li>ועוד פעילויות הניתנות לשילוב בבלנדד</li>
-            </ul>
-          </div>
-          <div class="col-md-4 tools">
-            <h5>BeeTime</h5>
-            <img src="images/beetime.png" alt="picture of instuctors" />
+      <p>מערכת BeeTime היא מתערכת אינטראקטיבית המאפשרת ללומדים בכיתה למידה:</p>
+      <ul>
+        <li>לענות על שאלות סקר</li>
+        <li>לכתוב באופן חופשי את דעתם על התוכן</li>
+        <li>להשתתף בהגרלה משעשעת</li>
+        <li>ועוד פעילויות הניתנות לשילוב בבלנדד</li>
+      </ul>
+    </div>
+    <div class="col-md-4 tools">
+      <h5>BeeTime</h5>
+      <img src="images/beetime.png" alt="picture of instuctors" />
 
-            <p>מערכת BeeTime היא מתערכת אינטראקטיבית המאפשרת ללומדים בכיתה למידה:</p>
-            <ul>
-              <li>לענות על שאלות סקר</li>
-              <li>לכתוב באופן חופשי את דעתם על התוכן</li>
-              <li>להשתתף בהגרלה משעשעת</li>
-              <li>ועוד פעילויות הניתנות לשילוב בבלנדד</li>
-            </ul>
-          </div>
-          <br /><br />
-          <div class="col-md-12" style="display: block; float: none;">
-            <a class="badge badge-primary" href="tools.html">
-              למידע, כתבות והמלצות העוסקות בכלים ויישמונים..</a
-            >
-          </div>
+      <p>מערכת BeeTime היא מתערכת אינטראקטיבית המאפשרת ללומדים בכיתה למידה:</p>
+      <ul>
+        <li>לענות על שאלות סקר</li>
+        <li>לכתוב באופן חופשי את דעתם על התוכן</li>
+        <li>להשתתף בהגרלה משעשעת</li>
+        <li>ועוד פעילויות הניתנות לשילוב בבלנדד</li>
+      </ul>
+    </div>
+    <br /><br />
+    <div class="col-md-12" style="display: block; float: none;">
+      <a class="badge badge-primary" href="tools.html">
+        למידע, כתבות והמלצות העוסקות בכלים ויישמונים..</a
+      >
+    </div>
+    <br />
+  </section>
+  <hr />
+
+  <!--section aboutUS-->
+  <section class="row" id="aboutUs">
+    <div class="col-md-12">
+      <h3 style="text-align: center !important;">אודות</h3>
+      <h5 style="text-align: center !important;">יוצרים</h5>
+      <div class="row">
+        <div class="col-md-6" style="text-align: center !important; margin-top: 2%;">
+          <img src="images/alex.png" class="mid-icon" alt="אלכס גולברג" />
           <br />
-        </section>
-        <hr />
-
-        <!--section aboutUS-->
-        <section class="row" id="aboutUs">
-          <div class="col-md-12">
-            <h3 style="text-align: center !important;">אודות</h3>
-            <h5 style="text-align: center !important;">יוצרים</h5>
-            <div class="row">
-              <div class="col-md-6" style="text-align: center !important; margin-top: 2%;">
-                <img src="images/alex.png" class="mid-icon" alt="אלכס גולברג" />
-                <br />
-                אלכס גולברג
-                <br />
-                shvedbook@gmail.com
-              </div>
-
-              <div class="col-md-6" style="text-align: center !important; margin-top: 2%;">
-                <img src="images/or.png" class="mid-icon" alt="אור אסם-נוסבאום" />
-                <br />
-                אור אסם-נוסבאום
-                <br />
-                or@campus.gov.il
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12" style="text-align: center; padding: 3%; font-size: large;">
-              האתר נבנה כחלק מקורס "תכנות 3", בהנחיית ד"ר דן כהן-וקס והגברת רעות בכר.
-              <br />
-              האתר מהווה חלק עיקרי בפורייקט הגמר שלנו, בפקולטה לטכנולוגיות למידה, המכון הטכנולוגי
-              חולון <br />
-              בהנחיית ד"ר רונן האמר ומוטי אלנקוה עבור "קמפוס"
-              <br />
-              <a
-                style="text-align: center; margin: 0 auto; font-size: x-large;"
-                href="googleApi.html"
-                target="popup"
-                onclick="window.open('googleApi.html','popup','width=600,height=400'); return false;"
-              >
-                למפת הגעה לHIT ולקמפוס לחצו כאן
-              </a>
-            </div>
-
-            <div class="col-md-4"></div>
-            <div class="col-md-2 mid-icon">
-              <img class="logo-icon" src="images/hit1.png" alt="המכון הטכנולוגי חולון" />
-            </div>
-            <div class="col-md-2">
-              <img class="logo-icon" src="images/campus1.png" alt="קמפוס - מיזם הלמידה הדיגיטלית" />
-            </div>
-            <div class="col-md-4"></div>
-          </div>
+          אלכס גולברג
           <br />
-        </section>
-        <hr />
+          shvedbook@gmail.com
+        </div>
+
+        <div class="col-md-6" style="text-align: center !important; margin-top: 2%;">
+          <img src="images/or.png" class="mid-icon" alt="אור אסם-נוסבאום" />
+          <br />
+          אור אסם-נוסבאום
+          <br />
+          or@campus.gov.il
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" style="text-align: center; padding: 3%; font-size: large;">
+        האתר נבנה כחלק מקורס "תכנות 3", בהנחיית ד"ר דן כהן-וקס והגברת רעות בכר.
+        <br />
+        האתר מהווה חלק עיקרי בפורייקט הגמר שלנו, בפקולטה לטכנולוגיות למידה, המכון הטכנולוגי חולון
+        <br />
+        בהנחיית ד"ר רונן האמר ומוטי אלנקוה עבור "קמפוס"
+        <br />
+        <a
+          style="text-align: center; margin: 0 auto; font-size: x-large;"
+          href="googleApi.html"
+          target="popup"
+          onclick="window.open('googleApi.html','popup','width=600,height=400'); return false;"
+        >
+          למפת הגעה לHIT ולקמפוס לחצו כאן
+        </a>
       </div>
 
-      <button onclick="topFunction()" class="btn-outline-primary" id="goToTop" title="Go to top">
-        חזרה להתחלה
-      </button>
+      <div class="col-md-4"></div>
+      <div class="col-md-2 mid-icon">
+        <img class="logo-icon" src="images/hit1.png" alt="המכון הטכנולוגי חולון" />
+      </div>
+      <div class="col-md-2">
+        <img class="logo-icon" src="images/campus1.png" alt="קמפוס - מיזם הלמידה הדיגיטלית" />
+      </div>
+      <div class="col-md-4"></div>
     </div>
-  </body>
-</html>
+    <br />
+  </section>
+  <hr />
+</div>

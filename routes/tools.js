@@ -4,7 +4,7 @@ const router = express.Router();
 
 module.exports = () => {
   router.get('/', (request, response) => {
-    return response.send('Tools List');
+    response.render('layout', { pageTitle: 'כלים', template: 'tools' });
   });
   router.get('/:toolID', (request, response) => {
     return response.send(`detail page of ${request.params.toolID}`);

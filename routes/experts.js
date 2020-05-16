@@ -4,6 +4,9 @@ const router = express.Router();
 
 module.exports = (params) => {
   const { expertsService } = params;
+  router.get('/', (request, response) => {
+    response.render('layout', { pageTitle: 'מומחי תוכן', template: 'experts' });
+  });
 
   router.get('/', async (request, response) => {
     const experts = await expertsService.getList();

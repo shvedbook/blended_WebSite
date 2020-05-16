@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= pageTitle %></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
+      integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If"
+      crossorigin="anonymous"
+    />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+    <!-- Scripts -->
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div id="headerLogo">
+        <h1><a href="index.html" style="font-size: 48pt;">מְעַרְבְּבִים</a></h1>
+        <p>הדרך הנכונה לשלב למידה מעורבת</p>
+      </div>
+
+      <nav class="navbar navbar-expand-md bg-primary navbar-dark sticky-top">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index#yourBlended">מה הבלנד שלך?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index#forum">פורום בלנדד</a>
+            </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                איך עושים בלנדד
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="models">מודלים</a>
+                <a class="dropdown-item" href="casestudy">מקרי בוחן</a>
+                <a class="dropdown-item" href="experts">מומחי תוכן</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tools">כלים ויישומונים</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#aboutUs">אודות</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <%- include(`../pages/${template}`) %>
+
+      <button onclick="topFunction()" class="btn-outline-primary" id="goToTop" title="Go to top">
+        חזרה להתחלה
+      </button>
+    </div>
+  </body>
+  <!-- JAVASCRIPT -->
+  <script
+    type="text/javascript"
+    src="https://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"
+  ></script>
+  <script type="text/javascript" src="/jScripts/jquery-1.12.0.min.js"></script>
+  <script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
+  <script type="text/javascript" src="/jScripts/JavaScript.js"></script>
+</html>
