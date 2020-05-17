@@ -10,7 +10,7 @@ const router = express.Router();
 
 module.exports = (params) => {
   router.get('/', (request, response) => {
-    response.render('layout', { pageTitle: 'מְעַרְבְּבִים', template: 'index' });
+    response.render('layout', { pageTitle: 'מה הבלמדד שלך?', template: 'index' });
   });
 
   router.use('/casestudy', casestudyRoute(params));

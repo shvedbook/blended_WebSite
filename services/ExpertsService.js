@@ -1,5 +1,5 @@
-const fs = require("fs");
-const util = require("util");
+const fs = require('fs');
+const util = require('util');
 
 /**
  * We want to use async/await with fs.readFile - util.promisfy gives us that
@@ -21,12 +21,20 @@ class expretservice {
   /**
    * Returns a list of exprets name and short name
    */
-  async getNames() {
+  async getAllData() {
     const data = await this.getData();
 
     // We are using map() to transform the array we get into another one
     return data.map((expret) => {
-      return { name: expret.name, shortname: expret.shortname };
+      return {
+        id: expret.id,
+        name: expret.name,
+        picture: expret.picture,
+        experience: expret.experience,
+        education: expret.ducation,
+        shortStory: expret.shortStory,
+        longStory: expret.longStory,
+      };
     });
   }
 
@@ -112,7 +120,7 @@ class expretservice {
    * Fetches exprets data from the JSON file provided to the constructor
    */
   async getData() {
-    const data = await readFile(this.datafile, "utf8");
+    const data = await readFile(this.datafile, 'utf8');
     return JSON.parse(data).exprets;
   }
 }

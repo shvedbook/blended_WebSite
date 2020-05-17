@@ -32,6 +32,19 @@ app.set('vies', path.join(__dirname, '.views'));
 
 app.use(express.static(path.join(__dirname, './static')));
 
+app.locals.siteName = 'מְעַרְבְּבִים';
+
+app.use(async (request, response, next) => {
+  try {
+    const names = await expertsService.getAllData();
+    response.locals.experttData = names;
+
+    return next();
+  } catch (err) {
+    return next(err);
+  }
+});
+
 app.use(
   '/',
   routes({
