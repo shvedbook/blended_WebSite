@@ -1,0 +1,40 @@
+<% experttData.forEach(function (expert) {%>
+<div class="row" id="expert1">
+  <div class="col-md-9">
+    <h3><%= expert.name %></h3>
+    <h4><%= expert.about %></h4>
+    <ul>
+      <li><b>תחום עיסוק ונסיון</b>: <%= expert.experience %></li>
+      <li><b>השכלה</b>: <%= expert.education %></li>
+    </ul>
+    <p>
+      <b>מה יש לי להגיד?:</b><br />
+      <%= expert.longStory %>
+    </p>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>מודלים שהוזכרו</h4>
+        <ul>
+          <% expert.models.forEach(function (model) {%>
+          <li><a href="<%= model.link %>"><%= model.name %></a></li>
+          <% })%>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h4>מקרי בוחן</h4>
+        <ul>
+          <% expert.case_studies.forEach(function (case_study) {%>
+          <li><a href="<%= case_study.link %>"><%= case_study.name %></a></li>
+          <% })%>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <img class="big-pic" src="images/model1.png" />
+  </div>
+  <span id="forlink2"></span>
+</div>
+<hr />
+
+<% })%>

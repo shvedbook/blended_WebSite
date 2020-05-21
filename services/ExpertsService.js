@@ -31,9 +31,11 @@ class expretservice {
         name: expret.name,
         picture: expret.picture,
         experience: expret.experience,
-        education: expret.ducation,
+        education: expret.education,
         shortStory: expret.shortStory,
         longStory: expret.longStory,
+        models: expret.models,
+        case_studies: expret.case_studies,
       };
     });
   }

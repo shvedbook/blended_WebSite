@@ -1,11 +1,11 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
 html {
   scroll-behavior: smooth;
 }
 
 body {
   direction: rtl;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Assistant', sans-serif;
   margin: 4% auto;
   max-width: 1280px;
   min-width: 400px;

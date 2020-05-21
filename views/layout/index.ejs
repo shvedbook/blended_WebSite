@@ -22,15 +22,12 @@
   <body>
     <div id="container" class="container">
       <div id="headerLogo">
-        <h1><a href="index.html" style="font-size: 48pt;">מְעַרְבְּבִים</a></h1>
+        <h1><a href="/" style="font-size: 48pt;">מְעַרְבְּבִים</a></h1>
         <p>הדרך הנכונה לשלב למידה מעורבת</p>
       </div>
 
       <%- include(`./partials/navigation`) %> <%- include(`../pages/${template}`) %>
-
-      <button onclick="topFunction()" class="btn-outline-primary" id="goToTop" title="Go to top">
-        חזרה להתחלה
-      </button>
+      <%-include(`./partials/topFunction`) %>
     </div>
     <!-- JAVASCRIPT -->
     <%- include(`./partials/scripts`) %>
