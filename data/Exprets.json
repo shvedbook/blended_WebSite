@@ -1,7 +1,7 @@
 {
   "exprets": [
     {
-      "id": "1",
+      "id": "expert1",
       "name": "ד'ר מומחה תוכן",
       "picture": "images/model1.png",
       "experience": "אני מתעסק בדברים הללו במשך 12 שנה",
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "id": "2",
+      "id": "expert2",
       "name": " מומחה תוכן",
       "picture": "images/model1.png",
       "experience": "אני מתעסק בדברים הללו במשך 2 שנה",
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "id": "3",
+      "id": "expert3",
       "name": "פרופסור מומחה תוכן",
       "picture": "images/model1.png",
       "experience": "30 שנה של נסיון כאיש אשקולות",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": "expert4",
       "name": "ד'ר מומחה תוכן",
       "picture": "images/model1.png",
       "experience": "אני מתעסק בדברים הללו במשך 12 שנה",
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "id": "5",
+      "id": "expert5",
       "name": "ד'ר מומחה תוכן",
       "picture": "images/model1.png",
       "experience": "אני מתעסק בדברים הללו במשך 12 שנה",

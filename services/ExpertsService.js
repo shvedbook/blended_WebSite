@@ -21,7 +21,7 @@ class expretservice {
   /**
    * Returns a list of exprets name and short name
    */
-  async getAllData() {
+  async getExpertData() {
     const data = await this.getData();
 
     // We are using map() to transform the array we get into another one
