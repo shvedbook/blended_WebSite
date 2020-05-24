@@ -45,6 +45,8 @@ app.use(async (request, response, next) => {
   try {
     const names = await expertsService.getExpertData();
     response.locals.experttData = names;
+    const feedbackData = await feedbackService.getExpertData();
+    response.locals.feedbackData = feedbackData;
 
     return next();
   } catch (err) {

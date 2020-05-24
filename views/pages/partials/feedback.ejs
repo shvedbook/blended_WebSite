@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-4">
       <div class="maincontent">
-        <h1>Send us feedback</h1>
+        <h2>בואו נדבר</h2>
         <% if (locals.errors){%>
         <div class="alert alert-danger">
           <ul>
@@ -12,11 +12,14 @@
           </ul>
         </div>
 
+        <%} else if(locals.successMessage) {%>
+        <div class="alert alert-success">
+          <%= successMessage %>
+        </div>
         <%}%>
-
         <form class="feedback-form" method="POST" action="/experts/feedback">
           <div class="form-group">
-            <label for="feedback-form-name">Name</label>
+            <label for="feedback-form-name">שם מלא</label>
             <input
               type="text"
               class="form-control"
@@ -62,43 +65,25 @@
     </div>
     <aside class="col-md-8">
       <div class="maincontent feedback">
-        <h1>Recent Feedback</h1>
+        <h2>הדיבור</h1>
 
         <div class="feedback-items">
-          <div class="feedback-item item-list media-list">
-            <div class="feedback-item media">
-              <div class="feedback-info media-body">
-                <div class="feedback-head">
-                  <div class="feedback-title">Impressive</div>
-                  <small>by Jane</small>
-                </div>
-                <div class="feedback-message">Please do it again</div>
-              </div>
-            </div>
-          </div>
+          
+           <% feedbackData.forEach(function (feedback) {%>
 
           <div class="feedback-item item-list media-list">
             <div class="feedback-item media">
               <div class="feedback-info media-body">
                 <div class="feedback-head">
-                  <div class="feedback-title">I'll be back</div>
-                  <small>by James</small>
+                  <div class="feedback-title"><%=feedback.title%></div>
+                  <small><%=feedback.name%></small>
                 </div>
-                <div class="feedback-message">I'm happy that I was there</div>
+                <div class="feedback-message"><%=feedback.message%></div>
               </div>
             </div>
           </div>
-          <div class="feedback-item item-list media-list">
-            <div class="feedback-item media">
-              <div class="feedback-info media-body">
-                <div class="feedback-head">
-                  <div class="feedback-title">Great Speaker</div>
-                  <small>by Melissa</small>
-                </div>
-                <div class="feedback-message">This was a great meetup!</div>
-              </div>
-            </div>
-          </div>
+          <hr/>
+          <% })%>
         </div>
       </div>
     </aside>

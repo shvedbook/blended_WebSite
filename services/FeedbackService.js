@@ -30,16 +30,16 @@ class FeedbackService {
    * @param {*} title The title of the feedback message
    * @param {*} message The feedback message
    */
-  async addEntry(name, email, title, message) {
+  async addExpertFeedback(name, email, title, message, group) {
     const data = (await this.getData()) || [];
-    data.unshift({ name, email, title, message });
+    data.unshift({ name, email, title, message, group });
     return writeFile(this.datafile, JSON.stringify(data));
   }
 
   /**
    * Fetches feedback data from the JSON file provided to the constructor
    */
-  async getData() {
+  async getExpertData() {
     const data = await readFile(this.datafile, 'utf8');
     if (!data) return [];
     return JSON.parse(data);

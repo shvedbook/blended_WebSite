@@ -9,6 +9,8 @@ module.exports = (params) => {
 
   router.get('/', async (request, response) => {
     const errors = request.session.feedback ? request.session.feedback.errors : false;
+    const successMessage = request.session.feedback ? request.session.feedback.message : false;
+
     request.session.feedback = {};
     const experts = await expertsService.getList();
     return response.render('layout', {
@@ -16,6 +18,7 @@ module.exports = (params) => {
       template: 'experts',
       experts,
       errors,
+      successMessage,
     });
   });
 
@@ -38,7 +41,7 @@ module.exports = (params) => {
         .escape()
         .withMessage('a valid message is required'),
     ],
-    (request, response) => {
+    async (request, response) => {
       const errors = validationResult(request);
       if (!errors.isEmpty()) {
         request.session.feedback = {
@@ -47,7 +50,14 @@ module.exports = (params) => {
         return response.redirect('/experts#feedback');
       }
 
-      return response.send('Feedback form sensadasd');
+      const { name, email, title, message } = request.body;
+      const group = 'experts';
+
+      await feedbackService.addExpertFeedback(name, email, title, message, group);
+      request.session.feedback = {
+        message: 'תגובתך התקבלה בהצלחה!',
+      };
+      return response.redirect('/experts#feedback');
     }
   );
   return router;
