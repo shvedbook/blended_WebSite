@@ -20,7 +20,7 @@ class FeedbackService {
    * Get all feedback items
    */
   async getList() {
-    const data = await this.getData();
+    const data = await this.getExpertData();
     return data;
   }
 
@@ -30,8 +30,8 @@ class FeedbackService {
    * @param {*} title The title of the feedback message
    * @param {*} message The feedback message
    */
-  async addExpertFeedback(name, email, title, message, group) {
-    const data = (await this.getData()) || [];
+  async addExpertData(name, email, title, message, group) {
+    const data = (await this.getExpertData()) || [];
     data.unshift({ name, email, title, message, group });
     return writeFile(this.datafile, JSON.stringify(data));
   }

@@ -53,7 +53,7 @@ module.exports = (params) => {
       const { name, email, title, message } = request.body;
       const group = 'experts';
 
-      await feedbackService.addExpertFeedback(name, email, title, message, group);
+      await feedbackService.addExpertData(name, email, title, message, group);
       request.session.feedback = {
         message: 'תגובתך התקבלה בהצלחה!',
       };
