@@ -30,8 +30,11 @@ class modelservice {
         id: model.id,
         name: model.name,
         picture: model.picture,
+        experience: model.experience,
+        education: model.education,
         Story: model.Story,
-        experts: model.experts,
+        longStory: model.longStory,
+        models: model.models,
         case_studies: model.case_studies,
       };
     });

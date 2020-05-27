@@ -214,3 +214,8 @@ a {
   font-size: large;
   font-weight: 400;
 }
+
+.carousel-item {
+  width: 100%;
+  background-color: bisque;
+}
