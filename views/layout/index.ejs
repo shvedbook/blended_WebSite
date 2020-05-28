@@ -35,14 +35,9 @@
     ></script>
   </head>
   <body>
+    <%- include(`./partials/navigation`) %>
     <div id="container" class="container">
-      <div id="headerLogo">
-        <h1><a href="/" style="font-size: 48pt;">מְעַרְבְּבִים</a></h1>
-        <p>הדרך הנכונה לשלב למידה מעורבת</p>
-      </div>
-
-      <%- include(`./partials/navigation`) %> <%- include(`../pages/${template}`) %>
-      <%-include(`./partials/topFunction`) %>
+      <%- include(`../pages/${template}`) %> <%-include(`./partials/topFunction`) %>
     </div>
     <!-- JAVASCRIPT -->
     <%- include(`./partials/scripts`) %>
