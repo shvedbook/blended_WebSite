@@ -1,11 +1,12 @@
-<section class="row item" aos="zoom-in">
+<section id="blendedSystem" class="row item" aos="zoom-in">
   <div class="col-md-4">
     <h1>מְעַרְבְּבִים</h1>
     <p>
       פורטל "מְעַרְבְּבִים" הוקם במטרה לספק לכם תכני Blended מעניינים, מונגשים ומותאמים לתרחישי
       ההוראה שלכם, ולעזור לכם להפוך שיעור Blended לחוויה חיובית ואפקטיביט.
     </p>
-    <div class="row onmobilehidden">
+    <div class="onmobilehidden">
+      <br />
       <br />
       <br />
       <br />
@@ -14,7 +15,8 @@
     </div>
   </div>
   <div class="col-md-8">
-    <div class="row onmobilehidden">
+    <div class="onmobilehidden">
+      <br />
       <br />
       <br />
       <br />
@@ -98,12 +100,22 @@
       </div>
       <button id="sendBtn" type="button" class="btn btn-primary col-md-2">שלח</button>
     </div>
-
-    <div id="aiAnswer"></div>
   </div>
-  <!--<div class="col-md-3 divNone">
-                <img src="images/method.png" alt="picture of instuctors" />
 
-            </div>-->
+  <div id="aiAnswer"></div>
+  <br />
+  <br />
+  <div id="tivuhMale" style="display: none;">
+    <%-include(`./modelAns/tivuhMale`) %>
+  </div>
+  <div id="kvuzatImun" style="display: none;">
+    <%-include(`./modelAns/kvuzatImun`) %>
+  </div>
+  <div id="havruta" style="display: none;">
+    <%-include(`./modelAns/havruta`) %>
+  </div>
+  <div id="kvuzatKria" style="display: none;">
+    <%-include(`./modelAns/kvuzatKria`) %>
+  </div>
 </section>
 <hr />

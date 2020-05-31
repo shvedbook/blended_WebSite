@@ -22,7 +22,7 @@ const routes = require('./routes');
 
 const app = express();
 
-const port = 3000;
+const port = 8080;
 
 app.set('trust proxy', 1);
 
@@ -49,7 +49,13 @@ app.use(async (request, response, next) => {
     response.locals.feedbackData = feedbackData;
     const modelsData = await modelService.getModelData();
     response.locals.modelsData = modelsData;
-
+    /*all models data */
+    const tivuhModelData = await modelService.getModel('tivuh-male');
+    response.locals.tivuhModelData = tivuhModelData;
+    const kvuzatImunModelData = await modelService.getModel('kvuzatImun');
+    response.locals.kvuzatImunModelData = kvuzatImunModelData;
+    const havrutaModelData = await modelService.getModel('kvuzatImun');
+    response.locals.havrutaModelData = havrutaModelData;
     return next();
   } catch (err) {
     return next(err);

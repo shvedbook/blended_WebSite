@@ -1,6 +1,6 @@
 <div class="container mt-4" id="feedback">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
       <div class="maincontent">
         <h2>בואו נדבר</h2>
         <% if (locals.errors){%>
@@ -56,21 +56,21 @@
               class="form-control"
               id="feedback-form-message"
               name="message"
-              rows="6"
+              rows="3"
             ></textarea>
           </div>
           <button type="submit" class="btn btn-secondary float-right">Submit</button>
         </form>
       </div>
     </div>
-    <aside class="col-md-8">
+    <aside class="col-md-6">
       <div class="maincontent feedback">
         <h2>הדיבור</h1>
 
         <div class="feedback-items">
-          
+          <% var counter = 0 %>
            <% feedbackData.forEach(function (feedback) {%>
-
+<% if(counter != 3){ %> 
           <div class="feedback-item item-list media-list">
             <div class="feedback-item media">
               <div class="feedback-info media-body">
@@ -78,11 +78,13 @@
                   <div class="feedback-title"><%=feedback.title%></div>
                   <small><%=feedback.name%></small>
                 </div>
-                <div class="feedback-message"><%=feedback.message%></div>
+                <div class="feedback-message" ><%=feedback.message%></div>
               </div>
             </div>
           </div>
           <hr/>
+          <% counter ++; %> 
+          <% } %> 
           <% })%>
         </div>
       </div>

@@ -10,6 +10,11 @@ module.exports = (params) => {
     response.render('layout', { pageTitle: 'מודלים', template: 'models', models });
     //return response.json(models);
   });
+  router.get('/:id', async (request, response) => {
+    const model = await modelService.getModel(request.params.id);
+    response.render('layout', { pageTitle: 'מודלים', template: 'model', model });
+    //return response.json(models);
+  });
 
   return router;
 };

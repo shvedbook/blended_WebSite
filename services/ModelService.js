@@ -75,17 +75,17 @@ class modelservice {
    * Get model information provided a shortname
    * @param {*} shortname
    */
-  async getmodel(shortname) {
+  async getModel(id) {
     const data = await this.getData();
     const model = data.find((elm) => {
-      return elm.shortname === shortname;
+      return elm.id === id;
     });
     if (!model) return null;
     return {
-      title: model.title,
+      id: model.id,
       name: model.name,
-      shortname: model.shortname,
-      description: model.description,
+      picture: model.picture,
+      story: model.Story,
     };
   }
 

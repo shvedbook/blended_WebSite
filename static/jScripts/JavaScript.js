@@ -60,9 +60,15 @@ function dataValidation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimkaia
     alert('you have to fill all the fields');
   }
 }
-
+function hideAllAnswers() {
+  $('#tivuhMale').css('display', 'none');
+  $('#kvuzatImun').css('display', 'none');
+  $('#kvuzatKria').css('display', 'none');
+  $('#havruta').css('display', 'none');
+}
 //calculation of the model
 function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimkaiamim) {
+  hideAllAnswers();
   console.log(
     'thanim = ' +
       thanim +
@@ -79,41 +85,43 @@ function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimka
   //$("#aiAnswer").text() = "רשימת המודלים הנמצאו מתאימים עבורך;";
   var numOfModels = 0;
   //בדיקה האם מודל תיווך מלא מתאים למקרה
-  $('#aiAnswer').html('רשימת המודלים הנמצאו מתאימים עבורך:<br/>');
+  // $('#aiAnswer').html('רשימת המודלים הנמצאו מתאימים עבורך:<br/>');
   if (modelpedogogi == 1) {
     numOfModels++;
-    $('#aiAnswer').append(
-      "<div>מבין המודלים הקיימים רק מודל 'תיווך מלא' מתאים להנחייה צמודה</div>"
-    );
+    $('#aiAnswer').html("<div>מבין המודלים הקיימים רק מודל 'תיווך מלא' מתאים להנחייה צמודה</div>");
+    $('#tivuhMale').css('display', 'block');
+
+    $('#tivuhMale').show();
   } else {
     if (thanim > 1 && modelpedogogi > 2 && ramatoryanut > 1) {
       numOfModels++;
-      $('#aiAnswer').append('<div>קבוצת אימון</div>');
+      $('#kvuzatImun').css('display', 'block');
     }
     if (thanim > 1 && modelpedogogi == 2 && ramatoryanut > 1 && mashavimkaiamim > 1 && eikef == 3) {
       numOfModels++;
-      $('#aiAnswer').append('<div>חברותא</div>');
+      $('#havruta').css('display', 'block');
     }
     if (thanim == 3) {
       numOfModels++;
-      $('#aiAnswer').append('<div>קבוצת קריאה - הוא המודל המוממלץ לקורסי העשרה</div>');
+      $('#kvuzatKria').css('display', 'block');
     }
     if (thanim > 1 && modelpedogogi == 2 && ramatoryanut > 1 && mashavimkaiamim > 1 && eikef > 1) {
       numOfModels++;
-      $('#aiAnswer').append('<div>כיתה הפוכה</div>');
+      $('#aiAnswer').html('<div>כיתה הפוכה</div>');
     }
     if (ramatoryanut == 1) {
       numOfModels++;
-      $('#aiAnswer').append(
+      $('#aiAnswer').html(
         "<div>המודל המתאים ביותר ללומדים בעלי אוריינות נמוכה הוא 'תיווך מלא'</div>"
       );
+      $('#tivuhMale').css('display', 'block');
     }
   }
 
   //if no model found
   if (numOfModels == 0) {
     $('#aiAnswer').html(
-      'לא נמצאו תוצאות מתאימות עבורכם<br/>אתם מוזמנים לעיין ברשימת המודלים הקיימים'
+      '<br/><a href src"/models"><a/><h2>לא נמצאו תוצאות מתאימות עבורכם<br/>אתם מוזמנים לעיין ברשימת המודלים הקיימים</h2>'
     );
   }
 }
