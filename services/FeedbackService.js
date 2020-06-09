@@ -30,9 +30,9 @@ class FeedbackService {
    * @param {*} title The title of the feedback message
    * @param {*} message The feedback message
    */
-  async addExpertData(name, email, title, message, group) {
+  async addExpertData(name, email, title, message, model) {
     const data = (await this.getExpertData()) || [];
-    data.unshift({ name, email, title, message, group });
+    data.unshift({ name, email, title, message, model });
     return writeFile(this.datafile, JSON.stringify(data));
   }
 

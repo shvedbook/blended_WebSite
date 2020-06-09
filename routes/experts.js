@@ -47,17 +47,16 @@ module.exports = (params) => {
         request.session.feedback = {
           errors: errors.array(),
         };
-        return response.redirect('/experts#feedback');
+        return response.redirect('/models#feedback');
       }
 
-      const { name, email, title, message } = request.body;
-      const group = 'experts';
+      const { name, email, title, message, model } = request.body;
 
-      await feedbackService.addExpertData(name, email, title, message, group);
+      await feedbackService.addExpertData(name, email, title, message, model);
       request.session.feedback = {
         message: 'תגובתך התקבלה בהצלחה!',
       };
-      return response.redirect('/experts#feedback');
+      return response.redirect(`/models#${model}`);
     }
   );
   return router;

@@ -35,7 +35,18 @@ class modelservice {
         Story: model.Story,
         longStory: model.longStory,
         models: model.models,
-        case_studies: model.case_studies,
+        experts: [
+          model.experts[0].id,
+          model.experts[0].name,
+          model.experts[0].education,
+          model.experts[0].longStory,
+          model.experts[0].media,
+        ],
+        case_studies: [
+          model.case_studies[0].name,
+          model.case_studies[0].story,
+          model.case_studies[0].media,
+        ],
       };
     });
   }
@@ -110,10 +121,26 @@ class modelservice {
     const data = await this.getData();
     return data.map((model) => {
       return {
+        id: model.id,
         name: model.name,
-        shortname: model.shortname,
-        title: model.title,
-        summary: model.summary,
+        picture: model.picture,
+        experience: model.experience,
+        education: model.education,
+        Story: model.Story,
+        longStory: model.longStory,
+        models: model.models,
+        experts: [
+          model.experts[0].id,
+          model.experts[0].name,
+          model.experts[0].education,
+          model.experts[0].longStory,
+          model.experts[0].media,
+        ],
+        case_studies: [
+          model.case_studies[0].name,
+          model.case_studies[0].story,
+          model.case_studies[0].media,
+        ],
       };
     });
   }

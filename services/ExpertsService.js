@@ -34,8 +34,6 @@ class expretservice {
         education: expret.education,
         shortStory: expret.shortStory,
         longStory: expret.longStory,
-        models: expret.models,
-        case_studies: expret.case_studies,
       };
     });
   }

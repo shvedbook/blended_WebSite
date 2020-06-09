@@ -1,0 +1,160 @@
+<% modelsData.forEach(function (model) {%>
+  <div id="<%=model.id%>" class="carousel slide" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner">
+      <div class="carousel-item ">
+        <div class="row models">
+          <div class="col-md-6 model-item">
+            <h3><%=model.name%></h3>
+            <hr />
+            <p>
+              <%=model.Story%>
+            </p>
+          </div>
+          <div class="col-md-6 feedback">
+            <div class="container mt-4" id="feedback">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="maincontent">
+                    <h2>בואו נדבר</h2>
+                    <% if (locals.errors){%>
+                    <div class="alert alert-danger">
+                      <ul>
+                        <% errors.forEach(function (error){%>
+                        <li><%=error.msg%></li>
+                        <%})%>
+                      </ul>
+                    </div>
+            
+                    <%} else if(locals.successMessage) {%>
+                    <div class="alert alert-success">
+                      <%= successMessage %>
+                    </div>
+                    <%}%>
+                    <form class="feedback-form" method="POST" action="/experts/feedback">
+                      <div class="form-group">
+                        <label for="feedback-form-name">שם מלא</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="feedback-form-name"
+                          name="name"
+                          placeholder="Enter your name"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <input id="feedback-form-model" name="model" type="hidden" value="<%=model.id%>">
+                      </div>
+                      <div class="form-group">
+                        <label for="feedback-form-email">דוא"ל</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="feedback-form-email"
+                          name="email"
+                          placeholder="Enter your email address"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="feedback-form-title">נושא</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="feedback-form-title"
+                          name="title"
+                          placeholder="Title of your feedback"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="feedback-form-message">הודעה</label>
+                        <textarea
+                          type="text"
+                          placeholder="'רשמו כאן את ההודעה שלכם ותלחצו על 'שלח"
+                          class="form-control"
+                          id="feedback-form-message"
+                          name="message"
+                          rows="3"
+                        ></textarea>
+                      </div>
+                      
+                      <button type="submit" class="btn btn-secondary float-right">שלח</button>
+                    </form>
+                  </div>
+                </div>
+                <aside class="col-md-6">
+                  <div class="maincontent feedback">
+                    <h2>הדיבור</h1>
+            
+                    <div class="feedback-items">
+                      <% var counter = 0 %>
+                       <% feedbackData.forEach(function (feedback) {%>
+           <% if(feedback.model == model.id){ %> 
+                        <% if(counter != 3){ %> 
+                      <div class="feedback-item item-list media-list">
+                        <div class="feedback-item media">
+                          <div class="feedback-info media-body">
+                            <div class="feedback-head">
+                              <div class="feedback-title"><%=feedback.title%></div>
+                              <small><%=feedback.name%></small>
+                            </div>
+                            <div class="feedback-message" ><%=feedback.message%></div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr/>
+                      <% counter ++; %> 
+                      <% } %> 
+                      <% } %> 
+                      <% })%>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item  active">
+        <div class="row models">
+          <div class="col-md-6 model-item">
+            <h3><%=model.experts[1]%></h3>
+            <hr />
+            <p><b>השכלה</b> <%=model.experts[2]%></p>
+            <p><b>המקרה</b> <%=model.experts[3]%></p>
+          </div>
+          <div class="col-md-6 feedback">
+            <img src="<%=model.experts[4]%>" alt="<%=model.experts[1]%>" />
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row models">
+          <div class="col-md-6 model-item">
+            <h3><%=model.case_studies[0]%></h3>
+            <hr />
+            <p><%=model.case_studies[1]%></p>
+          </div>
+          <div class="col-md-6 feedback">
+            <iframe
+              width="560"
+              height="315"
+              src="<%=model.case_studies[2]%>"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#<%=model.id%>" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#<%=model.id%>" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <% })%>
+  

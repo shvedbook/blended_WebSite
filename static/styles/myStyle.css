@@ -39,7 +39,9 @@ p {
   #aiAnswer img {
     width: 50%;
   }
-
+  .feedback img {
+    width: 100%;
+  }
   section img {
     width: 50%;
     display: block;
@@ -87,6 +89,9 @@ p {
 }*/
 
 @media screen and (min-width: 760px) {
+  .feedback img {
+    width: 100%;
+  }
   #aiAnswer img {
     width: 100%;
   }
@@ -142,6 +147,7 @@ a {
 /*מרגין אליון ותחתון למודלים*/
 .models {
   margin: 2% auto;
+  height: 85vh;
 }
 /*h5 inside tools section centrelizing*/
 .tools h5 {

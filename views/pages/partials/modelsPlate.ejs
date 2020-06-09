@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-12" id="jg2bnduy">
+    <h2>המודלים:</h2>
+    <p>
+      המודלים בבלנדד (הוראה מעורבת) יושבים על הספקטרום בין הוראה מקוונת גרידא לבין הוראה מסורתית
+    </p>
+  </div>
+  <div class="col-md-6 timeLine" style="text-align: right !important;">
+    <b>< </b>הוראה יותר מסורתית
+  </div>
+  <div class="col-md-6 timeLine" style="text-align: left !important;">
+    הוראה יותר מקוונת<b> ></b>
+  </div>
+  <% modelsData.forEach(function (model) {%>
+
+  <div style="width: 16.6%;">
+    <a
+      style="width: 100%; height: 55%;"
+      class="btn btn-outline-secondary align-middle"
+      href="/models#<%=model.id%>"
+      role="button"
+      ><%=model.name%></a
+    >
+  </div>
+
+  <% })%>
+  <hr />
+</div>
