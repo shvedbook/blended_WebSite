@@ -42,7 +42,7 @@
                     aria-expanded="false"
                     aria-controls="collapseExample"
                   >
-                    Link with href
+                    מה אתם חושבים על המודל?
                   </a>
                   <div class="collapse" id="collapse<%=model.id%>">
                     <div class="card card-body">
@@ -63,7 +63,7 @@
                             <%= successMessage %>
                           </div>
                           <%}%>
-                          <form class="feedback-form" method="POST" action="/experts/feedback">
+                          <form class="feedback-form" method="POST" action="/models/feedback">
                             <div class="form-group">
                               <label for="feedback-form-name">שם מלא</label>
                               <input
@@ -71,7 +71,7 @@
                                 class="form-control"
                                 id="feedback-form-name"
                                 name="name"
-                                placeholder="Enter your name"
+                                placeholder="איך קוראים לך?"
                               />
                             </div>
                             <div class="form-group">
@@ -89,7 +89,7 @@
                                 class="form-control"
                                 id="feedback-form-email"
                                 name="email"
-                                placeholder="Enter your email address"
+                                placeholder="כתובת מייל"
                               />
                             </div>
                             <div class="form-group">
@@ -99,7 +99,7 @@
                                 class="form-control"
                                 id="feedback-form-title"
                                 name="title"
-                                placeholder="Title of your feedback"
+                                placeholder="נושא ההודעה"
                               />
                             </div>
                             <div class="form-group">
@@ -110,11 +110,11 @@
                                 class="form-control"
                                 id="feedback-form-message"
                                 name="message"
-                                rows="3"
+                                rows="2"
                               ></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-secondary float-right">שלח</button>
+                            <button type="submit" class="btn btn-secondary col-md-12">שלח</button>
                           </form>
                         </div>
                       </div>

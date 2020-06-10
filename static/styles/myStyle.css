@@ -71,6 +71,9 @@ p {
   h4 {
     text-align: center;
   }
+  h4 a {
+    color: #6fc5d0;
+  }
   .timeLine {
     display: none;
   }
@@ -138,6 +141,11 @@ h4::first-letter {
 
 a {
   text-decoration: none !important;
+  color: #6fc5d0;
+}
+a:hover {
+  text-decoration: none !important;
+  color: orange;
 }
 
 /*קלאס שאומר לתמונה להיות בגודל מלא*/
@@ -253,7 +261,25 @@ a {
   background-color: #faca16;
   border-color: #faca16;
 }
+a .btn-primary:hover {
+  background-color: #faca16;
+  border-color: #faca16;
+}
+.btn-secondary:hover {
+  background-color: #faca16;
+  border-color: #faca16;
+}
 
+/*.badge-primary*/
+.badge-primary {
+  background-color: #6fc5d0;
+  border-color: #6fc5d0;
+}
+a.badge-primary:focus,
+a.badge-primary:hover {
+  background-color: #faca16;
+  border-color: #faca16;
+}
 /*blended system div styling*/
 #blendedSystem {
   padding-top: 5%;
@@ -291,4 +317,20 @@ a {
 
 .hidden {
   display: none;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3%;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0);
+  filter: alpha(opacity=50);
+  opacity: 0.5;
 }

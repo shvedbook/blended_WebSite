@@ -39,7 +39,7 @@ module.exports = (params) => {
         request.session.feedback = {
           errors: errors.array(),
         };
-        return response.redirect(`/models${model}`);
+        return response.redirect(`/models`);
       }
 
       const { name, email, title, message, model } = request.body;
