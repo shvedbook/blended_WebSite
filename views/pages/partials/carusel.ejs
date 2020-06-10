@@ -13,82 +13,13 @@
         <div class="col-md-6 feedback">
           <div class="container mt-4" id="feedback">
             <div class="row">
-              <div class="col-md-6">
-                <div class="maincontent">
-                  <h2>בואו נדבר</h2>
-                  <% if (locals.errors){%>
-                  <div class="alert alert-danger">
-                    <ul>
-                      <% errors.forEach(function (error){%>
-                      <li><%=error.msg%></li>
-                      <%})%>
-                    </ul>
-                  </div>
-          
-                  <%} else if(locals.successMessage) {%>
-                  <div class="alert alert-success">
-                    <%= successMessage %>
-                  </div>
-                  <%}%>
-                  <form class="feedback-form" method="POST" action="/experts/feedback">
-                    <div class="form-group">
-                      <label for="feedback-form-name">שם מלא</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="feedback-form-name"
-                        name="name"
-                        placeholder="Enter your name"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <input id="feedback-form-model" name="model" type="hidden" value="<%=model.id%>">
-                    </div>
-                    <div class="form-group">
-                      <label for="feedback-form-email">דוא"ל</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="feedback-form-email"
-                        name="email"
-                        placeholder="Enter your email address"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="feedback-form-title">נושא</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="feedback-form-title"
-                        name="title"
-                        placeholder="Title of your feedback"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="feedback-form-message">הודעה</label>
-                      <textarea
-                        type="text"
-                        placeholder="'רשמו כאן את ההודעה שלכם ותלחצו על 'שלח"
-                        class="form-control"
-                        id="feedback-form-message"
-                        name="message"
-                        rows="3"
-                      ></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-secondary float-right">שלח</button>
-                  </form>
-                </div>
-              </div>
-              <aside class="col-md-6">
+              <aside class="col-md-12">
                 <div class="maincontent feedback">
-                  <h2>הדיבור</h1>
-          
+                  <h5>מה בלנדרים נוספים חשבו על המודל הזה</h5>
+
                   <div class="feedback-items">
-                    <% var counter = 0 %>
-                     <% feedbackData.forEach(function (feedback) {%>
-         <% if(feedback.model == model.id){ %> 
-                      <% if(counter != 3){ %> 
+                    <% var counter = 0 %> <% feedbackData.forEach(function (feedback) {%> <%
+                    if(feedback.model == model.id){ %> <% if(counter != 3){ %>
                     <div class="feedback-item item-list media-list">
                       <div class="feedback-item media">
                         <div class="feedback-info media-body">
@@ -96,21 +27,104 @@
                             <div class="feedback-title"><%=feedback.title%></div>
                             <small><%=feedback.name%></small>
                           </div>
-                          <div class="feedback-message" ><%=feedback.message%></div>
+                          <div class="feedback-message"><%=feedback.message%></div>
                         </div>
                       </div>
                     </div>
-                    <hr/>
-                    <% counter ++; %> 
-                    <% } %> 
-                    <% } %> 
-                    <% })%>
+                    <hr />
+                    <% counter ++; %> <% } %> <% } %> <% })%>
+                  </div>
+                  <div class="text-center">
+                    <a
+                      class="btn btn-secondary feedback-item col-md-8 centerIt"
+                      data-toggle="collapse"
+                      href="#collapse<%=model.id%>"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="collapseExample"
+                    >
+                      מה דעתכם על המודל?
+                    </a>
+                  </div>
+                  <div class="collapse" id="collapse<%=model.id%>">
+                    <div class="card card-body">
+                      <div class="col-md-12">
+                        <div class="maincontent">
+                          <% if (locals.errors){%>
+                          <div class="alert alert-danger">
+                            <ul>
+                              <% errors.forEach(function (error){%>
+                              <li><%=error.msg%></li>
+                              <%})%>
+                            </ul>
+                          </div>
+
+                          <%} else if(locals.successMessage) {%>
+                          <div class="alert alert-success">
+                            <%= successMessage %>
+                          </div>
+                          <%}%>
+                          <form class="feedback-form" method="POST" action="/experts/feedback">
+                            <div class="form-group">
+                              <label for="feedback-form-name">שם מלא</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="feedback-form-name"
+                                name="name"
+                                placeholder="Enter your name"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <input
+                                id="feedback-form-model"
+                                name="model"
+                                type="hidden"
+                                value="<%=model.id%>"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="feedback-form-email">דוא"ל</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="feedback-form-email"
+                                name="email"
+                                placeholder="Enter your email address"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="feedback-form-title">נושא</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="feedback-form-title"
+                                name="title"
+                                placeholder="Title of your feedback"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="feedback-form-message">הודעה</label>
+                              <textarea
+                                type="text"
+                                placeholder="'רשמו כאן את ההודעה שלכם ותלחצו על 'שלח"
+                                class="form-control"
+                                id="feedback-form-message"
+                                name="message"
+                                rows="2"
+                              ></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-secondary float-right">שלח</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </aside>
             </div>
           </div>
-          
         </div>
       </div>
     </div>

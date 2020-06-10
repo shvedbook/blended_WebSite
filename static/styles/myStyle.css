@@ -147,7 +147,6 @@ a {
 /*מרגין אליון ותחתון למודלים*/
 .models {
   margin: 2% auto;
-  height: 85vh;
 }
 /*h5 inside tools section centrelizing*/
 .tools h5 {
@@ -263,9 +262,33 @@ a {
 /*models => feedback*/
 .feedback {
   background-color: #6fc5d0;
-  padding-right: 5%;
+}
+.feedback h5 {
+  color: whitesmoke;
+}
+.feedback-items {
+  padding: 10% 20%;
+  background-color: white;
+  border-radius: 15px;
+  width: 80%;
+  font-size: 12pt;
+  margin: 0 auto;
+}
+.card-body {
+  width: 80%;
+  font-size: 12pt;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+.centerIt {
+  margin: 10% auto;
 }
 .model-item {
   background-color: #f5f5f5;
   padding-top: 5%;
+  min-height: 85vh;
+}
+
+.hidden {
+  display: none;
 }
