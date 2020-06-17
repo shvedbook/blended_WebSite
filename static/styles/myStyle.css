@@ -13,12 +13,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  font-size: 14pt;
 }
 .container-fluid {
   padding: 5%;
 }
 p {
-  font-size: 14pt;
+  font-size: 12pt;
 }
 
 #header {
@@ -124,9 +125,7 @@ hr {
 }
 
 /*all media*/
-.navbar-toggler {
-  background-color: #007bff;
-}
+
 h4::first-letter {
   font-size: 200%;
 }
@@ -311,8 +310,9 @@ a.badge-primary:hover {
 }
 .model-item {
   background-color: #f5f5f5;
-  padding-top: 5%;
+  padding: 5% 3%;
   min-height: 85vh;
+  font-size: 12pt;
 }
 
 .hidden {
@@ -333,4 +333,22 @@ a.badge-primary:hover {
   background-color: rgba(0, 0, 0, 0);
   filter: alpha(opacity=50);
   opacity: 0.5;
+}
+
+.bc-blue {
+  background-color: #6fc5d0;
+}
+.bc-yellow {
+  background-color: #faca16;
+}
+.bc-green {
+  background-color: #90c553;
+}
+.bc-grey {
+  background-color: #f5f5f5;
+}
+
+.paded-div {
+  padding: 5%;
+  min-height: 85vh;
 }

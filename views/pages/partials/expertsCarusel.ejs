@@ -3,18 +3,32 @@
   <div class="carousel-inner">
     <div class="carousel-item">
       <div class="row models">
-        <div class="col-md-6 model-item">
+        <div class="col-md-6 model-item bc-grey">
           <h3><%=model.name%></h3>
           <hr />
           <p>
             <%=model.Story%>
           </p>
         </div>
-        <div class="col-md-6 feedback">
+        <div class="col-md-6 feedback bc-blue">
           <div class="container mt-4" id="feedback">
             <div class="row">
               <aside class="col-md-12">
                 <div class="maincontent feedback">
+                  <% if (locals.errors){%>
+                  <div class="alert alert-danger">
+                    <ul>
+                      <% errors.forEach(function (error){%>
+                      <li><%=error.msg%></li>
+                      <%})%>
+                    </ul>
+                  </div>
+
+                  <%} else if(locals.successMessage) {%>
+                  <div class="alert alert-success">
+                    <%= successMessage %>
+                  </div>
+                  <%}%>
                   <h5>מה בלנדרים נוספים חשבו על המודל הזה</h5>
 
                   <div class="feedback-items">
@@ -34,35 +48,22 @@
                     <hr />
                     <% counter ++; %> <% } %> <% } %> <% })%>
                   </div>
-                  <a
-                    class="btn btn-secondary feedback-item col-md-12"
-                    data-toggle="collapse"
-                    href="#collapse<%=model.id%>"
-                    role="button"
-                    aria-expanded="false"
-                    aria-controls="collapseExample"
-                  >
-                    מה אתם חושבים על המודל?
-                  </a>
+                  <div class="text-center">
+                    <a
+                      class="btn btn-secondary feedback-item col-md-8 centerIt"
+                      data-toggle="collapse"
+                      href="#collapse<%=model.id%>"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="collapseExample"
+                    >
+                      מה דעתכם על המודל?
+                    </a>
+                  </div>
                   <div class="collapse" id="collapse<%=model.id%>">
                     <div class="card card-body">
                       <div class="col-md-12">
                         <div class="maincontent">
-                          <h2>בואו נדבר</h2>
-                          <% if (locals.errors){%>
-                          <div class="alert alert-danger">
-                            <ul>
-                              <% errors.forEach(function (error){%>
-                              <li><%=error.msg%></li>
-                              <%})%>
-                            </ul>
-                          </div>
-
-                          <%} else if(locals.successMessage) {%>
-                          <div class="alert alert-success">
-                            <%= successMessage %>
-                          </div>
-                          <%}%>
                           <form class="feedback-form" method="POST" action="/models/feedback">
                             <div class="form-group">
                               <label for="feedback-form-name">שם מלא</label>
@@ -110,7 +111,7 @@
                                 class="form-control"
                                 id="feedback-form-message"
                                 name="message"
-                                rows="2"
+                                rows="3"
                               ></textarea>
                             </div>
 
@@ -129,25 +130,25 @@
     </div>
     <div class="carousel-item active">
       <div class="row models">
-        <div class="col-md-6 model-item">
+        <div class="col-md-6 model-item bc-grey">
           <h3><%=model.experts[1]%></h3>
           <hr />
           <p><b>השכלה</b> <%=model.experts[2]%></p>
           <p><b>המקרה</b> <%=model.experts[3]%></p>
         </div>
-        <div class="col-md-6 feedback">
+        <div class="col-md-6 feedback bc-yellow">
           <img src="<%=model.experts[4]%>" alt="<%=model.experts[1]%>" />
         </div>
       </div>
     </div>
     <div class="carousel-item">
       <div class="row models">
-        <div class="col-md-6 model-item">
+        <div class="col-md-6 model-item bc-grey">
           <h3><%=model.case_studies[0]%></h3>
           <hr />
           <p><%=model.case_studies[1]%></p>
         </div>
-        <div class="col-md-6 feedback">
+        <div class="col-md-6 feedback bc-green">
           <iframe
             width="560"
             height="315"

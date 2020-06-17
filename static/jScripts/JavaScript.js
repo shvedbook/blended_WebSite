@@ -144,3 +144,5 @@ function topFunction() {
 $('.carousel slide').carousel({
   interval: false,
 });
+
+$('.carousel').carousel('pause');
