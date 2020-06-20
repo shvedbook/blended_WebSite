@@ -28,10 +28,14 @@ module.exports = (params) => {
   router.post(
     '/feedback',
     [
-      check('name').trim().isLength({ min: 3 }).escape().withMessage('השם לא תקין'),
+      check('name').trim().isLength({ min: 3, max: 25 }).escape().withMessage('השם לא תקין'),
       check('email').trim().isEmail().normalizeEmail().withMessage('כתובת המייל לא תקינה'),
-      check('title').trim().isLength({ min: 3 }).escape().withMessage('הכותרת לא תקינה'),
-      check('message').trim().isLength({ min: 3 }).escape().withMessage('גוף ההודעה לא תקין'),
+      check('title').trim().isLength({ min: 3, max: 45 }).escape().withMessage('הכותרת לא תקינה'),
+      check('message')
+        .trim()
+        .isLength({ min: 3, max: 80 })
+        .escape()
+        .withMessage('גוף ההודעה לא תקין'),
     ],
     async (request, response) => {
       const errors = validationResult(request);
@@ -42,9 +46,9 @@ module.exports = (params) => {
         return response.redirect(`/models`);
       }
 
-      const { name, email, title, message, model } = request.body;
+      const { name, email, title, message, model, posneg } = request.body;
 
-      await feedbackService.addExpertData(name, email, title, message, model);
+      await feedbackService.addExpertData(name, email, title, message, model, posneg);
       request.session.feedback = {
         message: 'תגובתך התקבלה בהצלחה!',
       };

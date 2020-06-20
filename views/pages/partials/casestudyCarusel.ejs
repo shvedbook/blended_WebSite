@@ -34,14 +34,27 @@
                   <div class="feedback-items">
                     <% var counter = 0 %> <% feedbackData.forEach(function (feedback) {%> <%
                     if(feedback.model == model.id){ %> <% if(counter != 3){ %>
-                    <div class="feedback-item item-list media-list">
-                      <div class="feedback-item media">
-                        <div class="feedback-info media-body">
-                          <div class="feedback-head">
-                            <div class="feedback-title"><%=feedback.title%></div>
-                            <small><%=feedback.name%></small>
+                    <div class="row">
+                      <div class="col-2 posneg">
+                        <%if (feedback.posneg == "pos") { %>
+                        <span style="color: #90c553; font-weight: 700;">+</span>
+                        <% } else {%>
+                        <span style="color: red; font-weight: 700;">-</span>
+                        <% } %>
+                      </div>
+                      <div class="col-10">
+                        <div class="feedback-item item-list media-list">
+                          <div class="feedback-item media">
+                            <div class="feedback-info media-body">
+                              <div class="feedback-head">
+                                <div class="feedback-title">
+                                  <%=feedback.title%>
+                                </div>
+                                <small><%=feedback.name%></small>
+                              </div>
+                              <div class="feedback-message"><%=feedback.message%></div>
+                            </div>
                           </div>
-                          <div class="feedback-message"><%=feedback.message%></div>
                         </div>
                       </div>
                     </div>
@@ -73,6 +86,8 @@
                                 id="feedback-form-name"
                                 name="name"
                                 placeholder="איך קוראים לך?"
+                                minlength="3"
+                                maxlength="25"
                               />
                             </div>
                             <div class="form-group">
@@ -100,8 +115,17 @@
                                 class="form-control"
                                 id="feedback-form-title"
                                 name="title"
+                                minlength="3"
+                                maxlength="35"
                                 placeholder="נושא ההודעה"
                               />
+                            </div>
+                            <div class="form-group">
+                              <label for="feedback-form-posneg">אהבתם או לא?</label>
+                              <select id="feedback-form-posneg" class="form-control" name="posneg">
+                                <option value="pos">אהבתי</option>
+                                <option value="neg">לא אהבתי</option>
+                              </select>
                             </div>
                             <div class="form-group">
                               <label for="feedback-form-message">הודעה</label>
@@ -112,6 +136,8 @@
                                 id="feedback-form-message"
                                 name="message"
                                 rows="3"
+                                minlength="3"
+                                maxlength="80"
                               ></textarea>
                             </div>
 
