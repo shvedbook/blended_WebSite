@@ -1,4 +1,4 @@
-<% var myModel; modelsData.forEach(model => { if(model.id == "facetoface"){ myModel = model; %>
+<% var myModel; modelsData.forEach(model => { if(model.id == ansModel){ myModel = model; %>
 <div id="<%=model.id%>" class="carousel slide" data-ride="carousel" data-interval="false">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -8,11 +8,6 @@
           <hr />
           <p>
             <%=model.Story%>
-          </p>
-          <p>
-            <h3>
-              <a href="/models">לכל המודלים...</a>
-            </h3>
           </p>
         </div>
         <div class="col-md-6 feedback bc-blue">
