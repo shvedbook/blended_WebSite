@@ -19,9 +19,12 @@
 
     <!-- Scripts -->
   </head>
-  <body>
+  <body class="container-fluid">
+    <a class="navbar-brand ondeskhidden" href="/">
+      <img src="images/logo.png" width="150" class="d-inline-block align-top" alt="לוגו מערבבים" />
+    </a>
     <%- include(`./partials/navigation`) %>
-    <div id="container-fluid" class="container-fluid">
+    <div>
       <%- include(`../pages/${template}`) %> <%-include(`./partials/topFunction`) %>
     </div>
   </body>

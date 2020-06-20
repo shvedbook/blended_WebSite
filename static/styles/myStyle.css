@@ -8,7 +8,7 @@ body {
   font-family: 'Assistant', sans-serif;
   margin: 4% auto;
 
-  min-width: 400px;
+  min-width: 350px;
   background-image: url('../images/background.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -16,6 +16,7 @@ body {
   font-size: 14pt;
 }
 .container-fluid {
+  min-width: 350px;
   padding: 5%;
 }
 p {
@@ -24,63 +25,6 @@ p {
 
 #header {
   background-color: aquamarine;
-}
-
-/* [ON SMALL SCREENS] */
-@media screen and (max-width: 760px) {
-  .divNone {
-    display: none !important;
-  }
-  .badge {
-    font-size: larger;
-    width: 100%;
-    height: 50px;
-    padding: 4%;
-  }
-  #aiAnswer img {
-    width: 50%;
-  }
-  .feedback img {
-    width: 100%;
-  }
-  section img {
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .bg-primary {
-    background-color: transparent !important;
-  }
-
-  .bg-primary .show {
-    background-color: #007bff !important;
-  }
-  .big-icon {
-    width: 25%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .mid-icon {
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h4 {
-    text-align: center;
-  }
-  h4 a {
-    color: #6fc5d0;
-  }
-  .timeLine {
-    display: none;
-  }
-  .modelsLine {
-    width: 100%;
-  }
 }
 
 .selected {
@@ -187,12 +131,13 @@ a:hover {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color: white;
   font-size: x-large;
+  width: 80%;
+  margin: 0 auto;
 
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
@@ -395,4 +340,64 @@ a.badge-primary:hover {
   float: left;
 
   bottom: 30px;
+}
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 760px) {
+  .divNone {
+    display: none !important;
+  }
+  .paded-div {
+    padding: 6%;
+    min-height: 85vh;
+  }
+  .badge {
+    font-size: larger;
+    width: 100%;
+    height: 50px;
+    padding: 4%;
+  }
+  #aiAnswer img {
+    width: 50%;
+  }
+  .feedback img {
+    width: 100%;
+  }
+  section img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bg-primary {
+    background-color: transparent !important;
+  }
+
+  .bg-primary .show {
+    background-color: #007bff !important;
+  }
+  .big-icon {
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mid-icon {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h4 {
+    text-align: center;
+  }
+  h4 a {
+    color: #6fc5d0;
+  }
+  .timeLine {
+    display: none;
+  }
+  .modelsLine {
+    width: 100%;
+  }
 }
