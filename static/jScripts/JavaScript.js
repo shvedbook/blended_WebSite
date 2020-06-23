@@ -3,6 +3,11 @@ var jsoncounter = 0;
 //big json object
 var data = 0;
 $(document).ready(function () {
+  //check if all fields filled
+  $(document).change(function () {
+    checkIfAllField();
+  });
+  $('#blendedAnsNone').css('display', 'none');
   var x = window.matchMedia('(max-width: 768px)');
   JSbysize(x); // Call listener function at run time
   x.addListener(JSbysize); // Attach listener function on state changes
@@ -69,18 +74,6 @@ function hideAllAnswers() {
 //calculation of the model
 function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimkaiamim) {
   hideAllAnswers();
-  console.log(
-    'thanim = ' +
-      thanim +
-      ' modelpedogogi = ' +
-      modelpedogogi +
-      ' eikef = ' +
-      eikef +
-      ' ramatoryanut = ' +
-      ramatoryanut +
-      ' mashavimkaiamim = ' +
-      mashavimkaiamim
-  );
 
   //$("#aiAnswer").text() = "רשימת המודלים הנמצאו מתאימים עבורך;";
   var numOfModels = 0;
@@ -120,9 +113,7 @@ function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimka
 
   //if no model found
   if (numOfModels == 0) {
-    $('#aiAnswer').html(
-      '<br/><a href src"/models"><a/><h2>לא נמצאו תוצאות מתאימות עבורכם<br/>אתם מוזמנים לעיין ברשימת המודלים הקיימים</h2>'
-    );
+    $('#blendedAnsNone').css('display', 'block');
   }
 }
 
@@ -146,3 +137,23 @@ $('.carousel slide').carousel({
 });
 
 $('.carousel').carousel('pause');
+
+//check if all inputs filled
+
+function checkIfAllField() {
+  let notEmpty = true;
+  for (i = 1; i < 6; i++) {
+    if (parseInt($(`#inputGroupSelect0${i} option:selected`).val()) == 0) {
+      notEmpty = false;
+    }
+  }
+  if (notEmpty) {
+    $('#sendBtn').attr('disabled', false);
+  } else {
+    $('#sendBtn').attr('disabled', true);
+  }
+
+  /*if (notEmpty) {
+    $('sendBtn').attr('disabled', false);
+  }*/
+}

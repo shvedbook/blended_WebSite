@@ -411,3 +411,19 @@ a.badge-primary:hover {
     width: 100%;
   }
 }
+.mobilepadding {
+  padding: 2% 3%;
+}
+
+.mobileBtn {
+  width: 60%;
+  font-size: 22pt;
+  margin: 5% auto;
+  font-weight: 700;
+}
+
+.btn.disabled,
+.btn:disabled {
+  background-color: lightgray;
+  border-color: lightgrey;
+}

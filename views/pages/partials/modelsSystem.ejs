@@ -14,6 +14,13 @@
       <br />
     </div>
   </div>
+  <div class="ondeskhidden mobileBtn">
+    <a href="#blendedSystem"
+      ><button type="button" class="btn btn-primary col-md-2">
+        התאימו את ההוראה שלכם
+      </button>
+    </a>
+  </div>
   <div class="col-md-8">
     <div class="onmobilehidden">
       <br />
@@ -98,11 +105,29 @@
           <option value="3">כיתת לימוד עם מחשבים / עם מחשב בבית</option>
         </select>
       </div>
-      <button id="sendBtn" type="button" class="btn btn-primary col-md-2">שלח</button>
+      <div class="mobileBtn">
+        <button id="sendBtn" type="button" class="btn btn-primary col-12" disabled>
+          מצא לי מודל
+        </button>
+      </div>
     </div>
   </div>
 
-  <div id="aiAnswer"></div>
+  <div id="aiAnswer">
+    
+    <div id="blendedAnsNone" style="padding: 5% ;">
+      <p>
+        <h3>לא נמצאו תוצאות מתאימות עבורכם<br />אתם מוזמנים לעיין ברשימת המודלים הקיימים</h2>
+      </p>
+      <a href="/models">
+      <div class="mobileBtn">
+        <button  type="button" class="btn btn-primary col-12" >
+          למעבר לדף מודלים
+        </button>
+      </div>
+    </a>
+    </div>
+  </div>
   <br />
   <br />
   <div id="tivuhMale" style="display: none;">

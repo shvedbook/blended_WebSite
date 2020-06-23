@@ -1,51 +1,22 @@
 ﻿<!-- [REST OF YOUR PAGE] -->
 <span id="yourBlended"></span>
 <div id="page-contents" style="margin-top: 5%;">
-  <div id="headerBanner" class="onmobilehidden">
-    <a href="/#blendedSystem"><img src="images/header.png" alt="headerIMG" /></a>
+  <div id="headerBanner">
+    <a class="onmobilehidden" href="/#blendedSystem"
+      ><img src="images/header.png" alt="headerIMG"
+    /></a>
+    <a class="ondeskhidden" href="/#blendedSystem"
+      ><img src="images/mobileHeader.png" alt="headerIMG"
+    /></a>
   </div>
   <!-- section "whatsyour" -->
   <%- include('./partials/modelsSystem.ejs') %>
+  <img class="ondeskhidden" src="images/mobileBackground.png" style="width: 100%;" />
+
   <!-- sextion "whatis"-->
   <%- include('./partials/whatIs.ejs') %>
   <!-- section "howto" -->
-  <section class="row">
-    <div class="col-md-12">
-      <h3>איך עושים בלנדד?</h3>
-    </div>
-    <div class="col-md-4">
-      <a href="models">
-        <img  alt="models" src="images/models.png" class="big-icon" >
-      
-      <h4><a href="models">מודלים</a></h4>
-
-      <p>
-        <a class="pInA" href="models">
-          בואו להכיר את המודלים הראשיים של הבלנדד. איך הם עובדים, למי הם מתאים ועוד...
-        </a>
-      </p>
-    </div>
-    <div class="col-md-4">
-      <img src="images/casestudies.png" class="big-icon" />
-      <h4><a href="casestudy">מקרי בוחן</a></h4>
-      <p>
-        <a class="pInA" href="casestudy"
-          >בואו לראות דוגמאות לשילוב של מודלים של בלנדד בהוראה והדרכה, דוגמאות להצלחות וכישלונות,
-          מסכנות ועוד...</a
-        >
-      </p>
-    </div>
-    <div class="col-md-4">
-      <img src="images/exprets.png" class="big-icon" />
-      <h4><a href="experts">מומחי תוכן</a></h4>
-      <p>
-        <a class="pInA" href="experts"
-          >בואו לשמע את העמדות, הדעות והעצות של מומחי התוכן מהגדולים בתחום.</a
-        >
-      </p>
-    </div>
-  </section>
-  <hr />
+  <%- include("./partials/howTo.ejs") %>
 
   <!--section tools-->
   <section class="row" id="tools">
