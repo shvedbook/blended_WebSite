@@ -22,9 +22,24 @@ module.exports = (params) => {
     });
   });
 
-  router.get('/:expertID', (request, response) => {
-    return response.send(`detail page of ${request.params.expertID}`);
+  router.get('/:id', async (request, response) => {
+    const modelID = request.params.id;
+    return response.render('layout', {
+      pageTitle: 'מודלים',
+      template: 'model',
+      modelID,
+    });
   });
+  /*router.get('/:id', async (request, response) => {
+    const model = await modelsService.getModel(request.params.id);
+    console.log(model);
+
+    return response.render('layout', {
+      pageTitle: 'מודלים',
+      template: 'model-details',
+      model,
+    });
+  });*/
   router.post(
     '/feedback',
     [

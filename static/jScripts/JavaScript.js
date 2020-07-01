@@ -66,7 +66,7 @@ function dataValidation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimkaia
   }
 }
 function hideAllAnswers() {
-  $('#tivuhMale').css('display', 'none');
+  $('#facetoface').css('display', 'none');
   $('#kvuzatImun').css('display', 'none');
   $('#kvuzatKria').css('display', 'none');
   $('#havruta').css('display', 'none');
@@ -82,9 +82,9 @@ function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimka
   if (modelpedogogi == 1) {
     numOfModels++;
     $('#aiAnswer').html("<div>מבין המודלים הקיימים רק מודל 'תיווך מלא' מתאים להנחייה צמודה</div>");
-    $('#tivuhMale').css('display', 'block');
+    $('#facetoface').css('display', 'block');
 
-    $('#tivuhMale').show();
+    $('#facetoface').show();
   } else {
     if (thanim > 1 && modelpedogogi > 2 && ramatoryanut > 1) {
       numOfModels++;
@@ -107,7 +107,7 @@ function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimka
       $('#aiAnswer').html(
         "<div>המודל המתאים ביותר ללומדים בעלי אוריינות נמוכה הוא 'תיווך מלא'</div>"
       );
-      $('#tivuhMale').css('display', 'block');
+      $('#facetoface').css('display', 'block');
     }
   }
 

@@ -9,7 +9,7 @@ body {
   margin: 0 auto;
 
   min-width: 350px;
-  background-image: url('../images/background.png');
+  background-images: url('../images/background.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -313,10 +313,10 @@ a.badge-primary:hover {
   background-color: rgba(230, 230, 230, 0.31);
 }
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  background-images: url("data:images/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  background-images: url("data:images/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
 
 .posneg {
@@ -324,7 +324,7 @@ a.badge-primary:hover {
   width: 100%;
   font-size: xx-large;
 }
-#tivuhMale {
+#facetoface {
   width: 100%;
 }
 .slide2CS {

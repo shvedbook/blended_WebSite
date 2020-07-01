@@ -8,13 +8,9 @@ const cookieSession = require('cookie-session');
 
 const FeedbackService = require('./services/FeedbackService');
 
-const ExpertsService = require('./services/ExpertsService');
-
 const ModelService = require('./services/ModelService');
 
 const feedbackService = new FeedbackService('./data/feedback.json');
-
-const expertsService = new ExpertsService('./data/Exprets.json');
 
 const modelService = new ModelService('./data/models.json');
 
@@ -43,8 +39,6 @@ app.locals.siteName = 'מְעַרְבְּבִים';
 
 app.use(async (request, response, next) => {
   try {
-    const names = await expertsService.getExpertData();
-    response.locals.experttData = names;
     const feedbackData = await feedbackService.getExpertData();
     response.locals.feedbackData = feedbackData;
     const modelsData = await modelService.getModelData();
@@ -67,7 +61,7 @@ app.use(
   '/',
   routes({
     feedbackService,
-    expertsService,
+
     modelService,
   })
 );

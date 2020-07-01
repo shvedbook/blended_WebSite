@@ -1,7 +1,5 @@
 const express = require('express');
 
-const casestudyRoute = require('./casestudy');
-const expertsRoute = require('./experts');
 const modelsRoute = require('./models');
 const toolsRoute = require('./tools');
 
@@ -12,8 +10,6 @@ module.exports = (params) => {
     response.render('layout', { pageTitle: 'מה הבלמדד שלך?', template: 'index' });
   });
 
-  router.use('/casestudy', casestudyRoute(params));
-  router.use('/experts', expertsRoute(params));
   router.use('/models', modelsRoute(params));
   router.use('/tools', toolsRoute(params));
 
