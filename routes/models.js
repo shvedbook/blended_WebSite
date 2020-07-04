@@ -23,11 +23,17 @@ module.exports = (params) => {
   });
 
   router.get('/:id', async (request, response) => {
+    const errors = request.session.feedback ? request.session.feedback.errors : false;
+    const successMessage = request.session.feedback ? request.session.feedback.message : false;
+
+    request.session.feedback = {};
     const modelID = request.params.id;
     return response.render('layout', {
       pageTitle: 'מודלים',
       template: 'model',
       modelID,
+      errors,
+      successMessage,
     });
   });
   /*router.get('/:id', async (request, response) => {
@@ -41,7 +47,7 @@ module.exports = (params) => {
     });
   });*/
   router.post(
-    '/feedback',
+    `/feedback`,
     [
       check('name').trim().isLength({ min: 3, max: 25 }).escape().withMessage('השם לא תקין'),
       check('email').trim().isEmail().normalizeEmail().withMessage('כתובת המייל לא תקינה'),
@@ -58,7 +64,8 @@ module.exports = (params) => {
         request.session.feedback = {
           errors: errors.array(),
         };
-        return response.redirect(`/models`);
+        console.log(request.session.feedback);
+        return response.redirect(`/models/${request.body.model}`);
       }
 
       const { name, email, title, message, model, posneg } = request.body;
@@ -68,7 +75,8 @@ module.exports = (params) => {
         message: 'תגובתך התקבלה בהצלחה!',
       };
       let modelID = request.body.model;
-      return response.redirect(`/models#${modelID}`);
+      console.log(modelID);
+      return response.redirect(`/models/${modelID}`);
     }
   );
   return router;
