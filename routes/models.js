@@ -64,7 +64,6 @@ module.exports = (params) => {
         request.session.feedback = {
           errors: errors.array(),
         };
-        console.log(request.session.feedback);
         return response.redirect(`/models/${request.body.model}`);
       }
 

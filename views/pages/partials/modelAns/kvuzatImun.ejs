@@ -1,144 +1,56 @@
 <% var myModel; modelsData.forEach(model => { if(model.id == "kvuzatImun"){ myModel = model; %>
-  <div id="<%=model.id%>" class="carousel slide" data-ride="carousel" data-interval="false">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row models">
-          <div class="col-md-6 model-item bc-grey">
-            <h3><%=model.name%></h3>
-            <hr />
-            <p>
-              <%=model.Story%>
-            </p>
-            <p>
-              <h3>
-                <a href="/models">לכל המודלים...</a>
-              </h3>
-            </p>
-            <div class="row">
-              <div class="col-6">
-                <div class="col-8">
-                  <a class="slide2CS" href="#<%=model.id%>" role="button" data-slide="prev">
-                    <h5>
-                      תיעוד של מקרה בוחן
-                    </h5>
-                    <img src="images/arrowright.svg" />
-                  </a>
-                </div>
-                <div class="col-12">
-                  <a class="slide2E" href="#<%=model.id%>" role="button" data-slide="next">
-                    <h5>
-                      דעתו של מומכה תוכן
-                    </h5>
-                    <img src="images/arrowrleft.svg" />
-                  </a>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="ondeskhidden arrowdown">
-                  <img src="images/arrowdown.svg" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 feedback bc-blue">
-            <div class="container mt-4" id="feedback">
-              <div class="row">
-                <aside class="col-md-12">
-                  <div class="maincontent feedback">
-                    <% if (locals.errors){%>
-                    <div class="alert alert-danger">
-                      <ul>
-                        <% errors.forEach(function (error){%>
-                        <li><%=error.msg%></li>
-                        <%})%>
-                      </ul>
+<div id="<%=model.id%>">
+  <div class="row">
+    <div class="col-md-6">
+      <h2><%=model.name%></h2>
+      <hr />
+      <p><%=model.Story%></p>
+    </div>
+    <div class="col-md-6">
+      <div class="col-md-6 feedback bc-blue">
+        <div class="container mt-4" id="feedback">
+          <div class="row">
+            <aside class="col-md-12">
+              <div class="maincontent feedback">
+                <h5>מה בלנדרים נוספים חשבו על המודל הזה</h5>
+
+                <div class="feedback-items">
+                  <% var counter = 0 %> <% feedbackData.forEach(function (feedback) {%> <%
+                  if(feedback.model == model.id){ %> <% if(counter != 3){ %>
+                  <div class="row">
+                    <div class="col-2 posneg">
+                      <%if (feedback.posneg == "pos") { %>
+                      <span style="color: #90c553; font-weight: 700;">+</span>
+                      <% } else {%>
+                      <span style="color: red; font-weight: 700;">-</span>
+                      <% } %>
                     </div>
-  
-                    <%} else if(locals.successMessage) {%>
-                    <div class="alert alert-success">
-                      <%= successMessage %>
-                    </div>
-                    <%}%>
-                    <h5>מה בלנדרים נוספים חשבו על המודל הזה</h5>
-  
-                    <div class="feedback-items">
-                      <% var counter = 0 %> <% feedbackData.forEach(function (feedback) {%> <%
-                      if(feedback.model == model.id){ %> <% if(counter != 3){ %>
-                      <div class="row">
-                        <div class="col-2 posneg">
-                          <%if (feedback.posneg == "pos") { %>
-                          <span style="color: #90c553; font-weight: 700;">+</span>
-                          <% } else {%>
-                          <span style="color: red; font-weight: 700;">-</span>
-                          <% } %>
-                        </div>
-                        <div class="col-10">
-                          <div class="feedback-item item-list media-list">
-                            <div class="feedback-item media">
-                              <div class="feedback-info media-body">
-                                <div class="feedback-head">
-                                  <div class="feedback-title">
-                                    <%=feedback.title%>
-                                  </div>
-                                  <small><%=feedback.name%></small>
-                                </div>
-                                <div class="feedback-message"><%=feedback.message%></div>
+                    <div class="col-10">
+                      <div class="feedback-item item-list media-list">
+                        <div class="feedback-item media">
+                          <div class="feedback-info media-body">
+                            <div class="feedback-head">
+                              <div class="feedback-title">
+                                <%=feedback.title%>
                               </div>
+                              <small><%=feedback.name%></small>
                             </div>
+                            <div class="feedback-message"><%=feedback.message%></div>
                           </div>
                         </div>
                       </div>
-                      <hr />
-                      <% counter ++; %> <% } %> <% } %> <% })%>
                     </div>
                   </div>
-                </aside>
+                  <hr />
+                  <% counter ++; %> <% } %> <% } %> <% })%>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row models">
-          <div class="col-md-6 model-item bc-grey">
-            <h3><%=model.experts[1]%></h3>
-            <hr />
-            <p><b>השכלה</b> <%=model.experts[2]%></p>
-            <p><b>המקרה</b> <%=model.experts[3]%></p>
-          </div>
-          <div class="col-md-6 feedback bc-yellow">
-            <img src="<%=model.experts[4]%>" alt="<%=model.experts[1]%>" />
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row models">
-          <div class="col-md-6 model-item bc-grey">
-            <h3><%=model.case_studies[0]%></h3>
-            <hr />
-            <p><%=model.case_studies[1]%></p>
-          </div>
-          <div class="col-md-6 feedback bc-green">
-            <iframe
-              width="560"
-              height="315"
-              src="<%=model.case_studies[2]%>"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            </aside>
           </div>
         </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#<%=model.id%>" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#<%=model.id%>" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
-  <% } }); %>
-  
+</div>
+
+<% } }); %>
