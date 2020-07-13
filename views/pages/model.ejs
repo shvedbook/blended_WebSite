@@ -38,23 +38,25 @@
       <div class="row">
         <aside class="col-md-12">
           <div class="maincontent feedback">
-            <% if (locals.errors){%>
-            <div class="alert alert-danger">
-              <ul>
-                <% errors.forEach(function (error){%>
-                <li><%=error.msg%></li>
-                <%})%>
-              </ul>
-            </div>
+            <div class="feedback-status">
+              <% if (locals.errors){%>
+              <div class="alert alert-danger">
+                <ul>
+                  <% errors.forEach(function (error){%>
+                  <li><%=error.msg%></li>
+                  <%})%>
+                </ul>
+              </div>
 
-            <%} else if(locals.successMessage) {%>
-            <div class="alert alert-success">
-              <%= successMessage %>
+              <%} else if(locals.successMessage) {%>
+              <div class="alert alert-success">
+                <%= successMessage %>
+              </div>
+              <%}%>
             </div>
-            <%}%>
             <h5>מה בלנדרים נוספים חשבו על המודל הזה</h5>
 
-            <div class="feedback-items">
+            <div class="feedback-items" id="<%=model.id%>feedback">
               <% var counter = 0 %> <% feedbackData.forEach(function (feedback) {%> <%
               if(feedback.model == model.id){ %> <% if(counter != 3){ %>
               <div class="row">
@@ -197,7 +199,7 @@
   </div>
   <div class="col-md-6 feedback bc-green">
     <iframe
-      width="560"
+      width="100%"
       height="315"
       src="<%=model.case_studies[2]%>"
       frameborder="0"

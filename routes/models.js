@@ -1,6 +1,12 @@
 const express = require('express');
 const { check, validationResult } = require('express-validator');
-
+const { request, response } = require('express');
+const validations = [
+  check('name').trim().isLength({ min: 3, max: 25 }).escape().withMessage('השם לא תקין'),
+  check('email').trim().isEmail().normalizeEmail().withMessage('כתובת המייל לא תקינה'),
+  check('title').trim().isLength({ min: 3, max: 45 }).escape().withMessage('הכותרת לא תקינה'),
+  check('message').trim().isLength({ min: 3, max: 80 }).escape().withMessage('גוף ההודעה לא תקין'),
+];
 const router = express.Router();
 
 module.exports = (params) => {
@@ -46,25 +52,14 @@ module.exports = (params) => {
       model,
     });
   });*/
-  router.post(
-    `/feedback`,
-    [
-      check('name').trim().isLength({ min: 3, max: 25 }).escape().withMessage('השם לא תקין'),
-      check('email').trim().isEmail().normalizeEmail().withMessage('כתובת המייל לא תקינה'),
-      check('title').trim().isLength({ min: 3, max: 45 }).escape().withMessage('הכותרת לא תקינה'),
-      check('message')
-        .trim()
-        .isLength({ min: 3, max: 80 })
-        .escape()
-        .withMessage('גוף ההודעה לא תקין'),
-    ],
-    async (request, response) => {
+  router.post(`/feedback`, validations, async (request, response, next) => {
+    try {
       const errors = validationResult(request);
       if (!errors.isEmpty()) {
         request.session.feedback = {
           errors: errors.array(),
         };
-        return response.redirect(`/models/${request.body.model}`);
+        return response.redirect(`/models/${request.body.model}#${request.body.model}feedback`);
       }
 
       const { name, email, title, message, model, posneg } = request.body;
@@ -75,8 +70,27 @@ module.exports = (params) => {
       };
       let modelID = request.body.model;
       console.log(modelID);
-      return response.redirect(`/models/${modelID}`);
+      return response.redirect(`/models/${modelID}#${modelID}feedback`);
+    } catch (err) {
+      return next(err);
     }
-  );
+  });
+  router.post('/feedback/api', validations, async (request, response, next) => {
+    try {
+      const errors = validationResult(request);
+      if (!errors.isEmpty()) {
+        return response.json({ errors: errors.array() });
+      }
+
+      const { name, email, title, message, model, posneg } = request.body;
+
+      await feedbackService.addExpertData(name, email, title, message, model, posneg);
+
+      const feedback = await feedbackService.getList();
+      return response.json({ feedback });
+    } catch (err) {
+      next(err);
+    }
+  });
   return router;
 };
