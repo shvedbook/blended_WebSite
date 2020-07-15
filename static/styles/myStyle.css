@@ -39,6 +39,12 @@ p {
 }*/
 
 @media screen and (min-width: 760px) {
+  .card-block {
+    min-height: 350px;
+    background-color: #6fc5d0;
+    padding: 10%;
+  }
+
   .feedback img {
     width: 100%;
   }
@@ -93,7 +99,13 @@ a:hover {
   text-decoration: none !important;
   color: orange;
 }
-
+h5 {
+  font-size: larger;
+  color: black;
+}
+h3 {
+  font-size: large;
+}
 /*קלאס שאומר לתמונה להיות בגודל מלא*/
 .big-pic {
   width: 100%;
@@ -125,28 +137,24 @@ a:hover {
   text-align: center;
   width: 16.666% !important;
 }
-.btn-outline-primary {
-  width: 90% !important;
-}
 
 /*css for the back to top button*/
 #goToTop {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
+  bottom: 1%; /* Place the button at the bottom of the page */
   z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color: white;
-  font-size: x-large;
-  width: 80%;
+  font-size: large;
   margin: 0 auto;
-  color: #6fc5d0;
+  color: black;
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
   opacity: 0.8;
-  width: 80%;
+  width: 90%;
   max-height: 50px;
+  border: solid black 2px;
+  border-radius: 5%;
 }
 
 #goToTop:hover {
@@ -232,12 +240,7 @@ a.badge-primary:hover {
 }
 
 /*models => feedback*/
-.feedback {
-  background-color: #6fc5d0;
-}
-.feedback h5 {
-  color: whitesmoke;
-}
+
 .feedback-items {
   padding: 10% 5%;
   background-color: white;
@@ -301,11 +304,20 @@ a.badge-primary:hover {
 .bc-blue {
   background-color: #6fc5d0;
 }
+.bc-blue a {
+  color: #f5f5f5;
+}
 .bc-yellow {
   background-color: #faca16;
 }
+.bc-yellow a {
+  color: #f5f5f5;
+}
 .bc-green {
   background-color: #90c553;
+}
+.bc-green a {
+  color: #f5f5f5;
 }
 .bc-grey {
   background-color: rgba(230, 230, 230, 0.31);
@@ -320,7 +332,7 @@ a.badge-primary:hover {
 .posneg {
   margin: auto 0;
   width: 100%;
-  font-size: xx-large;
+  font-size: large;
 }
 #facetoface {
   width: 100%;
@@ -343,6 +355,14 @@ a.badge-primary:hover {
 }
 /* [ON SMALL SCREENS] */
 @media screen and (max-width: 760px) {
+  h5 {
+    font-size: xx-large;
+    text-align: center;
+  }
+  .col-md-2 {
+    width: 60%;
+    margin: 2% auto;
+  }
   .divNone {
     display: none !important;
   }
@@ -408,6 +428,11 @@ a.badge-primary:hover {
   .modelsLine {
     width: 100%;
   }
+  .card-block {
+    width: 100%;
+    min-height: 40vh;
+    text-align: center;
+  }
 }
 .mobilepadding {
   padding: 2% 3%;
@@ -433,8 +458,29 @@ a.badge-primary:hover {
 .scrolling-wrapper {
   overflow-x: auto;
 }
-.card-block {
-  min-height: 350px;
-  background-color: #6fc5d0;
-  padding: 10%;
+
+.padeding3 {
+  padding: 3%;
+}
+.padding100 {
+  padding-top: 100px;
+}
+
+.custom-select {
+  border: black 2px solid;
+}
+
+.arrows {
+  width: 100%;
+  min-height: 200px;
+}
+.tozar {
+  width: 90%;
+  margin: 0 auto;
+}
+.sticdownnav {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 1%; /* Place the button at the bottom of the page */
+  z-index: 99; /* Make sure it does not overlap */
+  outline: none; /* Remove outline */
 }

@@ -1,211 +1,201 @@
 <% var myModel; modelsData.forEach(model => { if(model.id == modelID){ myModel = model; %>
 <div class="row models">
-  <div class="col-md-6 model-item bc-grey">
+  <% let colors = ["green","blue","yellow"]; let randColor = colors[Math.floor(Math.random() * 3)]
+  %>
+  <div class="col-md-6 model-item bc-<%=randColor%>">
     <h3><%=model.name%></h3>
     <hr />
     <p>
       <%=model.Story%>
     </p>
-
     <div class="row">
-      <div class="col-6">
-        <div class="col-8">
-          <a class="slide2CS" href="#<%=model.id%>" role="button" data-slide="prev">
-            <h5>
-              תיעוד של מקרה בוחן
-            </h5>
-            <img src="/images/arrowright.svg" />
-          </a>
-        </div>
-        <div class="col-12">
-          <a class="slide2E" href="#<%=model.id%>" role="button" data-slide="next">
-            <h5>
-              דעתו של מומכה תוכן
-            </h5>
-            <img src="/images/arrowrleft.svg" />
-          </a>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="ondeskhidden arrowdown">
-          <img src="/images/arrowdown.svg" />
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6 feedback bc-blue">
-    <div class="container mt-4" id="feedback">
-      <div class="row">
-        <aside class="col-md-12">
-          <div class="maincontent feedback">
-            <div class="feedback-status">
-              <% if (locals.errors){%>
-              <div class="alert alert-danger">
-                <ul>
-                  <% errors.forEach(function (error){%>
-                  <li><%=error.msg%></li>
-                  <%})%>
-                </ul>
-              </div>
-
-              <%} else if(locals.successMessage) {%>
-              <div class="alert alert-success">
-                <%= successMessage %>
-              </div>
-              <%}%>
-            </div>
-            <h5>מה בלנדרים נוספים חשבו על המודל הזה</h5>
-
-            <div class="feedback-items" id="<%=model.id%>feedback">
-              <% var counter = 0 %> <% feedbackData.forEach(function (feedback) {%> <%
-              if(feedback.model == model.id){ %> <% if(counter != 3){ %>
-              <div class="row">
-                <div class="col-2 posneg">
-                  <%if (feedback.posneg == "pos") { %>
-                  <span style="color: #90c553; font-weight: 700;">+</span>
-                  <% } else {%>
-                  <span style="color: red; font-weight: 700;">-</span>
-                  <% } %>
-                </div>
-                <div class="col-10">
-                  <div class="feedback-item item-list media-list">
-                    <div class="feedback-item media">
-                      <div class="feedback-info media-body">
-                        <div class="feedback-head">
-                          <div class="feedback-title">
-                            <%=feedback.title%>
-                          </div>
-                          <small><%=feedback.name%></small>
-                        </div>
-                        <div class="feedback-message"><%=feedback.message%></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <% counter ++; %> <% } %> <% } %> <% })%>
-            </div>
-            <div class="text-center">
-              <a
-                class="btn btn-secondary feedback-item col-md-8 centerIt"
-                data-toggle="collapse"
-                href="#collapse<%=model.id%>"
-                role="button"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-              >
-                מה דעתכם על המודל?
-              </a>
-            </div>
-            <div class="collapse" id="collapse<%=model.id%>">
-              <div class="card card-body">
-                <div class="col-md-12">
-                  <div class="maincontent">
-                    <form class="feedback-form" method="POST" action="/models/feedback">
-                      <div class="form-group">
-                        <label for="feedback-form-name">שם מלא</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="feedback-form-name"
-                          name="name"
-                          placeholder="איך קוראים לך?"
-                          minlength="3"
-                          maxlength="25"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <input
-                          id="feedback-form-model"
-                          name="model"
-                          type="hidden"
-                          value="<%=model.id%>"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="feedback-form-email">דוא"ל</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="feedback-form-email"
-                          name="email"
-                          placeholder="כתובת מייל"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="feedback-form-title">נושא</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="feedback-form-title"
-                          name="title"
-                          minlength="3"
-                          maxlength="35"
-                          placeholder="נושא ההודעה"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="feedback-form-posneg">אהבתם או לא?</label>
-                        <select id="feedback-form-posneg" class="form-control" name="posneg">
-                          <option value="pos">אהבתי</option>
-                          <option value="neg">לא אהבתי</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label for="feedback-form-message">הודעה</label>
-                        <textarea
-                          type="text"
-                          placeholder="'רשמו כאן את ההודעה שלכם ותלחצו על 'שלח"
-                          class="form-control"
-                          id="feedback-form-message"
-                          name="message"
-                          rows="3"
-                          minlength="3"
-                          maxlength="80"
-                        ></textarea>
-                      </div>
-
-                      <button type="submit" class="btn btn-secondary col-md-12">שלח</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
+      <div class="col-8"></div>
+      <div class="col-4">
+        <img class="arrows" src="/images/mikrebohanarrow.png" width="100" />
       </div>
     </div>
   </div>
 </div>
+
 <div class="row models">
-  <div class="col-md-6 model-item bc-grey">
-    <h2>מומחה תוכן</h2>
-    <h3><%=model.experts[1]%></h3>
-    <hr />
-    <p><b>השכלה</b> <%=model.experts[2]%></p>
-    <p><b>המקרה</b> <%=model.experts[3]%></p>
-  </div>
-  <div class="col-md-6 feedback bc-yellow">
-    <img src="<%=model.experts[4]%>" alt="<%=model.experts[1]%>" />
-  </div>
-</div>
-<div class="row models">
-  <div class="col-md-6 model-item bc-grey">
+  <div class="model-item bc-grey">
     <h2>מקרה בוחן</h2>
     <h3><%=model.case_studies[0]%></h3>
     <hr />
     <p><%=model.case_studies[1]%></p>
   </div>
-  <div class="col-md-6 feedback bc-green">
-    <iframe
-      width="100%"
-      height="315"
-      src="<%=model.case_studies[2]%>"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
+</div>
+<div class="row models">
+  <div class="model-item bc-grey">
+    <h2>תוצרים</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="/images/beetime.png" style="width: 300px;" />
+        <h3>מערכי שיעור</h3>
+      </div>
+      <div class="col-md-4 tozar">
+        <img src="/images/beetime.png" style="width: 300px;" />
+        <h3>עדויות לומדים</h3>
+      </div>
+
+      <div class="col-md-4 tozar">
+        <img src="/images/beetime.png" style="width: 300px;" />
+        <h3>עוד משהו</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="feedback">
+  <div class="container mt-4" id="feedback">
+    <div class="row">
+      <aside class="col-md-12">
+        <div class="maincontent feedback">
+          <div class="feedback-status">
+            <% if (locals.errors){%>
+            <div class="alert alert-danger">
+              <ul>
+                <% errors.forEach(function (error){%>
+                <li><%=error.msg%></li>
+                <%})%>
+              </ul>
+            </div>
+
+            <%} else if(locals.successMessage) {%>
+            <div class="alert alert-success">
+              <%= successMessage %>
+            </div>
+            <%}%>
+          </div>
+          <h5>מה דעתך?</h5>
+
+          <div class="feedback-items" id="<%=model.id%>feedback">
+            <% var counter = 0 %> <% feedbackData.forEach(function (feedback) {%> <%
+            if(feedback.model == model.id){ %> <% if(counter != 3){ %>
+            <div class="row">
+              <div class="col-10">
+                <div class="feedback-item item-list media-list">
+                  <div class="feedback-item media">
+                    <div class="feedback-info media-body">
+                      <div class="feedback-head">
+                        <div class="row">
+                          <div class="col-2">
+                            <div class="col-2 posneg">
+                              <%if (feedback.posneg == "pos") { %>
+                              <span style="color: #90c553; font-weight: 700;">+</span>
+                              <% } else {%>
+                              <span style="color: red; font-weight: 700;">-</span>
+                              <% } %>
+                            </div>
+                          </div>
+                          <div class="col-10" style="vertical-align: middle;">
+                            <div class="feedback-title" style="font-weight: bold;">
+                              <%=feedback.title%>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="feedback-message">
+                          <%=feedback.message%>
+                        </div>
+                        <hr style="background-color: #fcd437; height: 4px;" />
+                        <small><%=feedback.name%></small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br /><br />
+            <% counter ++; %> <% } %> <% } %> <% })%>
+          </div>
+          <div class="text-center">
+            <a
+              class="btn btn-secondary feedback-item col-md-8 centerIt"
+              data-toggle="collapse"
+              href="#collapse<%=model.id%>"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              מה דעתכם על המודל?
+            </a>
+          </div>
+          <div class="collapse" id="collapse<%=model.id%>">
+            <div class="card card-body">
+              <div class="col-md-12">
+                <div class="maincontent">
+                  <form class="feedback-form" method="POST" action="/models/feedback">
+                    <div class="form-group">
+                      <label for="feedback-form-name">שם מלא</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="feedback-form-name"
+                        name="name"
+                        placeholder="איך קוראים לך?"
+                        minlength="3"
+                        maxlength="25"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        id="feedback-form-model"
+                        name="model"
+                        type="hidden"
+                        value="<%=model.id%>"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="feedback-form-email">דוא"ל</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="feedback-form-email"
+                        name="email"
+                        placeholder="כתובת מייל"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="feedback-form-title">נושא</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="feedback-form-title"
+                        name="title"
+                        minlength="3"
+                        maxlength="35"
+                        placeholder="נושא ההודעה"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="feedback-form-posneg">אהבתם או לא?</label>
+                      <select id="feedback-form-posneg" class="form-control" name="posneg">
+                        <option value="pos">אהבתי</option>
+                        <option value="neg">לא אהבתי</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="feedback-form-message">הודעה</label>
+                      <textarea
+                        type="text"
+                        placeholder="'רשמו כאן את ההודעה שלכם ותלחצו על 'שלח"
+                        class="form-control"
+                        id="feedback-form-message"
+                        name="message"
+                        rows="3"
+                        minlength="3"
+                        maxlength="80"
+                      ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary col-md-12">שלח</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
   </div>
 </div>
 <% } }); %>
