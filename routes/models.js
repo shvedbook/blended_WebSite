@@ -13,34 +13,46 @@ module.exports = (params) => {
   const { modelsService } = params;
   const { feedbackService } = params;
 
-  router.get('/', async (request, response) => {
-    const errors = request.session.feedback ? request.session.feedback.errors : false;
-    const successMessage = request.session.feedback ? request.session.feedback.message : false;
+  router.get('/', async (request, response, next) => {
+    try {
+      const errors = request.session.feedback ? request.session.feedback.errors : false;
+      const successMessage = request.session.feedback ? request.session.feedback.message : false;
 
-    request.session.feedback = {};
+      request.session.feedback = {};
 
-    return response.render('layout', {
-      pageTitle: 'מודלים',
-      template: 'models',
+      return response.render('layout', {
+        pageTitle: 'מודלים',
+        template: 'models',
 
-      errors,
-      successMessage,
-    });
+        errors,
+        successMessage,
+      });
+    }
+    catch (err) {
+      return next()
+    }
   });
 
-  router.get('/:id', async (request, response) => {
-    const errors = request.session.feedback ? request.session.feedback.errors : false;
-    const successMessage = request.session.feedback ? request.session.feedback.message : false;
+  router.get('/:id', async (request, response, next) => {
+    try {
+      const errors = request.session.feedback ? request.session.feedback.errors : false;
+      const successMessage = request.session.feedback ? request.session.feedback.message : false;
 
-    request.session.feedback = {};
-    const modelID = request.params.id;
-    return response.render('layout', {
-      pageTitle: 'מודלים',
-      template: 'model',
-      modelID,
-      errors,
-      successMessage,
-    });
+      request.session.feedback = {};
+      const modelID = request.params.id;
+      return response.render('layout', {
+        pageTitle: 'מודלים',
+        template: 'model',
+        modelID,
+        errors,
+        successMessage,
+      });
+    }
+    catch (err) {
+      return next(err)
+    }
+
+
   });
   /*router.get('/:id', async (request, response) => {
     const model = await modelsService.getModel(request.params.id);
@@ -59,7 +71,7 @@ module.exports = (params) => {
         request.session.feedback = {
           errors: errors.array(),
         };
-        return response.redirect(`/models/${request.body.model}#${request.body.model}feedback`);
+        return response.redirect(`/models/${request.body.model}#feedback`);
       }
 
       const { name, email, title, message, model, posneg } = request.body;
@@ -70,7 +82,7 @@ module.exports = (params) => {
       };
       let modelID = request.body.model;
       console.log(modelID);
-      return response.redirect(`/models/${modelID}#${modelID}feedback`);
+      return response.redirect(`/models/${modelID}#$feedback`);
     } catch (err) {
       return next(err);
     }

@@ -6,9 +6,14 @@ const toolsRoute = require('./tools');
 const router = express.Router();
 
 module.exports = (params) => {
-  router.get('/', (request, response) => {
-    response.render('layout', { pageTitle: 'מה הבלמדד שלך?', template: 'index' });
+ try{
+  router.get('/', (request, response, next) => {
+    return response.render('layout', { pageTitle: 'מה הבלמדד שלך?', template: 'index' });
   });
+ }
+ catch(err){
+   return next(err)
+ }
 
   router.use('/models', modelsRoute(params));
   router.use('/tools', toolsRoute(params));

@@ -8,7 +8,6 @@ body {
   font-family: 'Assistant', sans-serif;
   margin: 0 auto;
   position: relative;
-
   min-width: 350px;
   background-image: url('../images/background.png');
   background-repeat: no-repeat;
@@ -17,10 +16,12 @@ body {
   font-size: 14pt;
   width: 100%;
 }
+
 .container-fluid {
   min-width: 350px;
   padding: 5%;
 }
+
 p {
   font-size: 12pt;
 }
@@ -38,13 +39,18 @@ p {
     height: auto;
 }*/
 
+.card-block h3 {
+  font-weight: bolder;
+  color: white;
+}
+
 @media screen and (min-width: 760px) {
   .card-block {
-    min-height: 350px;
+    min-height: 200px;
+    min-width: 200px;
     background-color: #6fc5d0;
     padding: 10%;
   }
-
   .feedback img {
     width: 100%;
   }
@@ -73,7 +79,7 @@ p {
 }
 
 hr {
-  margin: 5% 0 !important;
+  margin: 5% 0;
 }
 
 /*all media*/
@@ -81,11 +87,15 @@ hr {
 h4::first-letter {
   font-size: 200%;
 }
+
 /*צבע טקסט שהוא קישור*/
+
 .pInA {
   color: black;
 }
+
 /*תמונות בתוך טיזרים בעמוד ראשי*/
+
 .col-md-4 img {
   width: 50%;
 }
@@ -95,61 +105,87 @@ a {
   color: #faca16;
   font-weight: bolder;
 }
+
 a:hover {
   text-decoration: none !important;
   color: orange;
 }
+
 h5 {
   font-size: larger;
   color: black;
 }
+
 h3 {
   font-size: large;
 }
+
+.larger {
+  font-size: larger;
+}
+
 /*קלאס שאומר לתמונה להיות בגודל מלא*/
+
 .big-pic {
   width: 100%;
 }
+
 /*מרגין אליון ותחתון למודלים*/
+
 .models {
   margin: 0 auto;
+  color: white;
+  font-weight: bold;
 }
+
 /*h5 inside tools section centrelizing*/
+
 .tools h5 {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
 .tools img {
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
 /*ציר זמן*/
+
 .timeLine {
   padding: 2%;
   font-size: large;
   font-weight: 400;
 }
+
 .timeLine b {
   font-size: large;
 }
+
 .modelsLine {
   text-align: center;
   width: 16.666% !important;
 }
 
 /*css for the back to top button*/
+
 #goToTop {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 1%; /* Place the button at the bottom of the page */
-  z-index: 99; /* Make sure it does not overlap */
-  outline: none; /* Remove outline */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 1%;
+  /* Place the button at the bottom of the page */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  outline: none;
+  /* Remove outline */
   background-color: white;
   font-size: large;
   margin: 0 auto;
   color: black;
-  cursor: pointer; /* Add a mouse pointer on hover */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
   opacity: 0.8;
   width: 90%;
   max-height: 50px;
@@ -163,26 +199,31 @@ h3 {
 }
 
 /*style for google api*/
+
 #myGoogleMap {
   height: 100%;
 }
 
 /*logo icons design*/
+
 .logo-icon {
-  width: 100%;
+  width: 50%;
 }
 
 /*footer design*/
+
 #footer {
   padding-bottom: 5%;
 }
 
 /*כותרות של המאפיינים*/
+
 @media screen and (min-width: 760px) {
   .ondeskhidden {
     display: none;
   }
 }
+
 @media screen and (max-width: 759px) {
   .onmobilehidden {
     display: none;
@@ -190,13 +231,16 @@ h3 {
 }
 
 /*#aiAnswer styling*/
+
 #aiAnswer {
   font-size: large;
   font-weight: 400;
 }
+
 .carousel {
   width: 100%;
 }
+
 .carousel-item {
   width: 100%;
 }
@@ -206,35 +250,42 @@ h3 {
 }
 
 /*btn-primary*/
+
 .btn-primary {
   background-color: #6fc5d0;
   border-color: #6fc5d0;
 }
+
 .btn-primary:hover {
   background-color: #faca16;
   border-color: #faca16;
 }
+
 a .btn-primary:hover {
   background-color: #faca16;
   border-color: #faca16;
 }
+
 .btn-secondary:hover {
   background-color: #faca16;
   border-color: #faca16;
 }
 
 /*.badge-primary*/
+
 .badge-primary {
   background-color: #6fc5d0;
   border-color: #6fc5d0;
   text-size-adjust: 80%;
 }
-a.badge-primary:focus,
-a.badge-primary:hover {
+
+a.badge-primary:focus, a.badge-primary:hover {
   background-color: #faca16;
   border-color: #faca16;
 }
+
 /*blended system div styling*/
+
 #blendedSystem {
   padding-top: 5%;
 }
@@ -243,21 +294,23 @@ a.badge-primary:hover {
 
 .feedback-items {
   padding: 10% 5%;
-  background-color: white;
   border-radius: 15px;
   width: 100%;
   font-size: 12pt;
   margin: 0 auto;
 }
+
 .card-body {
   width: 80%;
   font-size: 12pt;
   border-radius: 15px;
   margin: 0 auto;
 }
+
 .centerIt {
   margin: 10% auto;
 }
+
 @media only screen and (orientation: landscape) {
   .model-item {
     background-color: #f5f5f5;
@@ -270,6 +323,7 @@ a.badge-primary:hover {
     min-height: 85vh;
   }
 }
+
 @media only screen and (orientation: portrait) {
   .model-item {
     background-color: #f5f5f5;
@@ -281,12 +335,12 @@ a.badge-primary:hover {
     padding: 3%;
   }
 }
+
 .hidden {
   display: none;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-control-prev, .carousel-control-next {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -302,29 +356,38 @@ a.badge-primary:hover {
 }
 
 .bc-blue {
-  background-color: #6fc5d0;
+  background: linear-gradient(270deg, #416E81 9.76%, #6BBBC7 100%);
 }
+
 .bc-blue a {
   color: #f5f5f5;
 }
+
 .bc-yellow {
-  background-color: #faca16;
+  background: linear-gradient(270deg, #FCCB09 9.76%, #F1C20B 86.84%);
 }
+
 .bc-yellow a {
   color: #f5f5f5;
 }
+
 .bc-green {
-  background-color: #90c553;
+  background: linear-gradient(270deg, #90C553 9.76%, #8BB161 100%);
 }
+
 .bc-green a {
   color: #f5f5f5;
 }
+
 .bc-grey {
   background-color: rgba(230, 230, 230, 0.31);
+  color: black;
 }
+
 .carousel-control-prev-icon {
   background-image: url("data:images/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
+
 .carousel-control-next-icon {
   background-image: url("data:images/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
@@ -334,26 +397,32 @@ a.badge-primary:hover {
   width: 100%;
   font-size: large;
 }
+
 #facetoface {
   width: 100%;
 }
+
 .slide2CS {
   color: #90c553;
 }
+
 .slide2E {
   margin-right: 5%;
   color: #faca16;
 }
+
 .arrowdown {
   bottom: 0;
 }
+
 .arrowdown img {
   height: 150px;
   float: left;
-
   bottom: 30px;
 }
+
 /* [ON SMALL SCREENS] */
+
 @media screen and (max-width: 760px) {
   h5 {
     font-size: xx-large;
@@ -396,11 +465,9 @@ a.badge-primary:hover {
     margin-left: auto;
     margin-right: auto;
   }
-
   .bg-primary {
     background-color: white;
   }
-
   .bg-primary .show {
     background-color: #007bff !important;
   }
@@ -430,10 +497,12 @@ a.badge-primary:hover {
   }
   .card-block {
     width: 100%;
-    min-height: 40vh;
+    min-height: 30vh;
+    min-width: 200px;
     text-align: center;
   }
 }
+
 .mobilepadding {
   padding: 2% 3%;
 }
@@ -445,8 +514,7 @@ a.badge-primary:hover {
   font-weight: 700;
 }
 
-.btn.disabled,
-.btn:disabled {
+.btn.disabled, .btn:disabled {
   background-color: lightgray;
   border-color: lightgrey;
 }
@@ -455,6 +523,7 @@ a.badge-primary:hover {
   width: 100%;
   height: 100%;
 }
+
 .scrolling-wrapper {
   overflow-x: auto;
 }
@@ -462,6 +531,7 @@ a.badge-primary:hover {
 .padeding3 {
   padding: 3%;
 }
+
 .padding100 {
   padding-top: 100px;
 }
@@ -474,13 +544,75 @@ a.badge-primary:hover {
   width: 100%;
   min-height: 200px;
 }
+
 .tozar {
   width: 90%;
   margin: 0 auto;
 }
+
 .sticdownnav {
-  position: fixed; /* Fixed/sticky position */
-  bottom: 1%; /* Place the button at the bottom of the page */
-  z-index: 99; /* Make sure it does not overlap */
-  outline: none; /* Remove outline */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 1%;
+  /* Place the button at the bottom of the page */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  outline: none;
+  /* Remove outline */
+}
+
+.marginCenter {
+  margin: 0 auto;
+}
+
+.modelsPlate h2 {
+  font-weight: bolder;
+  border-bottom: #faca16 solid 10px;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.boxShadow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.roundedDiv {
+  background-color: lightgray;
+  padding: 2%;
+  margin: 1% 2%;
+  text-align: center;
+}
+
+.model-item h3 {
+  margin-bottom: 2%;
+  font: xx-large;
+}
+
+#feedback {
+  color: black;
+}
+
+#feedback hr {
+  margin: 0 0;
+}
+
+.tozarinItem {
+  background-color: white;
+  margin: 1% 1%;
+}
+
+.error-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.error-actions {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.error-actions .btn {
+  margin-right: 10px;
 }
