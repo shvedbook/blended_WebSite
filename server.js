@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 const cookieSession = require('cookie-session');
 
-const createError = require('http-errors')
+const createError = require('http-errors');
 
 const FeedbackService = require('./services/FeedbackService');
 
@@ -70,17 +70,15 @@ app.use(
     modelService,
   })
 );
-app.use((request, response, next) => {
-  return next(createError(404, 'הדף לא נמצא'))
 
-})
-app.use((err, request, response, next) =>{
+app.use((err, request, response, next) => {
   response.locals.message = err.message;
+  console.error(err);
   const status = err.status || 500;
   response.locals.status = status;
   response.status(status);
-  response.render('error')
-})
+  response.render('error');
+});
 
 app.listen(port, () => {
   console.log('Express server listening on port ' + port);

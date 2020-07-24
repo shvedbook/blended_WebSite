@@ -1,58 +1,53 @@
 <% var myModel; modelsData.forEach(model => { if(model.id == "facetoface"){ myModel = model; %>
-<div id="<%=model.id%>">
-  <div class="row">
-    <div class="col-md-6">
-      <h2><%=model.name%></h2>
-      <hr />
-      <p><%=model.Story%></p>
-      <a href="/models/<%=model.id%>">לדף המודל...</a>
-    </div>
-
-    <div class="col-md-6">
-      <div class="feedback bc-blue">
-        <div class="container mt-4" id="feedback">
-          <div class="row">
-            <aside class="col-md-12">
-              <div class="maincontent feedback">
-                <h5>מה בלנדרים נוספים חשבו על המודל הזה</h5>
-
-                <div class="feedback-items col-md-12">
-                  <% var counter = 0 %> <% feedbackData.forEach(function (feedback) {%> <%
-                  if(feedback.model == model.id){ %> <% if(counter != 3){ %>
-                  <div class="row">
-                    <div class="col-2 posneg">
-                      <%if (feedback.posneg == "pos") { %>
-                      <span style="color: #90c553; font-weight: 700;">+</span>
-                      <% } else {%>
-                      <span style="color: red; font-weight: 700;">-</span>
-                      <% } %>
-                    </div>
-                    <div class="col-10">
-                      <div class="feedback-item item-list media-list">
-                        <div class="feedback-item media">
-                          <div class="feedback-info media-body">
-                            <div class="feedback-head">
-                              <div class="feedback-title">
-                                <%=feedback.title%>
-                              </div>
-                              <small><%=feedback.name%></small>
-                            </div>
-                            <div class="feedback-message"><%=feedback.message%></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <% counter ++; %> <% } %> <% } %> <% })%>
-                </div>
+  <div class="row models">
+    <% let colors = ["green","blue","yellow"]; let randColor = colors[Math.floor(Math.random() * 3)]
+    %>
+    <div class="col-12 model-item bc-<%=randColor%>">
+      <h3><%=model.name%></h3>
+      <p class="col-md-6">
+        <%=model.longStory%>
+      </p>
+      <br />
+      <br />
+      <br />
+      <h3>גלו את המודל</h3>
+      <p>צפו במימושי המודל בשטח, עיינו בתוצרים והיחשפו לחוות דעת על המודל:</p>
+      <div class="row">
+  
+        <div class="row col-md-4">
+          <div class="col-md-3">
+            <a href="models/<%= model.id %>#caseStudy<%= model.id %>">
+              <div class=" roundedDiv <%=randColor%>">
+                מקרי בוחן
               </div>
-            </aside>
+            </a>
           </div>
+          <div class="col-md-3">
+            <a href="models/<%= model.id %>#tozarim<%= model.id %>">
+              <div class=" roundedDiv <%=randColor%>">
+                תוצרים
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="models/<%= model.id %>#feedback<%= model.id %>">
+              <div class=" roundedDiv <%=randColor%>">
+                ביקורות
+              </div>
+            </a>
+          </div>
+        </div>
+  
+  
+  
+      </div>
+      <div class="col-12 row">
+    
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<% } }); %>
+ 
+  <% } }); %>
+  
+  <!-- FOOTER -->
