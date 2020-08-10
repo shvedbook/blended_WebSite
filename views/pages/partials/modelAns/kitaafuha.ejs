@@ -1,11 +1,11 @@
-<% var myModel; modelsData.forEach(model => { if(model.id == "havruta"){ myModel = model; %>
+<% var myModel; modelsData.forEach(model => { if(model.id == "kitaafuha"){ myModel = model; %>
   <div class="row models">
     <% let colors = ["green","blue","yellow"]; let randColor = colors[Math.floor(Math.random() * 3)]
     %>
     <div class="col-12 model-item bc-<%=randColor%>">
       <h3><%=model.name%></h3>
       <p class="col-md-6">
-        <%=model.longStory%>
+        <%-model.ShortStory%>
       </p>
       <br />
       <br />
@@ -15,21 +15,21 @@
       <div class="row">
   
         <div class="row col-md-4">
-          <div class="col-md-3">
+          <div class="col-md-4">
             <a href="models/<%= model.id %>#caseStudy<%= model.id %>">
               <div class=" roundedDiv <%=randColor%>">
                 מקרי בוחן
               </div>
             </a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
             <a href="models/<%= model.id %>#tozarim<%= model.id %>">
               <div class=" roundedDiv <%=randColor%>">
                 תוצרים
               </div>
             </a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
             <a href="models/<%= model.id %>#feedback<%= model.id %>">
               <div class=" roundedDiv <%=randColor%>">
                 ביקורות
@@ -50,3 +50,4 @@
  
   <% } }); %>
   
+  <!-- FOOTER -->

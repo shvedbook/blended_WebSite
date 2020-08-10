@@ -134,8 +134,8 @@ h3 {
 
 .models {
   margin: 0 auto;
-  color: white;
-  font-weight: bold;
+
+  font-weight: bolder;
 }
 
 /*h5 inside tools section centrelizing*/
@@ -279,7 +279,8 @@ a .btn-primary:hover {
   text-size-adjust: 80%;
 }
 
-a.badge-primary:focus, a.badge-primary:hover {
+a.badge-primary:focus,
+a.badge-primary:hover {
   background-color: #faca16;
   border-color: #faca16;
 }
@@ -340,7 +341,8 @@ a.badge-primary:focus, a.badge-primary:hover {
   display: none;
 }
 
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -356,7 +358,7 @@ a.badge-primary:focus, a.badge-primary:hover {
 }
 
 .bc-blue {
-  background: linear-gradient(270deg, #416E81 9.76%, #6BBBC7 100%);
+  background: linear-gradient(270deg, #416e81 9.76%, #6bbbc7 100%);
 }
 
 .bc-blue a {
@@ -364,7 +366,7 @@ a.badge-primary:focus, a.badge-primary:hover {
 }
 
 .bc-yellow {
-  background: linear-gradient(270deg, #FCCB09 9.76%, #F1C20B 86.84%);
+  background: linear-gradient(270deg, #fccb09 9.76%, #f1c20b 86.84%);
 }
 
 .bc-yellow a {
@@ -372,7 +374,7 @@ a.badge-primary:focus, a.badge-primary:hover {
 }
 
 .bc-green {
-  background: linear-gradient(270deg, #90C553 9.76%, #8BB161 100%);
+  background: linear-gradient(270deg, #90c553 9.76%, #8bb161 100%);
 }
 
 .bc-green a {
@@ -514,7 +516,8 @@ a.badge-primary:focus, a.badge-primary:hover {
   font-weight: 700;
 }
 
-.btn.disabled, .btn:disabled {
+.btn.disabled,
+.btn:disabled {
   background-color: lightgray;
   border-color: lightgrey;
 }

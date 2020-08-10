@@ -33,6 +33,7 @@ class modelservice {
         experience: model.experience,
         education: model.education,
         Story: model.Story,
+        ShortStory: model.ShortStory,
         longStory: model.longStory,
         models: model.models,
         experts: [

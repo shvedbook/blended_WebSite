@@ -94,16 +94,16 @@ function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimka
     }
     if (thanim > 1 && modelpedogogi == 2 && ramatoryanut > 1 && mashavimkaiamim > 1 && eikef == 3) {
       numOfModels++;
-      $('#havruta').css('display', 'block');
+      $('#facetoface').css('display', 'block');
     }
     if (thanim == 3) {
       numOfModels++;
-      $('#kvuzatKria').css('display', 'block');
+      $('#kitaafuha').css('display', 'block');
       toSendBtn();
     }
     if (thanim > 1 && modelpedogogi == 2 && ramatoryanut > 1 && mashavimkaiamim > 1 && eikef > 1) {
       numOfModels++;
-      $('#kvuzatImun').css('display', 'block');
+      $('#kitaafuha').css('display', 'block');
       toSendBtn();
     }
     if (ramatoryanut == 1) {
@@ -111,6 +111,7 @@ function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimka
       $('#aiAnswer').html(
         "<div>המודל המתאים ביותר ללומדים בעלי אוריינות נמוכה הוא 'תיווך מלא'</div>"
       );
+
       $('#facetoface').css('display', 'block');
       toSendBtn();
     }
@@ -123,12 +124,11 @@ function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimka
 }
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style.display = 'block';
-    } else {
-      mybutton.style.display = 'none';
-    }
-  
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = 'block';
+  } else {
+    mybutton.style.display = 'none';
+  }
 }
 
 // When the user clicks on the button, scroll to the top of the document
