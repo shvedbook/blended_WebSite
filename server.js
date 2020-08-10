@@ -22,7 +22,7 @@ const { request } = require('http');
 
 const app = express();
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.set('trust proxy', 1);
 
@@ -70,6 +70,9 @@ app.use(
     modelService,
   })
 );
+app.use((request, response, next) => {
+  return next(createError(404, 'דף אינו נמצא'))
+  });
 
 app.use((err, request, response, next) => {
   response.locals.message = err.message;
