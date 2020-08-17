@@ -71,8 +71,8 @@ app.use(
   })
 );
 app.use((request, response, next) => {
-  return next(createError(404, 'דף אינו נמצא'))
-  });
+  return next(createError(404, 'דף אינו נמצא'));
+});
 
 app.use((err, request, response, next) => {
   response.locals.message = err.message;

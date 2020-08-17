@@ -6,7 +6,11 @@
     <h3><%=model.name%></h3>
     <div class="row">
       <div class="col-md-6">
-        <%-model.Story%>
+        <%-model.ShortStory%>
+        <a id="showDescBtn" href="#" onclick="showDescription()" style="font-size: large;"
+          >למידע נוסף...</a
+        >
+        <div class="description"><%-model.Story%></div>
       </div>
       <div class="col-md-6">
         <img src="<%=model.picture%>" style="width: 100%;" />

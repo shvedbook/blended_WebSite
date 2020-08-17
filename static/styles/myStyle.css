@@ -359,6 +359,7 @@ a.badge-primary:hover {
 
 .bc-blue {
   background: linear-gradient(270deg, #416e81 9.76%, #6bbbc7 100%);
+  color: #f5f5f5;
 }
 
 .bc-blue a {

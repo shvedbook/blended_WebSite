@@ -7,6 +7,8 @@ $(document).ready(function () {
   $(document).change(function () {
     checkIfAllField();
   });
+  $('.description').css('display', 'none');
+
   $('#blendedAnsNone').css('display', 'none');
   var x = window.matchMedia('(max-width: 768px)');
   JSbysize(x); // Call listener function at run time
@@ -167,4 +169,15 @@ function toSendBtn() {
   setTimeout(() => {
     location.replace('/#sendBtn');
   }, 500);
+}
+
+/*Show the model disc */
+function showDescription() {
+  if ($('.description').css('display') == 'none') {
+    $('#showDescBtn').text('סגור מידע נוסף');
+    $('.description').css('display', 'block');
+  } else {
+    $('#showDescBtn').text('למידע נוסף');
+    $('.description').css('display', 'none');
+  }
 }
