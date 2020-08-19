@@ -89,33 +89,51 @@ function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimka
     $('#facetoface').show();
     toSendBtn();
   } else {
-    if (thanim > 1 && modelpedogogi > 2 && ramatoryanut > 1) {
+    if (modelpedogogi == 5) {
+      $('#onlineblend').css('display', 'block');
       numOfModels++;
-      $('#kvuzatImun').css('display', 'block');
-      toSendBtn();
-    }
-    if (thanim > 1 && modelpedogogi == 2 && ramatoryanut > 1 && mashavimkaiamim > 1 && eikef == 3) {
-      numOfModels++;
-      $('#facetoface').css('display', 'block');
-    }
-    if (thanim == 3) {
-      numOfModels++;
-      $('#kitaafuha').css('display', 'block');
-      toSendBtn();
-    }
-    if (thanim > 1 && modelpedogogi == 2 && ramatoryanut > 1 && mashavimkaiamim > 1 && eikef > 1) {
-      numOfModels++;
-      $('#kitaafuha').css('display', 'block');
-      toSendBtn();
-    }
-    if (ramatoryanut == 1) {
-      numOfModels++;
-      $('#aiAnswer').html(
-        "<div>המודל המתאים ביותר ללומדים בעלי אוריינות נמוכה הוא 'תיווך מלא'</div>"
-      );
+    } else {
+      if (thanim > 1 && modelpedogogi > 2 && ramatoryanut > 1) {
+        numOfModels++;
+        $('#kvuzatImun').css('display', 'block');
+        toSendBtn();
+        numOfModels++;
+      }
+      if (
+        thanim > 1 &&
+        modelpedogogi == 2 &&
+        ramatoryanut > 1 &&
+        mashavimkaiamim > 1 &&
+        eikef == 3
+      ) {
+        numOfModels++;
+        $('#facetoface').css('display', 'block');
+      } else if (thanim == 3) {
+        numOfModels++;
+        $('#kitaafuha').css('display', 'block');
+        toSendBtn();
+        numOfModels++;
+      } else if (
+        thanim > 1 &&
+        modelpedogogi == 2 &&
+        ramatoryanut > 1 &&
+        mashavimkaiamim > 1 &&
+        eikef > 1
+      ) {
+        numOfModels++;
+        $('#kitaafuha').css('display', 'block');
+        toSendBtn();
+        numOfModels++;
+      } else if (ramatoryanut == 1) {
+        numOfModels++;
+        $('#aiAnswer').html(
+          "<div>המודל המתאים ביותר ללומדים בעלי אוריינות נמוכה הוא 'תיווך מלא'</div>"
+        );
 
-      $('#facetoface').css('display', 'block');
-      toSendBtn();
+        $('#facetoface').css('display', 'block');
+        toSendBtn();
+        numOfModels++;
+      }
     }
   }
 
@@ -123,6 +141,9 @@ function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimka
   if (numOfModels == 0) {
     $('#blendedAnsNone').css('display', 'block');
   }
+  setTimeout(() => {
+    window.location.replace('/#aiAnswer');
+  }, 500);
 }
 
 function scrollFunction() {
