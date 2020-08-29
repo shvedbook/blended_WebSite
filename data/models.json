@@ -44,9 +44,16 @@
       ],
       "case_studies": [
         {
-          "name": "הדרכה למדריכי צופים - צופי יפו",
-          "story": "לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית הועניב היושבב שערש שמחויט - שלושע ותלברו חשלו שעותלשך וחאית נובש ערששף. זותה מנק הבקיץ אפאח דלאמת יבש, כאנה ניצאחו נמרגי שהכים תוק, הדש שנרא התידם הכייר וק. <br/>  ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם השמה - לתכי מורגם בורק? לתיג ישבעס. ",
-          "media": "https://www.youtube.com/embed/paQCE58334M"
+          "name": "ערבית מדוברת למתחילים - פרוייקט 14 יום",
+          "interName": "גילעד סוויט<br/>מדרסה",
+          "story": "בתקופת הסגר בזמן הקורונה ערכו ב\"מדרסה\"- המיזם החברתי-טכנולוגי ללימוד ערבית מדוברת,<br/> מרתון למידה בו שלחו ללומדים מייל עם רשימת משימות יומית שכללה לימוד דרך הקורס מקוון, צפיהבתכנים להעשרה ותרגול ברשתות החברתיות.<br/><b>צפו ב5- תובנות מפי גילעד, המייסד והמנהל המקצועי של מדרסה, על השימוש במודל אונליין-בלנד מתוך פרוייקט \"14 יום\":</b>",
+          "pic": "/images/MadrasaBanner.png",
+          "video": "https://www.youtube.com/embed/paQCE58334M",
+          "caseLogo": "/images/madrasaLogo.png",
+          "instructors": "<div class='col-6'><img src='/images/michal-rosen.png' style='width: 100%;' /><br />מיכל רוזן</div><div class='col-6'><img src='/images/gilad.png' style='width: 100%;' /><br />גילעד סוויט</div>",
+          "lessonPlan": "<a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור ראשון</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור שני</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור שלישין</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור יום ארבע עשר</a><br/>",
+          "edSupply": "<a href='/files/vocabi.pdf' target='_blank'>אוצר מילים- ערבית למתחילים</a><br/>",
+          "links": "<img src='/images/madrasaLinkPic.png' style='width:100%'><br/><a href='https://madrasafree.com/14-days' target='_blank'>אתר פרויקט 14 יום</a><br/><a href='https://www.madrasafree.net/library' target='_blank'>ספריית מדרסה</a><br/>"
         }
       ]
     },

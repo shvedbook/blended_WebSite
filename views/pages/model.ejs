@@ -55,29 +55,50 @@
   </div>
 </div>
 <hr />
-<div id="caseStudy<%= model.id %>" class="row">
-  <div class="model-item bc-grey">
-    <h2>מקרה בוחן</h2>
-    <h3><%=model.case_studies[0]%></h3>
-    <hr />
-    <p><%=model.case_studies[1]%></p>
+<div id="caseStudy<%= model.id %>" class="row bc-grey">
+  <div class="col-md-6">
+    <div class="model-item">
+      <h3>מקרה בוחן</h3>
+      <p>צפו ב:</p>
+      <h2><%-model.case_studies_name%></h2>
+      <h5><%-model.case_studies_interName%></h5>
+      <p><%-model.case_studies_story%></p>
+      <div class="col-md-8 row">
+        <div class="col-6" style="border-left: 3px solid lightgrey;">
+          <img src="<%-model.case_studies_caseLogo%>" style="width: 100%;" />
+        </div>
+        <div class="col-6">
+          <h5 style="text-align: center;">
+            מדריכים
+          </h5>
+          <div class="row">
+            <%-model.case_studies_instructors%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <img style="width: 100%;" src="<%=model.case_studies_pic%>" />
   </div>
 </div>
 <hr />
 <div class="row models" id="tozarim<%= model.id %>">
   <div class="container-fluid bc-grey">
-    <h2>תוצרים</h2>
-    <div class="scrolling-wrapper col-12 row flex-row flex-nowrap mt-4 pb-4">
-      <% for(i=0; i<3; i++) {%>
-
-      <div class="col-md-3 boxShadow tozarinItem">
-        <h5>BeeTime</h5>
-        <img src="/images/beetime.png" alt="picture of instuctors" />
-
-        <p>מערכת BeeTime היא מתערכת אינטראקטיבית המאפשרת ללומדים בכיתה למידה:</p>
-        <a href="/tools">למידע נוסף אודות המערכת..</a>
+    <h2>משאבי למידה ותוצרים</h2>
+    <div class="row">
+      <div class="col-sm-3 bc-<%=randColor%>" style="margin-left: 3%;">
+        <h2>מערכי שיעור</h2>
+        <%-model.case_studies_lessonPlan%>
       </div>
-      <% }%>
+      <div class="col-sm-3 bc-<%=randColor%>" style="margin-left: 3%;">
+        <h2>עזרי הוראה</h2>
+        <%-model.case_studies_edSupply%>
+      </div>
+      <div class="col-sm-3 bc-<%=randColor%>" style="margin-left: 3%;">
+        <h2>קישורים</h2>
+        <%-model.case_studies_links%>
+      </div>
     </div>
   </div>
 </div>

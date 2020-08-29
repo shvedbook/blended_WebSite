@@ -43,11 +43,16 @@ class modelservice {
           model.experts[0].longStory,
           model.experts[0].media,
         ],
-        case_studies: [
-          model.case_studies[0].name,
-          model.case_studies[0].story,
-          model.case_studies[0].media,
-        ],
+        case_studies_name: model.case_studies[0].name,
+        case_studies_interName: model.case_studies[0].interName,
+        case_studies_story: model.case_studies[0].story,
+        case_studies_pic: model.case_studies[0].pic,
+        case_studies_video: model.case_studies[0].video,
+        case_studies_caseLogo: model.case_studies[0].caseLogo,
+        case_studies_instructors: model.case_studies[0].instructors,
+        case_studies_edSupply: model.case_studies[0].edSupply,
+        case_studies_lessonPlan: model.case_studies[0].lessonPlan,
+        case_studies_links: model.case_studies[0].links,
       };
     });
   }
