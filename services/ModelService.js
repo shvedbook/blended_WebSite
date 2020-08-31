@@ -53,6 +53,7 @@ class modelservice {
         case_studies_edSupply: model.case_studies[0].edSupply,
         case_studies_lessonPlan: model.case_studies[0].lessonPlan,
         case_studies_links: model.case_studies[0].links,
+        case_studies_products: model.case_studies[0].products,
       };
     });
   }

@@ -19,13 +19,24 @@ body {
 
 .container-fluid {
   min-width: 350px;
-  padding: 5%;
+  padding: 0;
 }
 
 p {
   font-size: 12pt;
 }
-
+h2 {
+  font-weight: 1000;
+  font-family: 'Assistant', sans-serif;
+}
+h3 {
+  background-color: rgb(68, 68, 68);
+  padding: 2%;
+  color: white;
+  font-weight: bolder;
+  display: inline-block;
+  border-radius: 25px;
+}
 #header {
   background-color: aquamarine;
 }
@@ -99,7 +110,9 @@ h4::first-letter {
 .col-md-4 img {
   width: 50%;
 }
-
+.col-12 {
+  padding-top: 2%;
+}
 a {
   text-decoration: none !important;
   color: #faca16;
@@ -171,26 +184,21 @@ h3 {
 
 #goToTop {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Fixed/sticky position */
   bottom: 1%;
-  /* Place the button at the bottom of the page */
   z-index: 99;
-  /* Make sure it does not overlap */
   outline: none;
-  /* Remove outline */
   background-color: white;
   font-size: large;
   margin: 0 auto;
   color: black;
   cursor: pointer;
-  /* Add a mouse pointer on hover */
   opacity: 0.8;
-  width: 90%;
+  width: 96%;
   max-height: 50px;
   border: solid black 2px;
-  border-radius: 5%;
+  border-radius: 25px;
+  left: 0;
 }
 
 #goToTop:hover {
@@ -322,6 +330,15 @@ a.badge-primary:hover {
   .paded-div {
     padding: 6%;
     min-height: 85vh;
+  }
+  #goToTop {
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
   }
 }
 
@@ -583,10 +600,11 @@ a.badge-primary:hover {
 }
 
 .roundedDiv {
-  background-color: lightgray;
+  background-color: rgb(68, 68, 68);
   padding: 2%;
   margin: 1% 2%;
   text-align: center;
+  border-radius: 15px;
 }
 
 .model-item h3 {
@@ -619,4 +637,10 @@ a.badge-primary:hover {
 
 .error-actions .btn {
   margin-right: 10px;
+}
+.background1 {
+  background-repeat: no-repeat;
+  background-image: url(/images/background1.png);
+  background-size: 100%;
+  margin: 0 auto;
 }

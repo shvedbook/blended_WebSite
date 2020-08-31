@@ -26,9 +26,15 @@
           "video": "https://www.youtube.com/embed/paQCE58334M",
           "caseLogo": "/images/madrasaLogo.png",
           "instructors": "<div class='col-6'><img src='/images/michal-rosen.png' style='width: 100%;' /><br />מיכל רוזן</div><div class='col-6'><img src='/images/gilad.png' style='width: 100%;' /><br />גילעד סוויט</div>",
-          "lessonPlan": "<a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור ראשון</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור שני</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור שלישין</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור יום ארבע עשר</a><br/>",
-          "edSupply": "<a href='/files/vocabi.pdf' target='_blank'>אוצר מילים- ערבית למתחילים</a><br/>",
-          "links": "<img src='/images/madrasaLinkPic.png' style='width:100%'><br/><a href='https://madrasafree.com/14-days' target='_blank'>אתר פרויקט 14 יום</a><br/><a href='https://www.madrasafree.net/library' target='_blank'>ספריית מדרסה</a><br/>"
+          "products": [
+            ["/files/madrasa1.pdf", "מערך שיעור ראשון"],
+            ["/files/madrasa2.pdf", "מערך שיעור שני"],
+            ["/files/madrasa3.pdf", "מערך שיעור שלישי"],
+            ["/files/madrasa4.pdf", "מערך שיעור ארבע עשרה"],
+            ["/files/vocabi.pdf", "אוצר מילים- ערבית למתחילים"],
+            ["https://madrasafree.com/14-days", "אתר פרויקט 14 יום"],
+            ["ספריית מדרסה", "ספריית מדרסה"]
+          ]
         }
       ]
     },
@@ -58,9 +64,15 @@
           "video": "https://www.youtube.com/embed/paQCE58334M",
           "caseLogo": "/images/madrasaLogo.png",
           "instructors": "<div class='col-6'><img src='/images/michal-rosen.png' style='width: 100%;' /><br />מיכל רוזן</div><div class='col-6'><img src='/images/gilad.png' style='width: 100%;' /><br />גילעד סוויט</div>",
-          "lessonPlan": "<a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור ראשון</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור שני</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור שלישין</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור יום ארבע עשר</a><br/>",
-          "edSupply": "<a href='/files/vocabi.pdf' target='_blank'>אוצר מילים- ערבית למתחילים</a><br/>",
-          "links": "<img src='/images/madrasaLinkPic.png' style='width:100%'><br/><a href='https://madrasafree.com/14-days' target='_blank'>אתר פרויקט 14 יום</a><br/><a href='https://www.madrasafree.net/library' target='_blank'>ספריית מדרסה</a><br/>"
+          "products": [
+            ["/files/madrasa1.pdf", "מערך שיעור ראשון"],
+            ["/files/madrasa2.pdf", "מערך שיעור שני"],
+            ["/files/madrasa3.pdf", "מערך שיעור שלישי"],
+            ["/files/madrasa4.pdf", "מערך שיעור ארבע עשרה"],
+            ["/files/vocabi.pdf", "אוצר מילים- ערבית למתחילים"],
+            ["https://madrasafree.com/14-days", "אתר פרויקט 14 יום"],
+            ["ספריית מדרסה", "ספריית מדרסה"]
+          ]
         }
       ]
     },
@@ -90,9 +102,15 @@
           "video": "https://www.youtube.com/embed/paQCE58334M",
           "caseLogo": "/images/madrasaLogo.png",
           "instructors": "<div class='col-6'><img src='/images/michal-rosen.png' style='width: 100%;' /><br />מיכל רוזן</div><div class='col-6'><img src='/images/gilad.png' style='width: 100%;' /><br />גילעד סוויט</div>",
-          "lessonPlan": "<a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור ראשון</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור שני</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור שלישין</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור יום ארבע עשר</a><br/>",
-          "edSupply": "<a href='/files/vocabi.pdf' target='_blank'>אוצר מילים- ערבית למתחילים</a><br/>",
-          "links": "<img src='/images/madrasaLinkPic.png' style='width:100%'><br/><a href='https://madrasafree.com/14-days' target='_blank'>אתר פרויקט 14 יום</a><br/><a href='https://www.madrasafree.net/library' target='_blank'>ספריית מדרסה</a><br/>"
+          "products": [
+            ["/files/madrasa1.pdf", "מערך שיעור ראשון"],
+            ["/files/madrasa2.pdf", "מערך שיעור שני"],
+            ["/files/madrasa3.pdf", "מערך שיעור שלישי"],
+            ["/files/madrasa4.pdf", "מערך שיעור ארבע עשרה"],
+            ["/files/vocabi.pdf", "אוצר מילים- ערבית למתחילים"],
+            ["https://madrasafree.com/14-days", "אתר פרויקט 14 יום"],
+            ["ספריית מדרסה", "ספריית מדרסה"]
+          ]
         }
       ]
     },
@@ -123,9 +141,15 @@
           "video": "https://www.youtube.com/embed/paQCE58334M",
           "caseLogo": "/images/madrasaLogo.png",
           "instructors": "<div class='col-6'><img src='/images/michal-rosen.png' style='width: 100%;' /><br />מיכל רוזן</div><div class='col-6'><img src='/images/gilad.png' style='width: 100%;' /><br />גילעד סוויט</div>",
-          "lessonPlan": "<a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור ראשון</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור שני</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור שלישין</a><br/><a href='/files/madrasa1.pdf' target='_blank'>מערך שיעור יום ארבע עשר</a><br/>",
-          "edSupply": "<a href='/files/vocabi.pdf' target='_blank'>אוצר מילים- ערבית למתחילים</a><br/>",
-          "links": "<img src='/images/madrasaLinkPic.png' style='width:100%'><br/><a href='https://madrasafree.com/14-days' target='_blank'>אתר פרויקט 14 יום</a><br/><a href='https://www.madrasafree.net/library' target='_blank'>ספריית מדרסה</a><br/>"
+          "products": [
+            ["/files/madrasa1.pdf", "מערך שיעור ראשון"],
+            ["/files/madrasa2.pdf", "מערך שיעור שני"],
+            ["/files/madrasa3.pdf", "מערך שיעור שלישי"],
+            ["/files/madrasa4.pdf", "מערך שיעור ארבע עשרה"],
+            ["/files/vocabi.pdf", "אוצר מילים- ערבית למתחילים"],
+            ["https://madrasafree.com/14-days", "אתר פרויקט 14 יום"],
+            ["ספריית מדרסה", "ספריית מדרסה"]
+          ]
         }
       ]
     }
