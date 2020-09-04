@@ -4,7 +4,10 @@ var jsoncounter = 0;
 var data = 0;
 $(document).ready(function () {
   // Gets the video src from the data-src on each button
-
+  $('#clickImg').click(() => {
+    $('#btnForVideo').click();
+    window.location.replace('#clickImg');
+  });
   var $videoSrc;
   $('.video-btn').click(function () {
     $videoSrc = $(this).data('src');

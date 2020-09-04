@@ -19,7 +19,7 @@ body {
 
 .container-fluid {
   min-width: 320px;
-  padding: 0 0.1;
+  padding: 0 0;
   width: 100%;
 }
 .scrolling-wrapper {
@@ -300,6 +300,7 @@ a.badge-primary:hover {
 
 #blendedSystem {
   padding-top: 5%;
+  padding-right: 3%;
 }
 
 /*models => feedback*/
@@ -335,13 +336,15 @@ a.badge-primary:hover {
     min-height: 85vh;
   }
   #goToTop {
-    background-color: orange;
+    font-weight: bolder;
     position: absolute;
     left: 0;
     bottom: 0;
     height: 100px;
     width: 100%;
     overflow: hidden;
+    display: inline-block;
+    border: none;
   }
 }
 
@@ -447,6 +450,11 @@ a.badge-primary:hover {
 /* [ON SMALL SCREENS] */
 
 @media screen and (max-width: 760px) {
+  .container-fluid {
+    min-width: 320px;
+    padding: 0 0.1;
+    width: 100%;
+  }
   h5 {
     font-size: xx-large;
     text-align: center;

@@ -54,7 +54,7 @@
     <div class="model-item">
       <h3>מקרה בוחן</h3>
       <p>צפו ב:</p>
-      <h2 ></h2style>><%-model.case_studies_name%></h2>
+      <h2 ></h2style><%-model.case_studies_name%></h2>
       <h5 style=" font-size: 4vh;"><%-model.case_studies_interName%></h5>
       <p><%-model.case_studies_story%></p>
       <div class="col-md-8 row">
@@ -72,10 +72,10 @@
       </div>
     </div>
   </div>
-  <div class="col-md-6">
-    <img style="width: 100%;" src="<%=model.case_studies_pic%>" />
+  <div  class="col-md-6">
+    <img id="clickImg" style="width: 100%;" src="<%=model.case_studies_pic%>" />
      <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
+<button id="btnForVideo" type="button" style="visibility: hidden;" class="btn btn-primary video-btn" data-toggle="modal" data-src="<%=model.case_studies_video%>" data-target="#myModal">
   Play Video 1 - autoplay
 </button>
   </div>
