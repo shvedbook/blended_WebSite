@@ -17,11 +17,6 @@ body {
   width: 100%;
 }
 
-.container-fluid {
-  min-width: 320px;
-  padding: 0 0;
-  width: 100%;
-}
 .scrolling-wrapper {
   max-width: 100%;
 }
@@ -325,6 +320,11 @@ a.badge-primary:hover {
 }
 
 @media only screen and (orientation: landscape) {
+  .container-fluid {
+    min-width: 320px;
+    padding: 0 0;
+    width: 100%;
+  }
   .model-item {
     background-color: #f5f5f5;
     padding: 5% 3%;
@@ -452,7 +452,7 @@ a.badge-primary:hover {
 @media screen and (max-width: 760px) {
   .container-fluid {
     min-width: 320px;
-    padding: 0 0.1;
+    padding: 0 1;
     width: 100%;
   }
   h5 {
