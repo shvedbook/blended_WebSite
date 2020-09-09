@@ -48,16 +48,16 @@
     
   </div>
 </div>
-<hr />
+<hr class="ondeskhidden"/>
 <div id="caseStudy<%= model.id %>" class="row bc-grey">
-  <div class="col-md-6">
+  <div class="col-md-6" style="padding-right: 5%">
     <div class="model-item">
       <h3>מקרה בוחן</h3>
       <p>צפו ב:</p>
       <h2 ></h2style><%-model.case_studies_name%></h2>
       <h5 style=" font-size: 4vh;"><%-model.case_studies_interName%></h5>
       <p><%-model.case_studies_story%></p>
-      <div class="col-md-8 row">
+      <div class="col-md-12 row">
         <div class="col-6" style="border-left: 3px solid lightgrey;">
           <img src="<%-model.case_studies_caseLogo%>" style="width: 100%;" />
         </div>
@@ -73,16 +73,16 @@
     </div>
   </div>
   <div  class="col-md-6">
-    <img id="clickImg" style="width: 100%;" src="<%=model.case_studies_pic%>" />
+    <img id="clickImg" style="width: 100%; cursor: pointer;" src="<%=model.case_studies_pic%>" />
      <!-- Button trigger modal -->
 <button id="btnForVideo" type="button" style="visibility: hidden;" class="btn btn-primary video-btn" data-toggle="modal" data-src="<%=model.case_studies_video%>" data-target="#myModal">
   Play Video 1 - autoplay
 </button>
   </div>
 </div>
-<hr />
-<div class="row models" id="tozarim<%= model.id %>">
-  <div class="container-fluid bc-grey">
+<hr class="ondeskhidden"/>
+<div class="row models" id="tozarim<%= model.id %>" style="padding: 5%;">
+  <div class="container-fluid ">
     <h2>משאבי למידה ותוצרים</h2>
     <div class="row">
       <% model.case_studies_products.forEach(product => { %>
@@ -96,7 +96,7 @@
     </div>
   </div>
 </div>
-<hr />
+<hr class="ondeskhidden"/>
 
 <div class="row" id="feedback<%= model.id %>">
   <div class="col-md-6">
@@ -224,7 +224,7 @@
 
                             <%=feedback.message%>
                           </div>
-                          <hr />
+                          <hr class="ondeskhidden"/>
                           <small><%=feedback.name%></small>
                         </div>
                       </div>
