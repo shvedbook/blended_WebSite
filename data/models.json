@@ -25,7 +25,7 @@
           "pic": "/images/facetoface.PNG",
           "video": "https://www.youtube.com/embed/KldIqi9C24Q",
           "caseLogo": "/images/israelDigitalLogo.png",
-          "instructors": "<div class='col-6'><img src='/images/selly.png' style='width: 100%;' /><br />סיליי ביינסין</div>",
+          "instructors": "<div class='col-12'><img src='/images/selly.png' style='width: 100%;' /><br />סיליי ביינסין</div>",
           "products": [
             ["/files/madrasa1.pdf", "מערך שיעור ראשון"],
             ["/files/madrasa2.pdf", "מערך שיעור שני"],
