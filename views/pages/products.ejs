@@ -1,11 +1,11 @@
 <div style="margin: 5% auto; text-align: center;">
-  <h3 style="font-size: 4vh; line-height: 0.4;">
+  <h3 style="font-size: line-height: 0.4;">
     משאבי למידה ותוצרים
   </h3>
 </div>
 <div class="row">
   <div class="col-2"></div>
-  <div class="col-8 row" style="text-align: center; font-size: 2.5vh; color: black;">
+  <div class="col-8 row" style="text-align: center; font-size:  color: black;">
     <div class="col-md-3" style="border-left: 3px solid #646464;">
       <a style="color: black;" href="/products#facetoface">מודל תיוך מלא</a>
     </div>
@@ -27,7 +27,7 @@
     <% let colors = ["green","blue","yellow"]; let randColor = colors[Math.floor(Math.random() * 3)]
     %>
     <div class="col-12">
-      <h2 class="col-md-3" style="margin: 2% auto; font-size: 6vh;"><%=model.name%></h2>
+      <h2 class="col-md-3" style="margin: 2% auto;"><%=model.name%></h2>
 
       <div class="row">
         <% model.case_studies_products.forEach(product => { %>
@@ -35,7 +35,7 @@
           <a href=" <%=product[0]%>" target="_blank">
             <img src="/images/madrasaLinkPic.png" style="width: 100%; max-height: 150px;" />
           </a>
-          <h5 style="text-align: center; font-size: 3vh;"><%=product[1]%></h5>
+          <h5 style="text-align: center;"><%=product[1]%></h5>
         </div>
         <% }); %>
       </div>
