@@ -223,6 +223,8 @@ h3 {
 
 #footer {
   padding-bottom: 5%;
+  width: 100%;
+  text-align: center;
 }
 
 /*כותרות של המאפיינים*/
@@ -330,7 +332,7 @@ a.badge-primary:hover {
   }
   .model-item {
     background-color: #f5f5f5;
-    padding: 5% 3%;
+    padding: 2% 3%;
     min-height: 85vh;
     font-size: 12pt;
   }
@@ -412,7 +414,9 @@ a.badge-primary:hover {
   background-color: rgba(230, 230, 230, 0.31);
   color: black;
 }
-
+.bc-grey a,.bc-grey h3 {
+  color: black;
+}
 .carousel-control-prev-icon {
   background-image: url("data:images/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
@@ -568,7 +572,7 @@ a.badge-primary:hover {
 }
 
 .padding100 {
-  padding-top: 100px;
+  padding-top: 70%;
 }
 
 .custom-select {
@@ -601,7 +605,7 @@ a.badge-primary:hover {
 }
 
 .modelsPlate h2 {
-  font-weight: bolder;
+  
   border-bottom: #faca16 solid 10px;
 }
 
@@ -614,11 +618,13 @@ a.badge-primary:hover {
 }
 
 .roundedDiv {
-  background-color: rgb(68, 68, 68);
-  padding: 2%;
+  background-color: white;
+  color:black;
+  padding: 1%;
   margin: 1% 2%;
   text-align: center;
   border-radius: 15px;
+  
 }
 
 .model-item h3 {
@@ -677,4 +683,10 @@ a.badge-primary:hover {
   font-weight: normal;
   color: #fff;
   opacity: 1;
+}
+#showDescBtn{
+  margin:10% 2%;
+  font-size: larger;
+  background-color: black;
+  padding:0 2%;
 }

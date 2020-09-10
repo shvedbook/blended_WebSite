@@ -1,14 +1,14 @@
 <span id="#howToBlend"></span>
   <hr class="ondeskhidden"/>
   <div style="background-color: #ffffff;">
-<% var bgcolor = ["blue","yellow","green"]
+<% var bgcolor = ["blue","yellow","green","grey"]
 var colorIndex = 0;
 %> 
-  <div class="container-fluid modelsPlate marginCenter col-md-6">
+  <div class="container-fluid modelsPlate marginCenter col-md-6 ">
     <h2 class="marginCenter alignCenter col-8">מודלים ללמידה מעורבת</h2>
     <p class="alignCenter"><br/>
       הכירו את דגמי הלמידה המעורבת של <b>קמפוס IL</b>, שמעו מהמומחים בתחום וצפו בדוגמאות מהשטח</p>
-    <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4">
+    <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 ondeskhidden">
 			<% modelsData.forEach(function (model) {%>
         <a href="/models/<%=model.id%>">
 			<div class="col-8">
@@ -19,11 +19,27 @@ var colorIndex = 0;
       </div>
     </a>
     <% colorIndex++;
-    if(colorIndex >2 ){
+    if(colorIndex >3 ){
       colorIndex = 0 ;
     } %> 
       <% })%>
   
+    </div>
+    <div class="row onmobilehidden">
+      <% modelsData.forEach(function (model) {%>
+        <a href="/models/<%=model.id%>" style=" height: 100px; width:25%;">
+			
+				<div class=" bc-<%=bgcolor[colorIndex]%> " style=" padding: 35% 5%; text-align: center; margin: 2% ;">
+          <h3 style="background: none"><%=model.name%></h3>
+          
+        
+      </div>
+    </a>
+    <% colorIndex++;
+    if(colorIndex >3 ){
+      colorIndex = 0 ;
+    } %> 
+      <% })%>
     </div>
 </div>
 <br/>

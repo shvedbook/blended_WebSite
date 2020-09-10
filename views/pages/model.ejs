@@ -7,15 +7,17 @@
     <div class="row">
       <div class="col-md-6">
         <%-model.ShortStory%>
-        <a id="showDescBtn" href="#" onclick="showDescription()" style="font-size: large;"
+        <a id="showDescBtn" href="#" onclick="showDescription()" 
           >למידע נוסף...</a
         >
+        <br/>
+        <br/>
         <div class="description"><%-model.Story%></div>
         <div class="row">
           <div class="row col-md-12">
             <div class="col-md-4">
               <a href="<%= model.id %>#caseStudy<%= model.id %>">
-                <div class="roundedDiv <%=randColor%>">
+                <div class="roundedDiv <%=randColor%>" >
                   מקרה בוחן
                 </div>
               </a>
@@ -52,7 +54,7 @@
 <div id="caseStudy<%= model.id %>" class="row bc-grey">
   <div class="col-md-6" style="padding-right: 5%">
     <div class="model-item">
-      <h3>מקרה בוחן</h3>
+      <h2>מקרה בוחן</h2>
       <p>צפו ב:</p>
       <h2 ></h2style><%-model.case_studies_name%></h2>
       <h5 style=" font-size: 4vh;"><%-model.case_studies_interName%></h5>
@@ -264,7 +266,11 @@
 </div> 
   
 
-<% } }); %>
+<% } 
+
+}
+
+); %>
 
 <!-- FOOTER -->
 <%-include(`./partials/footer`) %> <%-include(`./partials/topFunction`) %>

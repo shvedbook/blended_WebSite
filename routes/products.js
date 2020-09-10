@@ -15,7 +15,7 @@ module.exports = (params) => {
       request.session.feedback = {};
 
       return response.render('layout', {
-        pageTitle: 'תוצרים',
+        pageTitle: 'משאבי למידה ותוצרים',
         template: 'products',
 
         errors,
