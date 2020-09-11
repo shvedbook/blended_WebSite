@@ -29,6 +29,7 @@ p {
 h2 {
   font-weight: 800;
   font-family: 'Assistant', sans-serif;
+  color: #655959;
 }
 h3 {
   background-color: rgb(68, 68, 68);
@@ -41,7 +42,36 @@ h3 {
 #header {
   background-color: aquamarine;
 }
+/* before::ul {
+  background-image: url('/images/blueLi.svg');
+  background-repeat: no-repeat;
+}*/
+.whyBlend ul {
+  list-style-type: none;
+  line-height: 3vw;
+  vertical-align: middle;
+}
 
+.whyBlend ul li:before {
+  content: '';
+
+  display: inline-block;
+
+  height: 2vw;
+
+  width: 2vw;
+
+  background-size: 2vw;
+
+  background-image: url('/images/blueLi.svg');
+
+  background-repeat: no-repeat;
+
+  margin-left: 1vw;
+  padding: 1%;
+  font-size: 16pt;
+  font-weight: bold;
+}
 .selected {
   background-color: cornflowerblue;
 }
@@ -299,7 +329,6 @@ a.badge-primary:hover {
 /*blended system div styling*/
 
 #blendedSystem {
-  padding-top: 5%;
   padding-right: 3%;
 }
 
@@ -337,7 +366,7 @@ a.badge-primary:hover {
     font-size: 12pt;
   }
   .paded-div {
-    padding: 6%;
+    padding: 4%;
     min-height: 85vh;
   }
   #goToTop {
@@ -414,7 +443,8 @@ a.badge-primary:hover {
   background-color: rgba(230, 230, 230, 0.31);
   color: black;
 }
-.bc-grey a,.bc-grey h3 {
+.bc-grey a,
+.bc-grey h3 {
   color: black;
 }
 .carousel-control-prev-icon {
@@ -546,10 +576,10 @@ a.badge-primary:hover {
 }
 
 .mobileBtn {
-  width: 60%;
   font-size: 22pt;
   margin: 5% auto;
   font-weight: 700;
+  width: 100%;
 }
 
 .btn.disabled,
@@ -605,7 +635,6 @@ a.badge-primary:hover {
 }
 
 .modelsPlate h2 {
-  
   border-bottom: #faca16 solid 10px;
 }
 
@@ -619,12 +648,11 @@ a.badge-primary:hover {
 
 .roundedDiv {
   background-color: white;
-  color:black;
+  color: black;
   padding: 1%;
   margin: 1% 2%;
   text-align: center;
   border-radius: 15px;
-  
 }
 
 .model-item h3 {
@@ -684,9 +712,21 @@ a.badge-primary:hover {
   color: #fff;
   opacity: 1;
 }
-#showDescBtn{
-  margin:10% 2%;
+#showDescBtn {
+  margin: 10% 2%;
   font-size: larger;
   background-color: black;
-  padding:0 2%;
+  padding: 0 2%;
+}
+.blendedSystemBg {
+  background-image: url(/images/arrBackground.svg);
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position-x: 10vw;
+}
+.right45Bg {
+  background-image: url(/images/arrBackground.svg);
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position-x: 80vw;
 }
