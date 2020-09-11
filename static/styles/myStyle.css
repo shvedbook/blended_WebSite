@@ -39,6 +39,7 @@ h3 {
   display: inline-block;
   border-radius: 25px;
 }
+
 #header {
   background-color: aquamarine;
 }
@@ -63,13 +64,24 @@ h3 {
 
 @media screen and (min-width: 760px) {
   .blendedSystemBg {
-    background-image: url(/images/arrBackground.svg);
+    background-image: url('/images/arrBackground.svg');
     background-repeat: no-repeat;
     background-size: 10%;
     background-position-x: 10vw;
   }
+  .toolsBG {
+    background-image: url('/images/toolsBG.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .twoCirclesBg {
+    background-image: url('/images/twoCircles.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: 20%;
+  }
   .right45Bg {
-    background-image: url(/images/arrRightBackground.svg);
+    background-image: url('/images/arrRightBackground.svg');
     background-repeat: no-repeat;
     background-size: 100%;
   }
@@ -505,11 +517,7 @@ a.badge-primary:hover {
     padding: 0 1;
     width: 100%;
   }
-  .whyBlend ul {
-    list-style-type: none;
-    line-height: 3vw;
-    vertical-align: middle;
-  }
+
   h5 {
     font-size: xx-large;
     text-align: center;
