@@ -46,32 +46,7 @@ h3 {
   background-image: url('/images/blueLi.svg');
   background-repeat: no-repeat;
 }*/
-.whyBlend ul {
-  list-style-type: none;
-  line-height: 3vw;
-  vertical-align: middle;
-}
 
-.whyBlend ul li:before {
-  content: '';
-
-  display: inline-block;
-
-  height: 2vw;
-
-  width: 2vw;
-
-  background-size: 2vw;
-
-  background-image: url('/images/blueLi.svg');
-
-  background-repeat: no-repeat;
-
-  margin-left: 1vw;
-  padding: 1%;
-  font-size: 16pt;
-  font-weight: bold;
-}
 .selected {
   background-color: cornflowerblue;
 }
@@ -87,6 +62,44 @@ h3 {
 }
 
 @media screen and (min-width: 760px) {
+  .blendedSystemBg {
+    background-image: url(/images/arrBackground.svg);
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position-x: 10vw;
+  }
+  .right45Bg {
+    background-image: url(/images/arrRightBackground.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .whyBlend ul {
+    list-style-type: none;
+    line-height: 3vw;
+    vertical-align: middle;
+  }
+
+  .whyBlend ul li:before {
+    content: '';
+
+    display: inline-block;
+
+    height: 2vw;
+
+    width: 2vw;
+
+    background-size: 2vw;
+
+    background-image: url('/images/blueLi.svg');
+
+    background-repeat: no-repeat;
+
+    margin-left: 1vw;
+    padding: 1%;
+    font-size: 16pt;
+    font-weight: bold;
+  }
   .card-block {
     min-height: 200px;
     min-width: 200px;
@@ -492,6 +505,11 @@ a.badge-primary:hover {
     padding: 0 1;
     width: 100%;
   }
+  .whyBlend ul {
+    list-style-type: none;
+    line-height: 3vw;
+    vertical-align: middle;
+  }
   h5 {
     font-size: xx-large;
     text-align: center;
@@ -717,16 +735,4 @@ a.badge-primary:hover {
   font-size: larger;
   background-color: black;
   padding: 0 2%;
-}
-.blendedSystemBg {
-  background-image: url(/images/arrBackground.svg);
-  background-repeat: no-repeat;
-  background-size: 10%;
-  background-position-x: 10vw;
-}
-.right45Bg {
-  background-image: url(/images/arrBackground.svg);
-  background-repeat: no-repeat;
-  background-size: 10%;
-  background-position-x: 80vw;
 }
