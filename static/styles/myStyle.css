@@ -16,20 +16,30 @@ body {
   background-position: center;
   font-size: 14pt;
   width: 100%;
+  max-width: 1920px;
 }
-section {
+
+img {
+  vertical-align: middle;
+  border-style: none;
+  width: 50%;
+  margin: 0 auto;
 }
+
 .scrolling-wrapper {
   max-width: 100%;
 }
+
 p {
   font-size: 12pt;
 }
+
 h2 {
   font-weight: 800;
   font-family: 'Assistant', sans-serif;
   color: #655959;
 }
+
 h3 {
   background-color: rgb(68, 68, 68);
   padding: 2%;
@@ -42,6 +52,7 @@ h3 {
 #header {
   background-color: aquamarine;
 }
+
 /* before::ul {
   background-image: url('/images/blueLi.svg');
   background-repeat: no-repeat;
@@ -55,6 +66,12 @@ h3 {
     width: 100%;
     height: auto;
 }*/
+
+#mobileLOGO {
+  width: 80%;
+  padding: 0 0;
+  margin-left: 0;
+}
 
 .card-block h3 {
   font-weight: bolder;
@@ -72,11 +89,15 @@ h3 {
     background-image: url('/images/toolsBG.svg');
     background-repeat: no-repeat;
     background-size: 100%;
+    min-height: 450px;
+    padding: 3%;
   }
   .aboutUsBG {
     background-image: url('/images/aboutUsBG.svg');
     background-repeat: no-repeat;
     background-size: 100%;
+    min-height: 450px;
+    padding: 3% 0;
   }
   .twoCirclesBg {
     background-image: url('/images/twoCircles.svg');
@@ -89,28 +110,19 @@ h3 {
     background-repeat: no-repeat;
     background-size: 100%;
   }
-
   .whyBlend ul {
     list-style-type: none;
     line-height: 3vw;
     vertical-align: middle;
   }
-
   .whyBlend ul li:before {
     content: '';
-
     display: inline-block;
-
     height: 2vw;
-
     width: 2vw;
-
     background-size: 2vw;
-
     background-image: url('/images/blueLi.svg');
-
     background-repeat: no-repeat;
-
     margin-left: 1vw;
     padding: 1%;
     font-size: 16pt;
@@ -119,7 +131,6 @@ h3 {
   .card-block {
     min-height: 200px;
     min-width: 200px;
-
     padding: 10%;
   }
   .card {
@@ -174,9 +185,11 @@ h4::first-letter {
 .col-md-4 img {
   width: 50%;
 }
+
 .col-12 {
   padding-top: 2%;
 }
+
 a {
   text-decoration: none !important;
   color: #faca16;
@@ -211,7 +224,6 @@ h3 {
 
 .models {
   margin: 0 auto;
-
   font-weight: bolder;
 }
 
@@ -353,8 +365,7 @@ a .btn-primary:hover {
   text-size-adjust: 80%;
 }
 
-a.badge-primary:focus,
-a.badge-primary:hover {
+a.badge-primary:focus, a.badge-primary:hover {
   background-color: #faca16;
   border-color: #faca16;
 }
@@ -400,8 +411,22 @@ a.badge-primary:hover {
   }
   .paded-div {
     padding: 4%;
-    min-height: 85vh;
   }
+  #goToTop {
+    font-weight: bolder;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 20%;
+    margin-left: 40%;
+    overflow: hidden;
+    display: inline-block;
+    border: solid black 1px;
+  }
+}
+
+@media only screen and (orientation: portrait) {
   #goToTop {
     font-weight: bolder;
     position: absolute;
@@ -413,12 +438,8 @@ a.badge-primary:hover {
     display: inline-block;
     border: none;
   }
-}
-
-@media only screen and (orientation: portrait) {
   .model-item {
     background-color: #f5f5f5;
-
     min-height: 600px;
     font-size: 12pt;
   }
@@ -431,8 +452,7 @@ a.badge-primary:hover {
   display: none;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-control-prev, .carousel-control-next {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -476,10 +496,11 @@ a.badge-primary:hover {
   background-color: rgba(230, 230, 230, 0.31);
   color: black;
 }
-.bc-grey a,
-.bc-grey h3 {
+
+.bc-grey a, .bc-grey h3 {
   color: black;
 }
+
 .carousel-control-prev-icon {
   background-image: url("data:images/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
@@ -525,7 +546,6 @@ a.badge-primary:hover {
     padding: 0 1;
     width: 100%;
   }
-
   h5 {
     font-size: xx-large;
     text-align: center;
@@ -619,8 +639,7 @@ a.badge-primary:hover {
   width: 100%;
 }
 
-.btn.disabled,
-.btn:disabled {
+.btn.disabled, .btn:disabled {
   background-color: lightgray;
   border-color: lightgrey;
 }
@@ -723,13 +742,16 @@ a.badge-primary:hover {
 .error-actions .btn {
   margin-right: 10px;
 }
+
 .background1 {
   background-repeat: no-repeat;
   background-image: url(/images/background1.png);
   background-size: 100%;
   margin: 0 auto;
 }
+
 /*video model*/
+
 .modal-dialog {
   max-width: 800px;
   margin: 30px auto;
@@ -739,6 +761,7 @@ a.badge-primary:hover {
   position: relative;
   padding: 0px;
 }
+
 .close {
   position: absolute;
   right: -30px;
@@ -749,6 +772,7 @@ a.badge-primary:hover {
   color: #fff;
   opacity: 1;
 }
+
 #showDescBtn {
   margin: 10% 2%;
   font-size: larger;
