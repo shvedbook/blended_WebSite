@@ -163,7 +163,7 @@ function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimka
 
   //if no model found
   if (numOfModels == 0) {
-    $('#blendedAnsNone').css('display', 'block');
+    $('#facetoface').css('display', 'block');
   }
   setTimeout(() => {
     window.location.replace('/#aiAnswer');
