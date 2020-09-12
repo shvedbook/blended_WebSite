@@ -29,7 +29,8 @@
           "products": [
             ["/files/facetoface1.pdf", "סילבוס אוריינות דיגיטלית תיווך ישיר"],
             ["/files/facetoface2.pdf", "קורס מיומנויות תעסוקתיות דיגיטליות"]
-          ]
+          ],
+          "LinkPic": "/images/israelDigitalLogo.png"
         }
       ]
     },
@@ -67,7 +68,8 @@
             ["/files/vocabi.pdf", "אוצר מילים- ערבית למתחילים"],
             ["https://madrasafree.com/14-days", "אתר פרויקט 14 יום"],
             ["ספריית מדרסה", "ספריית מדרסה"]
-          ]
+          ],
+          "LinkPic": "/images/madrasaLinkPic.png"
         }
       ]
     },
@@ -105,7 +107,8 @@
             ["/files/vocabi.pdf", "אוצר מילים- ערבית למתחילים"],
             ["https://madrasafree.com/14-days", "אתר פרויקט 14 יום"],
             ["ספריית מדרסה", "ספריית מדרסה"]
-          ]
+          ],
+          "LinkPic": "/images/madrasaLinkPic.png"
         }
       ]
     },
@@ -143,7 +146,8 @@
             ["/files/madrasa4.pdf", "מערך שיעור ארבע עשרה"],
             ["/files/vocabi.pdf", "אוצר מילים- ערבית למתחילים"],
             ["https://madrasafree.com/14-days", "אתר פרויקט 14 יום"],
-            ["ספריית מדרסה", "ספריית מדרסה"]
+            ["ספריית מדרסה", "ספריית מדרסה"],
+            "LinkPic": "/images/madrasaLinkPic.png"
           ]
         }
       ]
