@@ -2,8 +2,6 @@ const express = require('express');
 
 const path = require('path');
 
-const enforce = require('express-sslify');
-
 const bodyParser = require('body-parser');
 
 const cookieSession = require('cookie-session');
@@ -23,7 +21,6 @@ const { response } = require('express');
 const { request } = require('http');
 
 const app = express();
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 const port = process.env.PORT || 8080;
 
