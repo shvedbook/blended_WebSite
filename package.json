@@ -10,8 +10,7 @@
     "express": "4.17.1",
     "express-validator": "^6.5.0",
     "http-errors": "^1.8.0",
-    "openssl": "^1.1.0",
-    "ssl-express-www": "^3.0.7"
+    "openssl": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^7.0.0",
