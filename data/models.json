@@ -27,13 +27,8 @@
           "caseLogo": "/images/israelDigitalLogo.png",
           "instructors": "<div class='col-12' ><div style=\"margin-right:25%\"><img src='/images/selly.png' style='width: 50%;' /><br />סיליי ביינסין</div></div>",
           "products": [
-            ["/files/madrasa1.pdf", "מערך שיעור ראשון"],
-            ["/files/madrasa2.pdf", "מערך שיעור שני"],
-            ["/files/madrasa3.pdf", "מערך שיעור שלישי"],
-            ["/files/madrasa4.pdf", "מערך שיעור ארבע עשרה"],
-            ["/files/vocabi.pdf", "אוצר מילים- ערבית למתחילים"],
-            ["https://madrasafree.com/14-days", "אתר פרויקט 14 יום"],
-            ["ספריית מדרסה", "ספריית מדרסה"]
+            ["/files/facetoface1.pdf", "סילבוס אוריינות דיגיטלית תיווך ישיר"],
+            ["/files/facetoface2.pdf", "קורס מיומנויות תעסוקתיות דיגיטליות"]
           ]
         }
       ]
