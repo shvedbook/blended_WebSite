@@ -1,5 +1,5 @@
 const express = require('express');
-
+const secure = require('ssl-express-www');
 const path = require('path');
 
 const bodyParser = require('body-parser');
@@ -21,6 +21,8 @@ const { response } = require('express');
 const { request } = require('http');
 
 const app = express();
+
+app.use(secure);
 
 const port = process.env.PORT || 8080;
 
