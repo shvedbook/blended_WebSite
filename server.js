@@ -11,7 +11,11 @@ const FeedbackService = require('./services/FeedbackService');
 
 const ModelService = require('./services/ModelService');
 
+const ModelSysDataService = require('./services/ModelSysDataService');
+
 const feedbackService = new FeedbackService('./data/feedback.json');
+
+const modelSysDataService = new ModelSysDataService('./data/modelSys.json');
 
 const modelService = new ModelService('./data/models.json');
 
@@ -65,7 +69,7 @@ app.use(
   '/',
   routes({
     feedbackService,
-
+    modelSysDataService,
     modelService,
   })
 );
