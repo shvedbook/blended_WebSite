@@ -27,9 +27,8 @@ module.exports = (params) => {
         errors,
         successMessage,
       });
-    }
-    catch (err) {
-      return next()
+    } catch (err) {
+      return next();
     }
   });
 
@@ -47,12 +46,9 @@ module.exports = (params) => {
         errors,
         successMessage,
       });
+    } catch (err) {
+      return next(err);
     }
-    catch (err) {
-      return next(err)
-    }
-
-
   });
   /*router.get('/:id', async (request, response) => {
     const model = await modelsService.getModel(request.params.id);
@@ -82,7 +78,7 @@ module.exports = (params) => {
       };
       let modelID = request.body.model;
       console.log(modelID);
-      return response.redirect(`/models/${modelID}#$feedback`);
+      return response.redirect(`/models/${modelID}#feedback`);
     } catch (err) {
       return next(err);
     }

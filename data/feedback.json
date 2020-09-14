@@ -1,5 +1,13 @@
 [
   {
+    "name": "אלכס",
+    "email": "shvedbook@gmail.com",
+    "title": "ניסוי תגובה לכיתה הפוכה",
+    "message": "כןד",
+    "model": "kitaafuha",
+    "posneg": "pos"
+  },
+  {
     "name": "asdasd",
     "email": "asd@gmail.com",
     "title": "yesyes",
@@ -267,7 +275,7 @@
     "name": "asdasd",
     "email": "asdas@gmail.com",
     "title": "asdasdf",
-    "message": "asdafasd&#x5C;fdg",
+    "message": "asdafasd\fdg",
     "model": "kitaafuha",
     "posneg": "pos"
   },

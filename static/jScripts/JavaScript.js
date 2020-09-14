@@ -72,8 +72,14 @@ function pullFromTB() {
   var eikef = parseInt($('#inputGroupSelect03 option:selected').val());
   var ramatoryanut = parseInt($('#inputGroupSelect04 option:selected').val());
   var mashavimkaiamim = parseInt($('#inputGroupSelect05 option:selected').val());
-
+  var containt = parseInt($('#inputGroupSelect01 option:selected').text());
+  var pedadogyModel = parseInt($('#inputGroupSelect02 option:selected').text());
+  var scope = parseInt($('#inputGroupSelect03 option:selected').text());
+  var literacy = parseInt($('#inputGroupSelect04 option:selected').text());
+  var resources = parseInt($('#inputGroupSelect05 option:selected').text());
+  //send data to data validation
   dataValidation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimkaiamim);
+  // send data to data tracing service
 }
 
 //function for data validation

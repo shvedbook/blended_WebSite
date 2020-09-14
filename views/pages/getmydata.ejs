@@ -1,8 +1,8 @@
 ﻿<div id="feedbackData" style="direction: ltr; text-align: left;">
   <h2>Feedback Data</h2>
-  [ <% feedbackData.forEach(function (feedback) {%> {"name":<%- feedback.name %>, "email":<%-
-  feedback.email %>, "title":<%- feedback.title %>, "message":<%- feedback.message %>, "model":<%-
-  feedback.model %>, "posneg":<%- feedback.posneg %>, },<br /><%})%> ]
+  [ <% feedbackData.forEach(function (feedback){%> {"name":"<%- feedback.name %>", "email":"<%-
+  feedback.email %>", "title":"<%- feedback.title %>", "message":"<%- feedback.message %>",
+  "model":"<%- feedback.model %>", "posneg":"<%- feedback.posneg %>" },<br /><%})%> ]
 </div>
 <!-- FOOTER -->
 <%-include(`./partials/footer`) %>
