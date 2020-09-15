@@ -105,6 +105,7 @@ function hideAllAnswers() {
 }
 //calculation of the model
 function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimkaiamim) {
+  
   hideAllAnswers();
 
   //$("#aiAnswer").text() = "רשימת המודלים הנמצאו מתאימים עבורך;";
@@ -113,17 +114,18 @@ function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimka
   // $('#aiAnswer').html('רשימת המודלים הנמצאו מתאימים עבורך:<br/>');
   if (modelpedogogi == 1) {
     numOfModels++;
-    $('#aiAnswer').html("<div>מבין המודלים הקיימים רק מודל 'תיווך מלא' מתאים להנחייה צמודה</div>");
     $('#facetoface').css('display', 'block');
-
+    
     $('#facetoface').show();
     toSendBtn();
   } else {
     if (modelpedogogi == 5) {
       $('#onlineblend').css('display', 'block');
       numOfModels++;
+      console.log("1")
     } else {
       if (thanim > 1 && modelpedogogi > 2 && ramatoryanut > 1) {
+        console.log("2")
         numOfModels++;
         $('#kvuzatImun').css('display', 'block');
         toSendBtn();
@@ -136,29 +138,42 @@ function modelCalculation(thanim, modelpedogogi, eikef, ramatoryanut, mashavimka
         mashavimkaiamim > 1 &&
         eikef == 3
       ) {
+        console.log("3")
         numOfModels++;
         $('#facetoface').css('display', 'block');
       } else if (thanim == 3) {
+        console.log("4")
         numOfModels++;
         $('#kitaafuha').css('display', 'block');
         toSendBtn();
         numOfModels++;
       } else if (
+       
         thanim > 1 &&
         modelpedogogi == 2 &&
         ramatoryanut > 1 &&
         mashavimkaiamim > 1 &&
         eikef > 1
       ) {
+        console.log("5")
         numOfModels++;
         $('#kitaafuha').css('display', 'block');
         toSendBtn();
         numOfModels++;
-      } else if (ramatoryanut == 1) {
+      }
+      if (ramatoryanut == 4) {
+        console.log("6")
         numOfModels++;
-        $('#aiAnswer').html(
-          "<div>המודל המתאים ביותר ללומדים בעלי אוריינות נמוכה הוא 'תיווך מלא'</div>"
-        );
+       
+
+        $('#facetoface').css('display', 'block');
+        toSendBtn();
+        numOfModels++;
+      }
+      else if (ramatoryanut == 1) {
+        console.log("7")
+        numOfModels++;
+      
 
         $('#facetoface').css('display', 'block');
         toSendBtn();
