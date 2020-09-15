@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  font-size: 14pt;
+  font-size: 18pt;
   width: 100%;
   max-width: 1920px;
 }
@@ -30,10 +30,6 @@ img {
   max-width: 100%;
 }
 
-p {
-  font-size: 12pt;
-}
-
 h2 {
   font-weight: 800;
   font-family: 'Assistant', sans-serif;
@@ -41,6 +37,7 @@ h2 {
 }
 
 h3 {
+  font-size: 16pt;
   background-color: rgb(68, 68, 68);
   padding: 2%;
   color: white;
@@ -365,7 +362,8 @@ a .btn-primary:hover {
   text-size-adjust: 80%;
 }
 
-a.badge-primary:focus, a.badge-primary:hover {
+a.badge-primary:focus,
+a.badge-primary:hover {
   background-color: #faca16;
   border-color: #faca16;
 }
@@ -452,7 +450,8 @@ a.badge-primary:focus, a.badge-primary:hover {
   display: none;
 }
 
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -497,7 +496,8 @@ a.badge-primary:focus, a.badge-primary:hover {
   color: black;
 }
 
-.bc-grey a, .bc-grey h3 {
+.bc-grey a,
+.bc-grey h3 {
   color: black;
 }
 
@@ -639,7 +639,8 @@ a.badge-primary:focus, a.badge-primary:hover {
   width: 100%;
 }
 
-.btn.disabled, .btn:disabled {
+.btn.disabled,
+.btn:disabled {
   background-color: lightgray;
   border-color: lightgrey;
 }
