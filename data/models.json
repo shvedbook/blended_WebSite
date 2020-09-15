@@ -133,7 +133,7 @@
           "pic": "/images/kitaAfuhaBanner.png",
           "video": "https://www.youtube.com/embed/RzJSax99hlk",
           "caseLogo": "/images/hit.png",
-          "instructors": "<div class='col-6' style='text-allign: center'><img src='/images/orna.png' style='width: 100%;' /><br />אורנה קופולוביץ'</div>",
+          "instructors": "<div class='col-6' style='text-allign: center'><img src='/images/orna.png' style='width: 100%;' /><br />עו\"ד אורנה קופולוביץ'</div>",
           "products": [
             ["/files/kitaafuha1.pdf", "ניהול משא ומתן הסבר"],
             ["/files/kitaafuha2.pdf", "תיעוד שיעור 1"],
