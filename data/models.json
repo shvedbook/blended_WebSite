@@ -135,8 +135,8 @@
           "caseLogo": "/images/hit.png",
           "instructors": "<div class='col-6' style='text-allign: center'><img src='/images/orna.png' style='width: 100%;' /><br />עו\"ד אורנה קופולוביץ'</div>",
           "products": [
-            ["/files/kitaafuha1.pdf", "ניהול משא ומתן הסבר"],
-            ["/files/kitaafuha2.png", "תיעוד שיעור 1"],
+            ["/files/kitaafuha1.png", "ניהול משא ומתן הסבר"],
+            ["/files/kitaafuha2.jpeg", "תיעוד שיעור 1"],
             ["/files/kitaafuha3.jpeg", "תיעוד שיעור 2"],
             ["/files/kitaafuha4.jpeg", "תיעוד שיעור 3"],
             ["/files/kitaafuha5.jpeg", "תיעוד שיעור 4"],
