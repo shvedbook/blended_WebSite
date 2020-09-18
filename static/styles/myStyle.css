@@ -74,7 +74,13 @@ h3 {
   font-weight: bolder;
   color: white;
 }
-
+.whatIs {
+  background-image: url('/images/whatisbackgroung.svg');
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  font-size: 1.5rem;
+  padding: 1% 8%;
+}
 @media screen and (min-width: 760px) {
   .blendedSystemBg {
     background-image: url('/images/arrBackground.svg');
@@ -404,7 +410,7 @@ a.badge-primary:hover {
   .model-item {
     background-color: #f5f5f5;
     padding: 2% 3%;
-    min-height: 85vh;
+
     font-size: 18px;
   }
   .paded-div {
