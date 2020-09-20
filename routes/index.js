@@ -9,7 +9,7 @@ const router = express.Router();
 module.exports = (params) => {
   try {
     router.get('/', (request, response, next) => {
-      return response.render('layout', { pageTitle: 'מה הבלמדד שלך?', template: 'index' });
+      return response.render('layout', { pageTitle: 'מה הבלנדד שלך?', template: 'index' });
     });
   } catch (err) {
     return next(err);
