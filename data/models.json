@@ -96,12 +96,12 @@
           "interName": "<b>ליאת לרון</b><br/>המרכז לחינוך סייבר",
           "story": "מערך הסייבר הלאומי' ו'המרכז לחינוך סייבר' של 'קרן רש\"י' פיתחו קורס וירטואלי ראשון במסגרת הנגשת לימודי הסייבר לאזרחי מדינת ישראל. צפו בליאת לרון, מנהלת המיזם, מספרת על שילוב הקורס במודל קבוצות הריצה:",
           "pic": "/images/KvutzatImunBanner.png",
-          "video": "https://www.youtube.com/embed/A92w2SSpNDs",
+          "video": "https://www.youtube.com/embed/cI1JF3_IgHk",
           "caseLogo": "/images/kvutzatImunLogo.png",
           "instructors": "<div class='col-6'><img src='/images/daniel.png' style='width: 100%;' /><br />ליאת לרון</div>",
           "products": [
             ["/files/kvutzatImunStudentsEvidence.mp4", "עדויות לומדים"],
-            ["/files/kvutzatImun1.pdf", "שקפי תיאור קבוצת ריצה"]
+            ["/files/kvuzatImun1.pdf", "שקפי תיאור קבוצת ריצה"]
           ],
           "LinkPic": "/images/kvutzatImunLinkPic.png"
         }
