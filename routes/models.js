@@ -5,7 +5,7 @@ const validations = [
   check('name').trim().isLength({ min: 3, max: 25 }).escape().withMessage('השם לא תקין'),
   check('email').trim().isEmail().normalizeEmail().withMessage('כתובת המייל לא תקינה'),
   check('title').trim().isLength({ min: 3, max: 45 }).escape().withMessage('הכותרת לא תקינה'),
-  check('message').trim().isLength({ min: 3, max: 80 }).escape().withMessage('גוף ההודעה לא תקין'),
+  check('message').trim().isLength({ min: 3, max: 300 }).escape().withMessage('גוף ההודעה לא תקין'),
 ];
 const router = express.Router();
 
