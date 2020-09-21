@@ -78,7 +78,7 @@ h3 {
   background-image: url('/images/whatisbackgroung.svg');
   background-repeat: no-repeat;
   background-position-y: 50%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 1% 8%;
 }
 @media screen and (min-width: 760px) {
@@ -106,7 +106,7 @@ h3 {
     background-image: url('/images/twoCircles.svg');
     background-repeat: no-repeat;
     background-size: 50%;
-    background-position-x: 20%;
+    background-position-x: 70%;
   }
   .right45Bg {
     background-image: url('/images/arrRightBackground.svg');
@@ -117,6 +117,7 @@ h3 {
     list-style-type: none;
     line-height: 3vw;
     vertical-align: middle;
+    margin-right: -5%;
   }
   .whyBlend ul li:before {
     content: '';
