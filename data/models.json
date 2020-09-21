@@ -100,7 +100,7 @@
           "caseLogo": "/images/kvutzatImunLogo.png",
           "instructors": "<div class='col-6'><img src='/images/daniel.png' style='width: 100%;' /><br />ליאת לרון</div>",
           "products": [
-            ["/files/kvutzatImunStudentsEvidence.mp4", "עדויות לומדים"],
+            ["https://www.youtube.com/watch?v=hA9Y5szieeA&feature=youtu.be", "עדויות לומדים"],
             ["/files/kvuzatImun1.pdf", "שקפי תיאור קבוצת ריצה"]
           ],
           "LinkPic": "/images/kvutzatImunLinkPic.png"
