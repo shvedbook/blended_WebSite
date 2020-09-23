@@ -1,4 +1,4 @@
-var sslRedirect = require('heroku-ssl-redirect');
+
 const express = require('express');
 const path = require('path');
 
@@ -26,8 +26,7 @@ const port = process.env.PORT || 8080;
 
 app.set('trust proxy', 1);
 
-// enable ssl redirect
-app.use(sslRedirect());
+
 
 app.use(
   cookieSession({
