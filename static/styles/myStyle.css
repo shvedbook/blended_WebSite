@@ -725,7 +725,10 @@ a.badge-primary:hover {
 #feedback {
   color: black;
 }
-
+#feedback .h22 {
+  padding: 3%;
+  color: #655959;
+}
 #feedback hr {
   margin: 0 0;
 }

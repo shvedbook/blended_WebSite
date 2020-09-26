@@ -3,15 +3,13 @@
   <% let colors = ["green","blue","yellow"]; let randColor = colors[Math.floor(Math.random() * 3)]
   %>
   <div class="col-12 model-item bc-<%=randColor%>">
-    <h2 style="color: white"><%=model.name%></h2>
+    <h2 style="color: white;"><%=model.name%></h2>
     <div class="row">
       <div class="col-md-6">
         <%-model.ShortStory%>
-        <a id="showDescBtn" href="#" onclick="showDescription()" 
-          >קרא/י עוד..</a
-        >
-        <br/>
-        <br/>
+        <a id="showDescBtn" href="#" onclick="showDescription()">קרא/י עוד..</a>
+        <br />
+        <br />
         <div class="description"><%-model.Story%></div>
         <h5 style="color: white; font-weight: 800; bottom: 0;">גלו את המודל</h5>
         <p>צפו במימושי המודל בשטח, עיינו בתוצרים והיחשפו לחוות דעת על המודל:</p>
@@ -42,41 +40,32 @@
         </div>
       </div>
       <div class="col-md-6 row">
-        <div class="col-2">
-
-        </div>
+        <div class="col-2"></div>
         <div class="col-8">
-           <img src="<%=model.picture%>" style="width: 100%;" />
+          <img src="<%=model.picture%>" style="width: 100%;" />
         </div>
-        <div class="col-2">
-          
-        </div>
-       
+        <div class="col-2"></div>
       </div>
     </div>
     <br />
-   
-    
-    
-    
   </div>
 </div>
-<hr class="ondeskhidden"/>
-<div id="caseStudy<%= model.id %>" class="row rows ">
-  <div class="col-md-6" style="padding-right: 5%; ">
+<hr class="ondeskhidden" />
+<div id="caseStudy<%= model.id %>" class="row rows">
+  <div class="col-md-6" style="padding-right: 5%;">
     <div class="model-item">
       <div class="roundedH2 col-3"><h2>מקרה בוחן</h2></div>
-      
+
       <p>צפו ב:</p>
-      <h2 ></h2style><%-model.case_studies_name%></h2>
-      <h5 ><%-model.case_studies_interName%></h5>
+      <h2><%-model.case_studies_name%></h2>
+      <h5><%-model.case_studies_interName%></h5>
       <p><%-model.case_studies_story%></p>
-      <div class="col-md-8 row" style="margin-right: -8%;" >
+      <div class="col-md-8 row" style="margin-right: -8%;">
         <div class="col-6" style="border-left: 3px solid lightgrey;">
           <img src="<%-model.case_studies_caseLogo%>" style="width: 100%;" />
         </div>
         <div class="col-6">
-          <h5 style="text-align: center;  ">
+          <h5 style="text-align: center;">
             מומחי התוכן
           </h5>
           <div class="row">
@@ -86,38 +75,52 @@
       </div>
     </div>
   </div>
-  <div  class="col-md-6">
-    <img id="clickImg" style="width: 80%; cursor: pointer;margin-right: 22%;" src="<%=model.case_studies_pic%>" />
-     <!-- Button trigger modal -->
-<button id="btnForVideo" type="button" style="visibility: hidden;" class="btn btn-primary video-btn" data-toggle="modal" data-src="<%=model.case_studies_video%>" data-target="#myModal">
-  Play Video 1 - autoplay
-</button>
+  <div class="col-md-6">
+    <img
+      id="clickImg"
+      style="width: 80%; cursor: pointer; margin-right: 22%;"
+      src="<%=model.case_studies_pic%>"
+    />
+    <!-- Button trigger modal -->
+    <button
+      id="btnForVideo"
+      type="button"
+      style="visibility: hidden;"
+      class="btn btn-primary video-btn"
+      data-toggle="modal"
+      data-src="<%=model.case_studies_video%>"
+      data-target="#myModal"
+    >
+      Play Video 1 - autoplay
+    </button>
   </div>
 </div>
-<hr class="ondeskhidden"/>
-<div class="row models" id="tozarim<%= model.id %>" style="padding: 5%; background-color: #f5f5f5;">
-  <div class="container-fluid ">
-    
-    <div class="roundedH2 col-3"><h2>משאבי למידה ותוצרים</h2></div>
+<hr class="ondeskhidden" />
+<div class="row models" id="tozarim<%= model.id %>" style="padding: 0 5%;">
+  <div class="container-fluid">
+    <div class="roundedH2 col-2" style="margin-right: 2%;">
+      <h2 style="font-size: larger; margin-right: 2%;">משאבי למידה ותוצרים</h2>
+    </div>
+    <h5 style="font-weight: 800; margin-right: 5%;"><%-model.case_studies_name%></h5>
     <div class="row">
       <% model.case_studies_products.forEach(product => { %>
-      <div class="col-sm-3 " style="padding: 1%; height: 200px;">
+      <div class="col-sm-3" style="padding: 1%; height: 200px;">
         <div style="display: block; text-align: center;">
-          <a href=" <%=product[0]%>"  target="_blank">
-            <img src="<%= model.case_studies_LinkPic %>"  />
+          <a href=" <%=product[0]%>" target="_blank">
+            <img src="<%= model.case_studies_LinkPic %>" />
           </a>
         </div>
-        <h5 style="text-align: center;  "><%=product[1]%></h5>
+        <h5 style="text-align: center;"><%=product[1]%></h5>
       </div>
       <% }); %>
     </div>
   </div>
 </div>
-<hr class="ondeskhidden"/>
+<hr class="ondeskhidden" />
 
 <div class="row" id="feedback<%= model.id %>">
-  <div class="col-md-6">
-    <h2 class="alignCenter" id="feedback">מה דעתך?</h2>
+  <div class="col-md-6" id="feedback">
+    <h2 class="alignCenter h22">מה דעתך?</h2>
     <div class="feedback-status">
       <% if (locals.errors){%>
       <div class="alert alert-danger">
@@ -241,7 +244,7 @@
 
                             <%=feedback.message%>
                           </div>
-                          <hr class="ondeskhidden"/>
+                          <hr class="ondeskhidden" />
                           <small><%=feedback.name%></small>
                         </div>
                       </div>
@@ -258,34 +261,36 @@
     </div>
   </div>
 </div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="myModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-
-      
       <div class="modal-body">
-
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
-        </button>        
+        </button>
         <!-- 16:9 aspect ratio -->
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-</div>
-        
-        
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe
+            class="embed-responsive-item"
+            src=""
+            id="video"
+            allowscriptaccess="always"
+            allow="autoplay"
+          ></iframe>
+        </div>
       </div>
-
     </div>
   </div>
-</div> 
-  
+</div>
 
-<% } 
-
-}
-
-); %>
+<% } } ); %>
 
 <!-- FOOTER -->
 <%-include(`./partials/footer`) %> <%-include(`./partials/topFunction`) %>
