@@ -90,8 +90,8 @@ h3 {
   .blendedSystemBg {
     background-image: url('/images/arrBackground.svg');
     background-repeat: no-repeat;
-    background-size: 10%;
-    background-position-x: 10vw;
+    background-size: 24%;
+    background-position-x: 0;
   }
   .toolsBG {
     background-image: url('/images/toolsBG.svg');
