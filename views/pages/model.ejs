@@ -19,21 +19,21 @@
           <div class="row col-md-12">
             <div class="col-md-4">
               <a href="<%= model.id %>#caseStudy<%= model.id %>">
-                <div class="roundedDiv <%=randColor%>" >
+                <div class="roundedDiv <%=randColor%>" style="color: #333333;">
                   מקרה בוחן
                 </div>
               </a>
             </div>
             <div class="col-md-4">
               <a href="<%= model.id %>#tozarim<%= model.id %>">
-                <div class="roundedDiv <%=randColor%>">
+                <div class="roundedDiv <%=randColor%>" style="color: #333333;">
                   תוצרים
                 </div>
               </a>
             </div>
             <div class="col-md-4">
-              <a href="<%= model.id %>#feedback<%= model.id %>">
-                <div class="roundedDiv <%=randColor%>">
+              <a href="<%= model.id %>#feedback<%= model.id %> ">
+                <div class="roundedDiv <%=randColor%>" style="color: #333333;">
                   ביקורות
                 </div>
               </a>
@@ -41,8 +41,17 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <img src="<%=model.picture%>" style="width: 70%;" />
+      <div class="col-md-6 row">
+        <div class="col-2">
+
+        </div>
+        <div class="col-8">
+           <img src="<%=model.picture%>" style="width: 100%;" />
+        </div>
+        <div class="col-2">
+          
+        </div>
+       
       </div>
     </div>
     <br />
