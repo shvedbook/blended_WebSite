@@ -791,8 +791,8 @@ a.badge-primary:hover {
 .roundedH2 {
   background-color: #333333;
 
-  padding: 0.5%;
-  margin: 1% 2%;
+  padding: 0.5% 0%;
+  margin: 1% 0%;
   text-align: center;
   border-radius: 25px;
   display: inline-block;
