@@ -800,3 +800,7 @@ a.badge-primary:hover {
 .roundedH2 h2 {
   color: white !important;
 }
+.rows {
+  margin-left: 0;
+  margin-right: 0;
+}
