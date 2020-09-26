@@ -32,7 +32,8 @@ var colorIndex = 0;
       <% modelsData.forEach(function (model) {%>
         <a href="/models/<%=model.id%>" style=" height: 100px; width:25%;">
 			
-				<div class=" bc-<%=bgcolor[colorIndex]%> " style=" padding: 35% 5%; text-align: center; margin: 2% ;">
+				<div class=" <%=model.id%>-font" style=" padding: 35% 5%; text-align: center; margin: 2% ; background-image: url('/images/sargel/<%=model.id%>.png') ; 
+          background-size: 100%;">
           <h3 style="background: none"><%=model.name%></h3>
           
         

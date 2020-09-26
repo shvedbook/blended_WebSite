@@ -216,7 +216,7 @@ h5 {
 }
 
 h3 {
-  font-size: large;
+  font-size: larger;
 }
 
 .larger {
@@ -784,4 +784,7 @@ a.badge-primary:hover {
   margin: 10% 2%;
 
   padding: 0 2%;
+}
+.kitaafuha-font h3 {
+  color: black;
 }
