@@ -788,3 +788,15 @@ a.badge-primary:hover {
 .kitaafuha-font h3 {
   color: black;
 }
+.roundedH2 {
+  background-color: #333333;
+
+  padding: 0.5%;
+  margin: 1% 2%;
+  text-align: center;
+  border-radius: 25px;
+  display: inline-block;
+}
+.roundedH2 h2 {
+  color: white !important;
+}
