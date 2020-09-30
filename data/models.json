@@ -127,22 +127,17 @@
       ],
       "case_studies": [
         {
-          "name": "ניהול משא ומתן <br/> לפי מודל כיתה הפוכה",
-          "interName": "<b>עו\"ד אורנה קופולוביץ'</b><br/>מכון טכנולוגי חולון",
+          "name": "זמנית לא זמין",
+          "interName": "זמנית לא זמין",
           "story": "",
-          "pic": "/images/kitaAfuhaBanner.png",
-          "video": "https://www.youtube.com/embed/RzJSax99hlk",
-          "caseLogo": "/images/hit.png",
-          "instructors": "<div class='col-6' style='text-allign: center'><img src='/images/orna.png' style='width: 100%;' /><br />עו\"ד אורנה קופולוביץ'</div>",
+          "pic": "#",
+          "video": "#",
+          "caseLogo": "#",
+          "instructors": "זמנית לא זמין",
           "products": [
-            ["/files/kitaafuha1.png", "ניהול משא ומתן הסבר"],
-            ["/files/kitaafuha2.jpeg", "תיעוד שיעור 1"],
-            ["/files/kitaafuha3.jpeg", "תיעוד שיעור 2"],
-            ["/files/kitaafuha4.jpeg", "תיעוד שיעור 3"],
-            ["/files/kitaafuha5.jpeg", "תיעוד שיעור 4"],
-            ["/files/kitaafuha6.jpeg", "תיעוד שיעור 21"]
+            
           ],
-          "LinkPic": "/images/hit.png"
+          "LinkPic": "#"
         }
       ]
     }
