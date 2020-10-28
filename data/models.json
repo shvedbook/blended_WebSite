@@ -23,7 +23,7 @@
           "interName": "<b>סיליי ביינסין</b><br/>ישראל דיגיטלית",
           "story": "בתכנית \" קידום תעסוקתי - עבודה בסביבה ממוחשבת\" שנועדה להקנות למשתתפיה היכרות בסיסית, אך מקיפה, עם תחום יישומי ,Office רמת עצמאות הלומדים עלתה בהדרגה ובהתאמה לסוג היישום הנלמד. <b>צפו ב9- תובנות מפי סיליי, מנהלת תחום אוריינות דיגיטלית, על השימוש במודל תיווך ישיר מתוך פרוייקט \"קידום תעסוקתי - עבודה בסביבה ממוחשבת\":</b>",
           "pic": "/images/facetofacecase-Copy.png",
-          "video": "https://www.youtube.com/embed/KldIqi9C24Q",
+          "video": "https://www.youtube.com/embed/oJJV-M4m_Lk",
           "caseLogo": "/images/israelDigitalLogo.png",
           "instructors": "<div class='col-12' ><div style=\"margin-right:25%\"><img src='/images/selly.png' style='width: 50%;' /><br />סיליי ביינסין</div></div>",
           "products": [
@@ -57,7 +57,7 @@
           "interName": "<b>גילעד סוויט</b><br/>מדרסה",
           "story": "בתקופת הסגר בזמן הקורונה ערכו ב\"מדרסה\"- המיזם החברתי-טכנולוגי ללימוד ערבית מדוברת,<br/> מרתון למידה בו שלחו ללומדים מייל עם רשימת משימות יומית שכללה לימוד דרך הקורס מקוון, צפיה בתכנים להעשרה ותרגול ברשתות החברתיות.<br/><b><b>צפו ב-5 תובנות מפי גילעד, המייסד והמנהל המקצועי של מדרסה, על השימוש במודל אונליין-בלנד מתוך פרוייקט \"14 יום\":</b></b>",
           "pic": "/images/MadrasaBanner.png",
-          "video": "https://www.youtube.com/embed/QRMeQa9UnEQ",
+          "video": "https://www.youtube.com/embed/YY6t7yu8EP0",
           "caseLogo": "/images/madrasaLogo.png",
           "instructors": "<div class='col-6'><img src='/images/michal-rosen.png' style='width: 100%;' /><br />מיכל רוזן</div><div class='col-6'><img src='/images/gilad.png' style='width: 100%;' /><br />גילעד סוויט</div>",
           "products": [
@@ -96,7 +96,7 @@
           "interName": "<b>ליאת לרון</b><br/>המרכז לחינוך סייבר",
           "story": "קורס self.py – הדרך שלך ללמוד פייתון הינו קורס ה-MOOC הראשון שפותח במסגרת שיתוף פעולה בין מערך הסייבר הלאומי והמרכז לחינוך סייבר מיסודה של קרן רש\"י, אשר מטרתו הנגשת לימודי הסייבר לאזרחי מדינת ישראל. צפו בליאת לרון, מנהלת המיזם, מספרת על שילוב הקורס במודל קבוצות הריצה, מודל אשר פותח במהירות עם סגירת מערכת החינוך בשל התפרצות הקורונה במרץ 2020.",
           "pic": "/images/KvutzatImunBanner.png",
-          "video": "https://www.youtube.com/embed/cI1JF3_IgHk",
+          "video": "https://www.youtube.com/embed/Ef3ezgGBKLU",
           "caseLogo": "/images/kvutzatImunLogo.png",
           "instructors": "<div class='col-6'><img src='/images/daniel.png' style='width: 100%;' /><br />ליאת לרון</div>",
           "products": [
@@ -134,9 +134,7 @@
           "video": "#",
           "caseLogo": "#",
           "instructors": "זמנית לא זמין",
-          "products": [
-            
-          ],
+          "products": [],
           "LinkPic": "#"
         }
       ]
